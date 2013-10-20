@@ -1,0 +1,21 @@
+[Desktop Entry]
+Comment=
+Encoding=UTF-8
+Icon=
+Keywords=
+Name=cn_dictionary
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=librehat
+X-KDE-PluginInfo-Category=Language
+X-KDE-PluginInfo-Email=librehat@outlook.com
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=cn_dictionary
+X-KDE-PluginInfo-Version=1
+X-KDE-PluginInfo-Website=http://www.librehat.com
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-Plasma-DefaultSize=200,100
+X-Plasma-MainScript=code/cn_dictionary.qml
+X-Plasma-RemoteLocation=
+X-Plasma-RequiredDataEngines=
