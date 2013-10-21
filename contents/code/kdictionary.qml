@@ -1,7 +1,6 @@
 // -*- coding: utf-8 -*-
 /*
- *   Author: librehat <librehat@outlook.com>
- *   Date: Sun Oct 20 2013, 14:55:37
+ *   Copyright (C) 2013 by William Wong <librehat@outlook.com> 
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -44,7 +43,7 @@ Item {
 
         PlasmaComponents.TextField {
             id: inputEntry;
-            placeholderText: i18n("Enter word(s) here");
+            placeholderText: i18n("<i>Enter word(s) here</i>");
             width: parent.width - 26; //26 = QIconItem's width + spacing
             maximumLength: 100; //Limit the maximum length //TODO: cutomisable
             font.pointSize: 10; //TODO: cutomisable
