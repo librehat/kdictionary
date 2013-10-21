@@ -145,6 +145,8 @@ Item {
         XmlRole { name: "web"; query: "web/explain[1]/value/string()" }
         XmlRole { name: "webkey2" ; query: "web/explain[2]/key/string() "}
         XmlRole { name: "web2"; query: "web/explain[2]/value/string()" }
+        XmlRole { name: "webkey3" ; query: "web/explain[2]/key/string() "}
+        XmlRole { name: "web3"; query: "web/explain[2]/value/string()" }
         
         onCountChanged: getYD();
     }
@@ -164,7 +166,7 @@ Item {
         if( ydModel.get(0).phonetic != '' )       yddes += "<b>发音:</b> <i>/" + ydModel.get(0).phonetic + "/</i><br /><br />"//TODO i18n
         yddes += "<b>基本词典:</b><br />" + ydModel.get(0).explains + "<br /><br />";//TODO i18n
         yddes += "<b>有道翻译:</b><br />" + ydModel.get(0).translation + "<br /><br />";//TODO i18n
-        yddes += "<b>网络释义:</b><br />" + ydModel.get(0).webkey + ": " + ydModel.get(0).web + "<br />" + ydModel.get(0).webkey2 + ": " + ydModel.get(0).web2;//TODO i18n
+        yddes += "<b>网络释义:</b><br />" + ydModel.get(0).webkey + ": " + ydModel.get(0).web + "<br />" + ydModel.get(0).webkey2 + ": " + ydModel.get(0).web2 + "<br />" + ydModel.get(0).webkey3 + ": " + ydModel.get(0).web3;//TODO i18n
         displayText.text = yddes;
     }
     //End of YOUDAO Fanyi
