@@ -24,12 +24,13 @@ import org.kde.qtextracomponents 0.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.extras 0.1 as PlasmaExtras
 
-Item {
+import "youdaoapi.js" as YDAPI
 
+Item {
     id: main;
     property int minimumWidth: 120;
     property int minimumHeight: 50;
-
+    
     Row {
         id: headrow;
         spacing: 4;
@@ -50,7 +51,11 @@ Item {
             clearButtonShown: true;
             focus: true;
             Keys.onPressed: {
-                if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)    query();
+                if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)
+                    if (inputEntry.text != '') {
+                        //queryYD(inputEntry.text);
+                        queryQQ(inputEntry.text);
+                    }
             }
         }
     }
@@ -74,30 +79,23 @@ Item {
         }
     }
     
-    function query() {
-        if(inputEntry.text != "") {
-            var url = "http://dict.qq.com/dict?q=" + inputEntry.text;
-            getResult(url);
-        }
-        else    console.log("Please enter word(s) at first.");
-    }
-    
-    function getResult(url) {
+    //Beginning of QQ Dictionary
+    function queryQQ(words) {
+        var qqurl = "http://dict.qq.com/dict?q=" + words;
         var resText;
         var doc = new XMLHttpRequest();
         doc.onreadystatechange = function() {
             if (doc.readyState == XMLHttpRequest.DONE) {
                 resText = doc.responseText;
-                //console.log(typeof resText + resText);
-                parseQQdict(resText);//TODO:add iciba, baidu translate, etc.
+                parseQQdict(resText);
             }
         }
-        doc.open('GET', url, true);
+        doc.open('GET', qqurl, true);
         doc.send();
     }
     
     function parseQQdict(resText) {
-        var jsonObj = JSON.parse(resText);
+        var jsonObj = JSON.parse(resText);//Generate JSON Object
         var desresult = "";
         
         if (typeof jsonObj == 'object') {
@@ -106,9 +104,9 @@ Item {
             
             if (typeof localdes == 'object') {
                 if(typeof localdes[0].pho == 'object') {
-                    desresult += "<b>发音:</b> " + "<i>/" + localdes[0].pho[0] + "/</i><br /><br />";
+                    desresult += "<b>发音:</b> " + "<i>/" + localdes[0].pho[0] + "/</i><br /><br />";//TODO i18n
                 }
-                desresult += "<b>本地释义:</b> " + "<br />";
+                desresult += "<b>本地释义:</b> " + "<br />";//TODO i18n
                 for (var i=0 ; i<10 ; i++){
                     if(typeof localdes[0].des[i] != 'object')       break;
                     desresult += "<b>" + localdes[0].des[i].p + "</b> "+ localdes[0].des[i].d + "<br />";
@@ -118,7 +116,7 @@ Item {
             else    console.log ("localdes is not an object. Its type is:" + typeof localdes);
             
             if (typeof netdes == 'object') {
-                desresult += "<b>网络释义:</b>" + "<br />";
+                desresult += "<b>网络释义:</b>" + "<br />";//TODO i18n
                 for (var i=0 ; i<5 ; i++) {
                     if(typeof netdes.des[i] != 'object')       break;
                     desresult += netdes.des[i].d + " ; ";
@@ -132,4 +130,42 @@ Item {
         if (desresult != '')    displayText.text = desresult;
         else    displayText.text = i18n("No result.");
     }
+    
+    //End of QQ Dictionary
+    
+    //Beginning of YOUDAO Fanyi
+    XmlListModel {
+        id: ydModel;
+        query: "/youdao-fanyi";
+        
+        XmlRole { name: "translation"; query: "translation/string()" }//YOUDAO Translation
+        XmlRole { name: "phonetic"; query: "basic/phonetic/string()" }//YOUDAO Basic Dictionary
+        XmlRole { name: "explains"; query: "basic/explains/string()" }
+        XmlRole { name: "webkey" ; query: "web/explain[1]/key/string() "}//YOUDAO Web Dictionary
+        XmlRole { name: "web"; query: "web/explain[1]/value/string()" }
+        XmlRole { name: "webkey2" ; query: "web/explain[2]/key/string() "}
+        XmlRole { name: "web2"; query: "web/explain[2]/value/string()" }
+        
+        onCountChanged: getYD();
+    }
+    
+    function queryYD(words) {
+        if( YDAPI.name == '' || YDAPI.key == '' )       displayText.text = i18n("API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>");
+        else {
+            var ydurl = "http://fanyi.youdao.com/openapi.do?keyfrom=" + YDAPI.name + "&key=" + YDAPI.key + "&type=data&doctype=xml&version=1.1&q=" + words;
+            ydModel.source = ydurl;
+            displayText.text = i18n("Loading...");//it's not instantaneous!
+        }
+    }
+    
+    function getYD() {
+        //console.log(ydModel.count)
+        var yddes = "";
+        if( ydModel.get(0).phonetic != '' )       yddes += "<b>发音:</b> <i>/" + ydModel.get(0).phonetic + "/</i><br /><br />"//TODO i18n
+        yddes += "<b>基本词典:</b><br />" + ydModel.get(0).explains + "<br /><br />";//TODO i18n
+        yddes += "<b>有道翻译:</b><br />" + ydModel.get(0).translation + "<br /><br />";//TODO i18n
+        yddes += "<b>网络释义:</b><br />" + ydModel.get(0).webkey + ": " + ydModel.get(0).web + "<br />" + ydModel.get(0).webkey2 + ": " + ydModel.get(0).web2;//TODO i18n
+        displayText.text = yddes;
+    }
+    //End of YOUDAO Fanyi
 }
