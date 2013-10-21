@@ -9,9 +9,9 @@
 
 ## TO-DO List
 
-[ ] Add sentence examples
-[ ] Add iciba API
-[ ] Invoke Baidu Translate API dealing with sentences
-[ ] Offline dictionary
-[ ] Configuration UI
-[ ] Allow some customisations
+- [ ] Add sentence examples
+- [ ] Add iciba API
+- [ ] Invoke Baidu Translate API dealing with sentences
+- [ ] Offline dictionary
+- [ ] Configuration UI
+- [ ] Allow some customisations
