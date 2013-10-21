@@ -32,13 +32,14 @@ KDictionary invokes [QQDict](http://dict.qq.com) API at default for some reasons
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to iCiBa
 
-### TO-DO List
+### TO-DO List (0.x)
 
-- [ ] Add sentence examples for QQdict API
-- [x] Add YOUDAO API
-- [ ] Add iciba API
-- [ ] Add Baidu Translate API
-- [ ] i18n
-- [ ] Offline dictionary
-- [x] Configuration XML File
-- [x] Configuration UI
+- [x] Configuration XML File (0.2.x)
+- [x] Configuration UI (0.2.x)
+- [x] Add YOUDAO API (0.2.x)
+- [ ] Add sentence examples for QQdict API (0.2.x)
+- [ ] Add Baidu Translate API (0.3.x)
+- [ ] Add iCiBa API (0.3.x)
+- [ ] Modular scripts (0.4.x)
+- [ ] i18n (0.4.x)
+- [ ] Offline dictionary (0.9.x)
