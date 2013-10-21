@@ -35,14 +35,14 @@ Item {
         anchors { left: parent.left; right: parent.right }
 
         QIconItem {
-            icon: QIcon("accessories-dictionary");
+            icon: QIcon('accessories-dictionary');
             width: 22;
             height: 22;
         }
 
         PlasmaComponents.TextField {
             id: inputEntry;
-            placeholderText: i18n("<i>Enter word(s) here</i>");
+            placeholderText: i18n('<i>Enter word(s) here</i>');
             width: parent.width - 22 - headrow.spacing;//22:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             //font.pointSize: 10; //Use plasma theme settings
@@ -51,7 +51,7 @@ Item {
             Keys.onPressed: {
                 if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)
                     if (inputEntry.text != '') {
-                        displayText.text = i18n("Loading...");//it's not instantaneous!
+                        displayText.text = i18n('Loading...');//it's not instantaneous!
                         var p = plasmoid.readConfig('dictProvider') - 1 + 1;//ensure its type is number instead of object
                         switch(p) {
                             case 0:
@@ -91,7 +91,7 @@ Item {
     
     //Beginning of QQ Dictionary
     function queryQQ(words) {
-        var qqurl = "http://dict.qq.com/dict?q=" + words;
+        var qqurl = 'http://dict.qq.com/dict?q=' + words;
         var resText;
         var doc = new XMLHttpRequest();
         doc.onreadystatechange = function() {
@@ -106,7 +106,7 @@ Item {
     
     function parseQQdict(resText) {
         var jsonObj = JSON.parse(resText);//Generate JSON Object
-        var desresult = "";
+        var desresult = '';
         
         if (typeof jsonObj == 'object') {
             var localdes = jsonObj.local;
@@ -114,31 +114,31 @@ Item {
             
             if (typeof localdes == 'object') {
                 if(typeof localdes[0].pho == 'object') {
-                    desresult += "<b>发音:</b> " + "<i>/" + localdes[0].pho[0] + "/</i><br /><br />";//TODO i18n
+                    desresult += '<b>发音:</b> ' + '<i>/' + localdes[0].pho[0] + '/</i><br /><br />';//TODO i18n
                 }
-                desresult += "<b>本地释义:</b> " + "<br />";//TODO i18n
+                desresult += '<b>本地释义:</b> ' + '<br />';//TODO i18n
                 for (var i=0 ; i<10 ; i++){
                     if(typeof localdes[0].des[i] != 'object')       break;
-                    desresult += "<b>" + localdes[0].des[i].p + "</b> "+ localdes[0].des[i].d + "<br />";
+                    desresult += '<b>' + localdes[0].des[i].p + '</b> '+ localdes[0].des[i].d + '<br />';
                 }
-                desresult += "<br />";
+                desresult += '<br />';
             }
-            else    console.log ("localdes is not an object. Its type is:" + typeof localdes);
+            else    console.log ('localdes is not an object. Its type is:' + typeof localdes);
             
             if (typeof netdes == 'object') {
-                desresult += "<b>网络释义:</b>" + "<br />";//TODO i18n
+                desresult += '<b>网络释义:</b>' + '<br />';//TODO i18n
                 for (var i=0 ; i<5 ; i++) {
                     if(typeof netdes.des[i] != 'object')       break;
-                    desresult += netdes.des[i].d + " ; ";
+                    desresult += netdes.des[i].d + ' ; ';
                 }
             }
-            else    console.log ("netdes is not an object. Its type is:" + typeof netdes);
+            else    console.log ('netdes is not an object. Its type is:' + typeof netdes);
             
         }
-        else    console.log ("jsonObj is not an object. Its type is:" + typeof jsonObj);
+        else    console.log ('jsonObj is not an object. Its type is:' + typeof jsonObj);
         
         if (desresult != '')    displayText.text = desresult;
-        else    displayText.text = i18n("No result.");
+        else    displayText.text = i18n('No result.');
     }
     
     //End of QQ Dictionary
@@ -146,40 +146,39 @@ Item {
     //Beginning of YOUDAO Fanyi
     XmlListModel {
         id: ydModel;
-        query: "/youdao-fanyi";
+        query: '/youdao-fanyi';
         
-        XmlRole { name: "translation"; query: "translation/string()" }//YOUDAO Translation
-        XmlRole { name: "phonetic"; query: "basic/phonetic/string()" }//YOUDAO Basic Dictionary
-        XmlRole { name: "explains"; query: "basic/explains/string()" }
-        XmlRole { name: "webkey" ; query: "web/explain[1]/key/string() "}//YOUDAO Web Dictionary
-        XmlRole { name: "web"; query: "web/explain[1]/value/string()" }
-        XmlRole { name: "webkey2" ; query: "web/explain[2]/key/string() "}
-        XmlRole { name: "web2"; query: "web/explain[2]/value/string()" }
-        XmlRole { name: "webkey3" ; query: "web/explain[3]/key/string() "}
-        XmlRole { name: "web3"; query: "web/explain[3]/value/string()" }
+        XmlRole { name: 'translation'; query: 'translation/string()' }//YOUDAO Translation
+        XmlRole { name: 'phonetic'; query: 'basic/phonetic/string()' }//YOUDAO Basic Dictionary
+        XmlRole { name: 'explains'; query: 'basic/explains/string()' }
+        XmlRole { name: 'webkey' ; query: 'web/explain[1]/key/string() '}//YOUDAO Web Dictionary
+        XmlRole { name: 'web'; query: 'web/explain[1]/value/string()' }
+        XmlRole { name: 'webkey2' ; query: 'web/explain[2]/key/string() '}
+        XmlRole { name: 'web2'; query: 'web/explain[2]/value/string()' }
+        XmlRole { name: 'webkey3' ; query: 'web/explain[3]/key/string() '}
+        XmlRole { name: 'web3'; query: 'web/explain[3]/value/string()' }
         
         onCountChanged: getYD();
     }
     
     function queryYD(words) {
-        var ydkey = "&key=" + plasmoid.readConfig('youdao_key');//Ensure it's string
-        var ydname = "?keyfrom=" + plasmoid.readConfig('youdao_name');//Ensure it's string
+        var ydkey = '&key=' + plasmoid.readConfig('youdao_key');//Ensure it's string
+        var ydname = '?keyfrom=' + plasmoid.readConfig('youdao_name');//Ensure it's string
         
-        if( ydkey == '' || ydname == '' )       displayText.text = i18n("API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>");
+        if( ydkey == '' || ydname == '' )       displayText.text = i18n('API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>');
         else {
-            var ydurl = "http://fanyi.youdao.com/openapi.do" + ydname + ydkey+ "&type=data&doctype=xml&version=1.1&q=" + words;
+            var ydurl = 'http://fanyi.youdao.com/openapi.do' + ydname + ydkey+ '&type=data&doctype=xml&version=1.1&q=' + words;
             console.log(ydurl);
             ydModel.source = ydurl;
         }
     }
     
     function getYD() {
-        //console.log(ydModel.count)
-        var yddes = "";
-        if( ydModel.get(0).phonetic != '' )       yddes += "<b>发音:</b> <i>/" + ydModel.get(0).phonetic + "/</i><br /><br />"//TODO i18n
-        yddes += "<b>基本词典:</b><br />" + ydModel.get(0).explains + "<br /><br />";//TODO i18n
-        yddes += "<b>有道翻译:</b><br />" + ydModel.get(0).translation + "<br /><br />";//TODO i18n
-        yddes += "<b>网络释义:</b><br />" + ydModel.get(0).webkey + ": " + ydModel.get(0).web + "<br />" + ydModel.get(0).webkey2 + ": " + ydModel.get(0).web2 + "<br />" + ydModel.get(0).webkey3 + ": " + ydModel.get(0).web3;//TODO i18n
+        var yddes = '';
+        if( ydModel.get(0).phonetic != '' )     yddes += '<b>发音:</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'//TODO i18n
+        yddes += '<b>基本词典:</b><br />' + ydModel.get(0).explains + '<br /><br />';//TODO i18n
+        yddes += '<b>有道翻译:</b><br />' + ydModel.get(0).translation + '<br /><br />';//TODO i18n
+        yddes += '<b>网络释义:</b><br />' + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;//TODO i18n
         displayText.text = yddes;
     }
     //End of YOUDAO Fanyi
