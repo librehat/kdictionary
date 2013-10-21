@@ -24,8 +24,6 @@ import org.kde.qtextracomponents 0.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.extras 0.1 as PlasmaExtras
 
-import "youdaoapi.js" as YDAPI
-
 Item {
     id: main;
     property int minimumWidth: 120;
@@ -45,16 +43,28 @@ Item {
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: i18n("<i>Enter word(s) here</i>");
-            width: parent.width - 22 - headrow.spacing; //26 = QIconItem's width + spacing
-            maximumLength: 100; //Limit the maximum length //TODO: cutomisable
-            font.pointSize: 10; //TODO: cutomisable
+            width: parent.width - 22 - headrow.spacing;//22:QIconItem's width
+            maximumLength: 140; //Limit the maximum length
+            //font.pointSize: 10; //Use plasma theme settings
             clearButtonShown: true;
             focus: true;
             Keys.onPressed: {
                 if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)
                     if (inputEntry.text != '') {
-                        //queryYD(inputEntry.text);
-                        queryQQ(inputEntry.text);
+                        displayText.text = i18n("Loading...");//it's not instantaneous!
+                        var p = plasmoid.readConfig('dictProvider') - 1 + 1;//ensure its type is number instead of object
+                        switch(p) {
+                            case 0:
+                            {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
+                            case 1:
+                            {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
+                            case 2:
+                            {console.log('Baidu is in TO-DO list');break;}
+                            case 3:
+                            {console.log('iCiBa is in TO-DO list');break;}
+                            default:
+                            {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
+                        }
                     }
             }
         }
@@ -145,18 +155,21 @@ Item {
         XmlRole { name: "web"; query: "web/explain[1]/value/string()" }
         XmlRole { name: "webkey2" ; query: "web/explain[2]/key/string() "}
         XmlRole { name: "web2"; query: "web/explain[2]/value/string()" }
-        XmlRole { name: "webkey3" ; query: "web/explain[2]/key/string() "}
-        XmlRole { name: "web3"; query: "web/explain[2]/value/string()" }
+        XmlRole { name: "webkey3" ; query: "web/explain[3]/key/string() "}
+        XmlRole { name: "web3"; query: "web/explain[3]/value/string()" }
         
         onCountChanged: getYD();
     }
     
     function queryYD(words) {
-        if( YDAPI.name == '' || YDAPI.key == '' )       displayText.text = i18n("API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>");
+        var ydkey = "&key=" + plasmoid.readConfig('youdao_key');//Ensure it's string
+        var ydname = "?keyfrom=" + plasmoid.readConfig('youdao_name');//Ensure it's string
+        
+        if( ydkey == '' || ydname == '' )       displayText.text = i18n("API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>");
         else {
-            var ydurl = "http://fanyi.youdao.com/openapi.do?keyfrom=" + YDAPI.name + "&key=" + YDAPI.key + "&type=data&doctype=xml&version=1.1&q=" + words;
+            var ydurl = "http://fanyi.youdao.com/openapi.do" + ydname + ydkey+ "&type=data&doctype=xml&version=1.1&q=" + words;
+            console.log(ydurl);
             ydModel.source = ydurl;
-            displayText.text = i18n("Loading...");//it's not instantaneous!
         }
     }
     

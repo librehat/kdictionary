@@ -4,39 +4,37 @@
      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
-    <group name="General">
+    <group name="kdict">
         <entry name="autoClear" type="Bool">
+            <label>Clear once input text changed.</label>
             <default>true</default>
         </entry>
         <entry name="enableWebdict" type="Bool">
+            <label>Show description from web.</label>
             <default>true</default>
         </entry>
         <entry name="dictProvider" type="Enum">
-            <choices name="Provider">
-            <choice name="QQ"/>
-            <choice name="YouDao"/>
-            <choice name="Baidu"/>
-            <choice name="iCiBa"/>
+            <choices name="dictProviderChoices">
+                <choice name="QQ"/>
+                <choice name="YOUDAO"/>
+                <choice name="Baidu"/>
+                <choice name="iCiBa"/>
             </choices>
         </entry>
-    </group>
-    <group name="API">
         <entry name="youdao_key" type="string">
+            <label>YouDao API key</label>
             <default></default>
         </entry>
         <entry name="youdao_name" type="string">
+            <label>YouDao API name</label>
             <default></default>
         </entry>
         <entry name="baidu_key" type="string">
-            <default></default>
-        </entry>
-        <entry name="baidu_secret" type="string">
+            <label>Baidu API key</label>
             <default></default>
         </entry>
         <entry name="iciba_key" type="string">
-            <default></default>
-        </entry>
-        <entry name="iciba_name" type="string">
+            <label>iCiBa API key</label>
             <default></default>
         </entry>
     </group>
