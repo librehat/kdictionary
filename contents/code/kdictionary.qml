@@ -33,8 +33,8 @@ Item {
     
     Row {
         id: headrow;
-        spacing: 4;
-        anchors { left: parent.left; right: parent.right}
+        spacing: 6;
+        anchors { left: parent.left; right: parent.right }
 
         QIconItem {
             icon: QIcon("accessories-dictionary");
@@ -45,7 +45,7 @@ Item {
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: i18n("<i>Enter word(s) here</i>");
-            width: parent.width - 26; //26 = QIconItem's width + spacing
+            width: parent.width - 22 - headrow.spacing; //26 = QIconItem's width + spacing
             maximumLength: 100; //Limit the maximum length //TODO: cutomisable
             font.pointSize: 10; //TODO: cutomisable
             clearButtonShown: true;
