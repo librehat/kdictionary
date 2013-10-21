@@ -46,7 +46,7 @@
       <rect>
        <x>70</x>
        <y>36</y>
-       <width>200</width>
+       <width>230</width>
        <height>20</height>
       </rect>
      </property>
@@ -62,12 +62,12 @@
       <rect>
        <x>70</x>
        <y>76</y>
-       <width>200</width>
+       <width>230</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Show description from web</string>
+      <string>Show description from web (TODO)</string>
      </property>
      <property name="checked">
       <bool>true</bool>

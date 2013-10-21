@@ -48,6 +48,8 @@ Item {
             //font.pointSize: 10; //Use plasma theme settings
             clearButtonShown: true;
             focus: true;
+            onTextChanged: autoClear();
+            
             Keys.onPressed: {
                 if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)
                     if (inputEntry.text != '') {
@@ -59,9 +61,9 @@ Item {
                             case 1:
                             {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
                             case 2:
-                            {console.log('Baidu is in TO-DO list');break;}
+                            {displayText.text='Baidu is in TO-DO list';break;}
                             case 3:
-                            {console.log('iCiBa is in TO-DO list');break;}
+                            {displayText.text='iCiBa is in TO-DO list';break;}
                             default:
                             {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
                         }
@@ -87,6 +89,12 @@ Item {
                 textFormat: Text.RichText;
             }
         }
+    }
+
+    function autoClear() {//clear once text input changed
+        var ac = plasmoid.readConfig('autoClear') + 1 - 1;//stupid QML!!! Can't tolerate it longer!
+        if( ac )
+            displayText.text = "";
     }
     
     //Beginning of QQ Dictionary
