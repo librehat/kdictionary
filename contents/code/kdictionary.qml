@@ -32,31 +32,31 @@ Item {
 
     Row {
         id: headrow;
-        spacing: 6;
+        spacing: 4;
         anchors { left: parent.left; right: parent.right }
 
         QIconItem {
             icon: QIcon('accessories-dictionary');
-            width: 22;
-            height: 22;
+            width: 26;
+            height: 26;
         }
 
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: i18n('<i>Enter word(s) here</i>');
-            width: parent.width - 22 - headrow.spacing;//22:QIconItem's width
+            width: parent.width - 26 - headrow.spacing;//22:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;
 
             onTextChanged: autoClear();
-            Keys.onPressed: if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)        enterTriggered();
+            Keys.onPressed: if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) enterTriggered();
         }
     }
 
-    PlasmaComponents.TextArea {
+    DictArea {//Modified from PlasmaComponents.TextArea
         id: displayText;
-        anchors { top: headrow.bottom; left: main.left; right: main.right; bottom: main.bottom; topMargin: headrow.spacing }
+        anchors { top: headrow.bottom; left: main.left; right: main.right; bottom: main.bottom; topMargin: 2 }
         contentMaxHeight: text.height + 1;//QML says text.height type is 'undefined', so let it plus 1
         contentMaxWidth: width - font.pointSize * 2.2;
         readOnly: true;
@@ -166,7 +166,7 @@ Item {
             }}
 
             if (typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
-                desresult += '<br /><a href="' + baike[0].link + '">百科词条</a>';//cannot open it directly due to limitation of TextArea. may be removed in following versions.
+                desresult += '<br /><a href="' + baike[0].link + '">SOSO百科词条</a>';
             }
         }
         parseDone();
