@@ -43,7 +43,7 @@ KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons
 - [x] Configuration UI (0.2.0)
 - [x] Add YOUDAO API (0.2.0)
 - [x] Add sentence examples for QQdict API (0.2.1)
-- [x] Add synonym, morphology and baike for QQdict API (0.2.x)
+- [x] Add synonym, morphology and baike for QQdict API (0.2.2)
 - [ ] Add setting on content control (0.2.x)
 - [ ] Add Baidu Translate API (0.3.x)
 - [ ] Add iCiBa API (0.3.x)
