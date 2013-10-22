@@ -120,15 +120,28 @@ Item {
             var localdes = jsonObj.local;
             var netdes = jsonObj.netdes[0];
             
-            if (typeof localdes == 'object') {
+            if (typeof localdes == 'object' && typeof localdes[0] == 'object') {
+                
                 if(typeof localdes[0].pho == 'object') {
                     desresult += '<b>发音:</b> ' + '<i>/' + localdes[0].pho[0] + '/</i><br /><br />';//TODO i18n
                 }
+                
+                if(typeof localdes[0].des == 'object') {
                 desresult += '<b>本地释义:</b> ' + '<br />';//TODO i18n
-                for (var i=0 ; i<10 ; i++){
-                    if(typeof localdes[0].des[i] != 'object')       break;
-                    desresult += '<b>' + localdes[0].des[i].p + '</b> '+ localdes[0].des[i].d + '<br />';
+                    for (var i=0 ; i<10 ; i++){
+                        if(typeof localdes[0].des[i] != 'object')       break;
+                        desresult += '<b>' + localdes[0].des[i].p + '</b> '+ localdes[0].des[i].d + '<br />';
+                    }
                 }
+                
+                if(typeof localdes[0].sen == 'object') {
+                    desresult += '<br /><b>例句:</b> ' + '<br />';//TODO i18n
+                    for (var i=0 ; i<3 ; i++){//TODO maximum number could be set by user
+                        if(typeof localdes[0].sen[0].s[i] != 'object')      break;
+                        desresult += localdes[0].sen[0].s[i].es + '<br />' + localdes[0].sen[0].s[i].cs + '<br />';
+                    }
+                }
+                
                 desresult += '<br />';
             }
             else    console.log ('localdes is not an object. Its type is:' + typeof localdes);
