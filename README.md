@@ -5,14 +5,19 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 
 ### Installation
 
-* Download plasmoid from [releases](https://github.com/librehat/kdictionary/releases)
-* Run `plasmapkg -i kdictionary.plasmoid` to install it
-* Run `kbuildsycoca4` to refresh desktop cache
-* Have fun
+1. Download KDictionary plasmoid from [releases](https://github.com/librehat/kdictionary/releases)
+2. Run `plasmapkg -i kdictionary-<ver>.plasmoid` to install it
+3. Run `kbuildsycoca4` to refresh desktop cache
+4. Have fun
+
+##### NOTICE
+
+- If you've installed an early version of KDictionary, you need to run `plasmapkg -u kdictionary-<ver>.plasmoid` instead to **upgrade** KDictionary.
+- Any upgrade will lose previous settings data.
 
 ### Advanced Usage
 
-KDictionary invokes [QQDict](http://dict.qq.com) API at default for some reasons. But you can choose other providers, instructions are shown below.
+KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons. But you can choose other providers, instructions are shown below.
 
 #### YOUDAO
 
@@ -28,7 +33,7 @@ KDictionary invokes [QQDict](http://dict.qq.com) API at default for some reasons
 
 #### iCiBa (TODO)
 
-1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary
+1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box.
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to iCiBa
 
