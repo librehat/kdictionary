@@ -26,8 +26,8 @@ import org.kde.plasma.extras 0.1 as PlasmaExtras
 
 Item {
     id: main;
-    property int minimumWidth: 120;
-    property int minimumHeight: 50;
+    property int minimumWidth: 200;
+    property int minimumHeight: 100;
     
     Row {
         id: headrow;
@@ -45,7 +45,6 @@ Item {
             placeholderText: i18n('<i>Enter word(s) here</i>');
             width: parent.width - 22 - headrow.spacing;//22:QIconItem's width
             maximumLength: 140; //Limit the maximum length
-            //font.pointSize: 10; //Use plasma theme settings
             clearButtonShown: true;
             focus: true;
             onTextChanged: autoClear();
@@ -72,23 +71,14 @@ Item {
         }
     }
 
-    PlasmaExtras.ScrollArea {
-        id: view;
+    PlasmaComponents.TextArea {
+        id: displayText;
         anchors { top: headrow.bottom; left: main.left; right: main.right; bottom: main.bottom; topMargin: 4}
-
-        Flickable {
-            id:display;
-            interactive: false;//disable dragging the content
-            contentWidth: displayText.width;
-            contentHeight: displayText.height;
-            
-            PlasmaComponents.Label{
-                id: displayText;
-                width: view.width - font.pointSize * 1.5;//ensure there is no horizontal scrollbar
-                wrapMode: TextEdit.Wrap;
-                textFormat: Text.RichText;
-            }
-        }
+        contentMaxHeight: main.height;
+        contentMaxWidth: main.width - font.pointSize * 2.5;
+        readOnly: true;
+        textFormat: Text.RichText;
+        wrapMode: TextEdit.Wrap;
     }
 
     function autoClear() {//clear once text input changed
@@ -186,7 +176,7 @@ Item {
         var ydkey = '&key=' + plasmoid.readConfig('youdao_key');//Ensure it's string
         var ydname = '?keyfrom=' + plasmoid.readConfig('youdao_name');//Ensure it's string
         
-        if( ydkey == '' || ydname == '' )       displayText.text = i18n('API key is empty.<br />Please follow instructions in <u>kdictionary/contents/code/youdaoapi.js</u>');
+        if( ydkey == '&key=' || ydname == '?keyfrom=' )       displayText.text = i18n('API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
         else {
             var ydurl = 'http://fanyi.youdao.com/openapi.do' + ydname + ydkey+ '&type=data&doctype=xml&version=1.1&q=' + words;
             console.log(ydurl);
