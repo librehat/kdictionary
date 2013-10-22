@@ -47,27 +47,9 @@ Item {
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;
-            onTextChanged: autoClear();
             
-            Keys.onPressed: {
-                if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)
-                    if (inputEntry.text != '') {
-                        displayText.text = i18n('Loading...');//it's not instantaneous!
-                        var p = plasmoid.readConfig('dictProvider') - 1 + 1;//ensure its type is number instead of object
-                        switch(p) {
-                            case 0:
-                            {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
-                            case 1:
-                            {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
-                            case 2:
-                            {displayText.text='Baidu is in TO-DO list';break;}
-                            case 3:
-                            {displayText.text='iCiBa is in TO-DO list';break;}
-                            default:
-                            {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
-                        }
-                    }
-            }
+            onTextChanged: autoClear();
+            Keys.onPressed: if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)        enterTriggered();
         }
     }
 
@@ -84,7 +66,26 @@ Item {
     function autoClear() {//clear once text input changed
         var ac = plasmoid.readConfig('autoClear') + 1 - 1;//stupid QML!!! Can't tolerate it longer!
         if( ac )
-            displayText.text = "";
+            displayText.text = '';
+    }
+    
+    function enterTriggered() {
+        if (inputEntry.text != '') {
+            displayText.text = i18n('<i>Loading...</i>');//it's not instantaneous!
+            var p = plasmoid.readConfig('dictProvider') - 1 + 1;//ensure its type is number instead of object
+            switch(p) {
+                case 0:
+                {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
+                case 1:
+                {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
+                case 2:
+                {displayText.text='Baidu is in TO-DO list';break;}
+                case 3:
+                {displayText.text='iCiBa is in TO-DO list';break;}
+                default:
+                {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
+            }
+        }
     }
     
     //Beginning of QQ Dictionary
@@ -169,7 +170,7 @@ Item {
         XmlRole { name: 'webkey3' ; query: 'web/explain[3]/key/string() '}
         XmlRole { name: 'web3'; query: 'web/explain[3]/value/string()' }
         
-        onCountChanged: getYD();
+        onCountChanged: parseYD();
     }
     
     function queryYD(words) {
@@ -184,7 +185,7 @@ Item {
         }
     }
     
-    function getYD() {
+    function parseYD() {
         var yddes = '';
         if( ydModel.get(0).phonetic != '' )     yddes += '<b>发音:</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'//TODO i18n
         if( ydModel.get(0).explains != '' )     yddes += '<b>基本词典:</b><br />' + ydModel.get(0).explains + '<br /><br />';//TODO i18n
