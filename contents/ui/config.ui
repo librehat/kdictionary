@@ -133,6 +133,9 @@
      <property name="maxLength">
       <number>20</number>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_youdao_name">
      <property name="geometry">
@@ -145,6 +148,9 @@
      </property>
      <property name="maxLength">
       <number>20</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_baidu_key">
@@ -159,6 +165,9 @@
      <property name="maxLength">
       <number>20</number>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_iciba_key">
      <property name="geometry">
@@ -171,6 +180,9 @@
      </property>
      <property name="maxLength">
       <number>20</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
      </property>
     </widget>
     <widget class="QLabel" name="label_ydkey">
