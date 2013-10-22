@@ -1,6 +1,6 @@
 // -*- coding: utf-8 -*-
 /*
- *   Copyright (C) 2013 by William Wong <librehat@outlook.com> 
+ *   Copyright (C) 2013 by William Wong <librehat@outlook.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -29,7 +29,7 @@ Item {
     property int minimumWidth: 200;
     property int minimumHeight: 100;
     property string desresult;//description result
-    
+
     Row {
         id: headrow;
         spacing: 6;
@@ -48,7 +48,7 @@ Item {
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;
-            
+
             onTextChanged: autoClear();
             Keys.onPressed: if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return)        enterTriggered();
         }
@@ -69,7 +69,7 @@ Item {
         if(ac)
             displayText.text = '';
     }
-    
+
     function enterTriggered() {
         if (inputEntry.text != '') {
             displayText.text = i18n('<i>Loading...</i>');//it's not instantaneous!
@@ -177,7 +177,7 @@ Item {
     XmlListModel {
         id: ydModel;
         query: '/youdao-fanyi';
-        
+
         XmlRole { name: 'translation'; query: 'translation/string()' }//YOUDAO Translation
         XmlRole { name: 'phonetic'; query: 'basic/phonetic/string()' }//YOUDAO Basic Dictionary
         XmlRole { name: 'explains'; query: 'basic/explains/string()' }
@@ -187,14 +187,14 @@ Item {
         XmlRole { name: 'web2'; query: 'web/explain[2]/value/string()' }
         XmlRole { name: 'webkey3' ; query: 'web/explain[3]/key/string()' }
         XmlRole { name: 'web3'; query: 'web/explain[3]/value/string()' }
-        
+
         onCountChanged: parseYD();
     }
-    
+
     function queryYD(words) {
         var ydkey = '&key=' + plasmoid.readConfig('youdao_key');//Ensure it's string
         var ydname = '?keyfrom=' + plasmoid.readConfig('youdao_name');//Ensure it's string
-        
+
         if(ydkey == '&key=' || ydname == '?keyfrom=')       displayText.text = i18n('API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
         else {
             var ydurl = 'http://fanyi.youdao.com/openapi.do' + ydname + ydkey+ '&type=data&doctype=xml&version=1.1&q=' + words;
@@ -202,7 +202,7 @@ Item {
             ydModel.source = ydurl;
         }
     }
-    
+
     function parseYD() {
         if(ydModel.get(0).phonetic != '')  desresult += '<b>发音:</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'//TODO i18n
         if(ydModel.get(0).explains != '')  desresult += '<b>基本词典:</b><br />' + ydModel.get(0).explains + '<br /><br />';//TODO i18n
