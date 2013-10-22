@@ -97,7 +97,7 @@ Item {
             switch(dictProvider) {
                 case 0: {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
                 case 1: {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
-                case 2: {displayText.text='Baidu is in TO-DO list';break;}
+                case 2: {console.log('Quering with Baidu');queryBD(inputEntry.text);break;}
                 case 3: {console.log('Quering with iCiBa');queryCB(inputEntry.text);break;}
                 default: {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
         }}
@@ -222,6 +222,31 @@ Item {
         parseDone();
     }
     //End of YOUDAO Fanyi
+
+    //Beginning of Baidu
+    function queryBD(words) {
+        var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=' + baidu_key + '&q=' + words + '&from=auto&to=auto';
+        var resText;
+        var doc = new XMLHttpRequest();
+        doc.onreadystatechange = function() {
+            if (doc.readyState == XMLHttpRequest.DONE) {
+                resText = doc.responseText;
+                parseBD(resText);
+            }
+        }
+        doc.open('GET', bdurl, true);
+        doc.send();
+    }
+
+    function parseBD(resText) {
+        var jsonObj = JSON.parse(resText);
+
+        if(typeof jsonObj == 'object' && typeof jsonObj.trans_result == 'object') {
+            desresult += '<b>百度翻译</b>:<br /><br />原文: ' + jsonObj.trans_result[0].src + '<br /><br />译文: ' + jsonObj.trans_result[0].dst;
+        }
+        parseDone();
+    }
+    //End of Baidu
 
     //Beginning of iCiBa
     XmlListModel {
