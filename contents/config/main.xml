@@ -6,11 +6,23 @@
     <kcfgfile name=""/>
     <group name="kdict">
         <entry name="autoClear" type="Bool">
-            <label>Clear once input text changed.</label>
+            <label>Clear once input text changed</label>
             <default>true</default>
         </entry>
-        <entry name="enableWebdict" type="Bool">
-            <label>Show description from web.</label>
+        <entry name="showSentences" type="Bool">
+            <label>Show sentences</label>
+            <default>true</default>
+        </entry>
+        <entry name="showPhrases" type="Bool">
+            <label>Show phrases</label>
+            <default>true</default>
+        </entry>
+        <entry name="showWebdict" type="Bool">
+            <label>Show description from web</label>
+            <default>true</default>
+        </entry>
+        <entry name="showBaike" type="Bool">
+            <label>Show SOSO Baike</label>
             <default>true</default>
         </entry>
         <entry name="dictProvider" type="Enum">
@@ -35,7 +47,7 @@
         </entry>
         <entry name="iciba_key" type="string">
             <label>iCiBa API key</label>
-            <default></default>
+            <default>40AAB9CEFD02DA381C2DCB7A512BCB0F</default>
         </entry>
     </group>
 </kcfg>

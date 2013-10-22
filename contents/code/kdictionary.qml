@@ -29,6 +29,16 @@ Item {
     property int minimumWidth: 200;
     property int minimumHeight: 100;
     property string desresult;//description result
+    property bool autoClear;
+    property bool showSentences;
+    property bool showPhrases;
+    property bool showWebdict;
+    property bool showBaike;
+    property int dictProvider;
+    property string youdao_key;
+    property string youdao_name;
+    property string baidu_key;
+    property string iciba_key;
 
     Row {
         id: headrow;
@@ -49,7 +59,7 @@ Item {
             clearButtonShown: true;
             focus: true;
 
-            onTextChanged: autoClear();
+            onTextChanged: if(autoClear)  displayText.text = '';
             Keys.onPressed: if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) enterTriggered();
         }
     }
@@ -64,33 +74,38 @@ Item {
         wrapMode: TextEdit.Wrap;
     }
 
-    function autoClear() {//clear once text input changed
-        var ac = plasmoid.readConfig('autoClear') + 1 - 1;//stupid QML!!! Can't tolerate it longer!
-        if(ac)
-            displayText.text = '';
+    Component.onCompleted: {
+        plasmoid.addEventListener('configChanged', configChanged);
+    }
+
+    function configChanged() {
+        autoClear = plasmoid.readConfig('autoClear');
+        showSentences = plasmoid.readConfig('showSentences');
+        showPhrases = plasmoid.readConfig('showPhrases');
+        showWebdict = plasmoid.readConfig('showWebdict');
+        showBaike = plasmoid.readConfig('showBaike');
+        dictProvider = plasmoid.readConfig('dictProvider');
+        youdao_key = plasmoid.readConfig('youdao_key');
+        youdao_name = plasmoid.readConfig('youdao_name');
+        baidu_key = plasmoid.readConfig('baidu_key');
+        iciba_key = plasmoid.readConfig('iciba_key');
     }
 
     function enterTriggered() {
         if (inputEntry.text != '') {
             displayText.text = i18n('<i>Loading...</i>');//it's not instantaneous!
-            var p = plasmoid.readConfig('dictProvider') - 1 + 1;//ensure its type is number instead of object
-            switch(p) {
-                case 0:
-                {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
-                case 1:
-                {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
-                case 2:
-                {displayText.text='Baidu is in TO-DO list';break;}
-                case 3:
-                {displayText.text='iCiBa is in TO-DO list';break;}
-                default:
-                {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
+            switch(dictProvider) {
+                case 0: {console.log('Quering with QQDict');queryQQ(inputEntry.text);break;}
+                case 1: {console.log('Quering with YOUDAO');queryYD(inputEntry.text);break;}
+                case 2: {displayText.text='Baidu is in TO-DO list';break;}
+                case 3: {console.log('Quering with iCiBa');queryCB(inputEntry.text);break;}
+                default: {console.log('No such provider. Use QQDict instead.');queryQQ(inputEntry.text);}
         }}
     }
 
     function parseDone() {
         if (desresult != '')    displayText.text = desresult;
-        else    displayText.text = i18n('No result.');
+        else    displayText.text = i18n('<i>No result.</i>');
         desresult = '';
     }
 
@@ -129,7 +144,7 @@ Item {
                         desresult += localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';//don't bold it, make it the same style as YOUDAO
                 }}
 
-                if(typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
+                if(showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
                     desresult += '<b>例句:</b>' + '<br />';//TODO i18n
                     for (var i=0;;i++){
                         if(typeof localdes[0].sen[0].s[i] != 'object') {desresult += '<br />';break;}
@@ -150,7 +165,7 @@ Item {
                         desresult += localdes[0].syn[i].p + ' ' + localdes[0].syn[i].c + '<br />';
                 }}
 
-                if(typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
+                if(showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
                     desresult += '<b>短语:</b>' + '<br />';//TODO i18n
                     for (var i=0;;i++){//get all of them
                         if(typeof localdes[0].ph[i] != 'object') {desresult += '<br />';break;}
@@ -158,14 +173,14 @@ Item {
                 }}
             }
 
-            if (typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
+            if (showWebdict &&  typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
                 desresult += '<b>网络释义:</b>' + '<br />';//TODO i18n
                 for (var i=0 ; i<5 ; i++) {//5 is enough for netdes for it's often ridiculous
                     if(typeof netdes[0].des[i] != 'object') {desresult += '<br />';break;}
                     desresult += netdes[0].des[i].d + ' ; ';
             }}
 
-            if (typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
+            if (showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
                 desresult += '<br /><a href="' + baike[0].link + '">SOSO百科词条</a>';
             }
         }
@@ -192,13 +207,9 @@ Item {
     }
 
     function queryYD(words) {
-        var ydkey = '&key=' + plasmoid.readConfig('youdao_key');//Ensure it's string
-        var ydname = '?keyfrom=' + plasmoid.readConfig('youdao_name');//Ensure it's string
-
-        if(ydkey == '&key=' || ydname == '?keyfrom=')       displayText.text = i18n('API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
+        if(youdao_key == '' || youdao_name == '')  displayText.text = i18n('YOUDAO API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
         else {
-            var ydurl = 'http://fanyi.youdao.com/openapi.do' + ydname + ydkey+ '&type=data&doctype=xml&version=1.1&q=' + words;
-            console.log(ydurl);
+            var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
             ydModel.source = ydurl;
         }
     }
@@ -207,8 +218,48 @@ Item {
         if(ydModel.get(0).phonetic != '')  desresult += '<b>发音:</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'//TODO i18n
         if(ydModel.get(0).explains != '')  desresult += '<b>基本词典:</b><br />' + ydModel.get(0).explains + '<br /><br />';//TODO i18n
         if(ydModel.get(0).translation != '')  desresult += '<b>有道翻译:</b><br />' + ydModel.get(0).translation + '<br /><br />';//TODO i18n
-        if(ydModel.get(0).webkey != '')  desresult += '<b>网络释义:</b><br />' + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;//TODO i18n
+        if(showWebdict && ydModel.get(0).webkey != '')  desresult += '<b>网络释义:</b><br />' + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;//TODO i18n
         parseDone();
     }
     //End of YOUDAO Fanyi
+
+    //Beginning of iCiBa
+    XmlListModel {
+        id: cbModel;
+        query: '/dict';
+
+        XmlRole { name: 'pho1'; query: 'ps[1]/string()' }
+        XmlRole { name: 'pho2'; query: 'ps[2]/string()' }
+        XmlRole { name: 'ex1'; query: 'acceptation[1]/string()' }
+        XmlRole { name: 'ex2'; query: 'acceptation[2]/string()' }
+        XmlRole { name: 'ex3'; query: 'acceptation[3]/string()' }
+        XmlRole { name: 'pos1'; query: 'pos[1]/string()' }
+        XmlRole { name: 'pos2'; query: 'pos[2]/string()' }
+        XmlRole { name: 'pos3'; query: 'pos[3]/string()' }
+        XmlRole { name: 'seno1'; query: 'sent[1]/orig/string()' }
+        XmlRole { name: 'seno2'; query: 'sent[2]/orig/string()' }
+        XmlRole { name: 'seno3'; query: 'sent[3]/orig/string()' }
+        XmlRole { name: 'sent1'; query: 'sent[1]/trans/string()' }
+        XmlRole { name: 'sent2'; query: 'sent[2]/trans/string()' }
+        XmlRole { name: 'sent3'; query: 'sent[3]/trans/string()' }
+
+        onCountChanged: parseCB();
+    }
+
+    function queryCB(words) {
+        if(iciba_key == '')  displayText.text = i18n('iCiBa API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
+        else {
+            var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + iciba_key;
+            cbModel.source = cburl;
+            console.log(cburl);
+        }
+    }
+
+    function parseCB() {
+        if(cbModel.get(0).pho1 != '')  desresult += '<b>发音:</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'//TODO i18n
+        if(cbModel.get(0).ex1 != '')  desresult += '<b>金山词霸:</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';//TODO i18n
+        if(showSentences && cbModel.get(0).seno1 != '')  desresult += '<b>例句:</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;//TODO i18n
+        parseDone();
+    }
+    //End of iCiBa
 }
