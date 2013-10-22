@@ -134,39 +134,39 @@ Item {
 
             if (typeof localdes == 'object' && typeof localdes[0] == 'object') {
                 if(typeof localdes[0].pho == 'object') {
-                    desresult += '<b>发音:</b> ' + '<i>/' + localdes[0].pho[0] + '/</i><br /><br />';//TODO i18n
+                    desresult += i18n('<b>Phonetic:</b> ') + '<i>/' + localdes[0].pho[0] + '/</i><br /><br />';
                 }
 
                 if(typeof localdes[0].des == 'object' && typeof localdes[0].des[0] == 'object') {
-                desresult += '<b>本地释义:</b>' + '<br />';//TODO i18n
+                desresult += i18n('<b>Definitions:</b>') + '<br />';
                     for (var i=0;;i++){//get all of them
                         if(typeof localdes[0].des[i] != 'object') {desresult += '<br />';break;}
                         desresult += localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';//don't bold it, make it the same style as YOUDAO
                 }}
 
                 if(showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
-                    desresult += '<b>例句:</b>' + '<br />';//TODO i18n
+                    desresult += i18n('<b>Examples:</b>') + '<br />';
                     for (var i=0;;i++){
                         if(typeof localdes[0].sen[0].s[i] != 'object') {desresult += '<br />';break;}
                         desresult += localdes[0].sen[0].s[i].es + '<br />' + localdes[0].sen[0].s[i].cs + '<br />';
                 }}
 
                 if(typeof localdes[0].mor == 'object' && typeof localdes[0].mor[0] == 'object') {
-                    desresult += '<b>词形变化:</b>' + '<br />';//TODO i18n
+                    desresult += i18n('<b>Morphology:</b>') + '<br />';
                     for (var i=0;;i++){//get all of them
                         if(typeof localdes[0].mor[i] != 'object') {desresult += '<br />';break;}
                         desresult += localdes[0].mor[i].c + ' ' + localdes[0].mor[i].m + '<br />';
                 }}
 
                 if(typeof localdes[0].syn == 'object' && typeof localdes[0].syn[0] == 'object') {
-                    desresult += '<b>同义词:</b>' + '<br />';//TODO i18n
+                    desresult += i18n('<b>Synonym:</b>') + '<br />';
                     for (var i=0;;i++){//get all of them
                         if(typeof localdes[0].syn[i] != 'object') {desresult += '<br />';break;}
                         desresult += localdes[0].syn[i].p + ' ' + localdes[0].syn[i].c + '<br />';
                 }}
 
                 if(showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
-                    desresult += '<b>短语:</b>' + '<br />';//TODO i18n
+                    desresult += i18n('<b>Phrases:</b>') + '<br />';
                     for (var i=0;;i++){//get all of them
                         if(typeof localdes[0].ph[i] != 'object') {desresult += '<br />';break;}
                         desresult += localdes[0].ph[i].phs + '<br />' + localdes[0].ph[i].phd + '<br />';
@@ -174,14 +174,14 @@ Item {
             }
 
             if (showWebdict &&  typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
-                desresult += '<b>网络释义:</b>' + '<br />';//TODO i18n
+                desresult += i18n('<b>Web Definitions:</b>') + '<br />';
                 for (var i=0 ; i<5 ; i++) {//5 is enough for netdes for it's often ridiculous
                     if(typeof netdes[0].des[i] != 'object') {desresult += '<br />';break;}
                     desresult += netdes[0].des[i].d + ' ; ';
             }}
 
             if (showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
-                desresult += '<br /><a href="' + baike[0].link + '">SOSO百科词条</a>';
+                desresult += '<br /><a href="' + baike[0].link + i18n('">SOSO Baike</a>');
             }
         }
         parseDone();
@@ -215,10 +215,10 @@ Item {
     }
 
     function parseYD() {
-        if(ydModel.get(0).phonetic != '')  desresult += '<b>发音:</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'//TODO i18n
-        if(ydModel.get(0).explains != '')  desresult += '<b>基本词典:</b><br />' + ydModel.get(0).explains + '<br /><br />';//TODO i18n
-        if(ydModel.get(0).translation != '')  desresult += '<b>有道翻译:</b><br />' + ydModel.get(0).translation + '<br /><br />';//TODO i18n
-        if(showWebdict && ydModel.get(0).webkey != '')  desresult += '<b>网络释义:</b><br />' + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;//TODO i18n
+        if(ydModel.get(0).phonetic != '')  desresult += i18n('<b>Phonetic:</b> <i>/') + ydModel.get(0).phonetic + '/</i><br /><br />'
+        if(ydModel.get(0).explains != '')  desresult += i18n('<b>Definitions:</b><br />') + ydModel.get(0).explains + '<br /><br />';
+        if(ydModel.get(0).translation != '')  desresult += i18n('<b>Translation:</b><br />') + ydModel.get(0).translation + '<br /><br />';
+        if(showWebdict && ydModel.get(0).webkey != '')  desresult += i18n('<b>Web Definitions:</b><br />') + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;
         parseDone();
     }
     //End of YOUDAO Fanyi
@@ -245,7 +245,7 @@ Item {
         var jsonObj = JSON.parse(resText);
 
         if(typeof jsonObj == 'object' && typeof jsonObj.trans_result == 'object') {
-            desresult += '<b>百度翻译</b>:<br /><br />原文: ' + jsonObj.trans_result[0].src + '<br /><br />译文: ' + jsonObj.trans_result[0].dst;
+            desresult += i18n('<b>Baidu Translation</b>:<br /><br />Original: ') + jsonObj.trans_result[0].src + i18n('<br /><br />Translation: ') + jsonObj.trans_result[0].dst;
         }
         parseDone();
     }
@@ -284,9 +284,9 @@ Item {
     }
 
     function parseCB() {
-        if(cbModel.get(0).pho1 != '')  desresult += '<b>发音:</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'//TODO i18n
-        if(cbModel.get(0).ex1 != '')  desresult += '<b>金山词霸:</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';//TODO i18n
-        if(showSentences && cbModel.get(0).seno1 != '')  desresult += '<b>例句:</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;//TODO i18n
+        if(cbModel.get(0).pho1 != '')  desresult += i18n('<b>Phonetic:</b> <i>/') + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
+        if(cbModel.get(0).ex1 != '')  desresult += i18n('<b>Definitions:</b><br />') + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
+        if(showSentences && cbModel.get(0).seno1 != '')  desresult += i18n('<b>Examples:</b><br />') + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
         parseDone();
     }
     //End of iCiBa
