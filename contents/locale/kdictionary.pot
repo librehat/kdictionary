@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.5.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 18:58+0800\n"
+"POT-Creation-Date: 2013-10-23 21:54+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,112 +17,104 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:119
-msgid "<i>Loading...</i>"
+#: ../ui/BAIDU.qml:27
+msgid "Baidu API key is empty."
 msgstr ""
 
-#: ../ui/main.qml:132
-msgid "<i>No result.</i>"
+#: ../ui/BAIDU.qml:27 ../ui/ICB.qml:49 ../ui/MWCD.qml:41 ../ui/YOUDAO.qml:44
+msgid "Help?"
 msgstr ""
 
-#: ../ui/main.qml:160
-msgid "<b>Phonetic:</b> "
+#: ../ui/BAIDU.qml:47
+msgid "Baidu Translation:"
 msgstr ""
 
-#: ../ui/main.qml:164
-msgid "<b>Definitions:</b>"
+#: ../ui/BAIDU.qml:47
+msgid "Original: "
 msgstr ""
 
-#: ../ui/main.qml:171
-msgid "<b>Examples:</b>"
+#: ../ui/BAIDU.qml:47
+msgid "Translation: "
 msgstr ""
 
-#: ../ui/main.qml:178
-msgid "<b>Morphology:</b>"
+#: ../ui/ICB.qml:49
+msgid "iCiBa API key is empty."
 msgstr ""
 
-#: ../ui/main.qml:185
-msgid "<b>Synonym:</b>"
+#: ../ui/ICB.qml:57 ../ui/MWCD.qml:51 ../ui/QQ.qml:50 ../ui/YOUDAO.qml:52
+msgid "Phonetic:"
 msgstr ""
 
-#: ../ui/main.qml:192
-msgid "<b>Phrases:</b>"
+#: ../ui/ICB.qml:58 ../ui/MWCD.qml:55 ../ui/QQ.qml:54 ../ui/YOUDAO.qml:53
+msgid "Definitions:"
 msgstr ""
 
-#: ../ui/main.qml:200
-msgid "<b>Web Definitions:</b>"
+#: ../ui/ICB.qml:59 ../ui/QQ.qml:63
+msgid "Examples:"
 msgstr ""
 
-#: ../ui/main.qml:207
-msgid "\">SOSO Baike</a>"
+#: ../ui/main.qml:86
+msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:214
-msgid ""
-"YOUDAO API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
+#: ../ui/main.qml:100
+msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:222 ../ui/main.qml:264 ../ui/main.qml:281
-msgid "<b>Phonetic:</b> <i>/"
+#: ../ui/main.qml:125
+msgid "Enter word(s) here"
 msgstr ""
 
-#: ../ui/main.qml:223 ../ui/main.qml:265 ../ui/main.qml:285
-msgid "<b>Definitions:</b><br />"
+#: ../ui/MWCD.qml:41
+msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
 msgstr ""
 
-#: ../ui/main.qml:224
-msgid "<b>Translation:</b><br />"
+#: ../ui/MWCD.qml:50
+msgid "Entry"
 msgstr ""
 
-#: ../ui/main.qml:225
-msgid "<b>Web Definitions:</b><br />"
+#: ../ui/MWCD.qml:50
+msgid ":"
 msgstr ""
 
-#: ../ui/main.qml:230
-msgid ""
-"Baidu API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
+#: ../ui/MWCD.qml:56
+msgid "Origin:"
 msgstr ""
 
-#: ../ui/main.qml:250
-msgid "<b>Baidu Translation</b>:<br /><br />Original: "
+#: ../ui/MWCD.qml:59
+msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:250
-msgid "<br /><br />Translation: "
+#: ../ui/QQ.qml:71
+msgid "Morphology:"
 msgstr ""
 
-#: ../ui/main.qml:256
-msgid ""
-"iCiBa API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
+#: ../ui/QQ.qml:79
+msgid "Synonym:"
 msgstr ""
 
-#: ../ui/main.qml:266
-msgid "<b>Examples:</b><br />"
+#: ../ui/QQ.qml:87
+msgid "Phrases:"
 msgstr ""
 
-#: ../ui/main.qml:271
-msgid ""
-"Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
-"href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
+#: ../ui/QQ.qml:96 ../ui/YOUDAO.qml:55
+msgid "Web Definitions:"
 msgstr ""
 
-#: ../ui/main.qml:280
-msgid "<b>Entry "
+#: ../ui/QQ.qml:104
+msgid "SOSO Baike"
 msgstr ""
 
-#: ../ui/main.qml:286
-msgid "<b>Origin:</b><br />"
+#: ../ui/YOUDAO.qml:44
+msgid "YOUDAO API key is empty."
 msgstr ""
 
-#: ../ui/main.qml:289
-msgid "<i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
+#: ../ui/YOUDAO.qml:54
+msgid "Translation:"
 msgstr ""
 
-#: ../ui/main.qml:307
-msgid "<i>Enter word(s) here</i>"
+#: ../ui/YOUDAO.qml:55
+msgid ": "
 msgstr ""
 
 #: rc.js:3

@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 18:58+0800\n"
-"PO-Revision-Date: 2013-10-23 18:58+0800\n"
+"POT-Creation-Date: 2013-10-23 21:51+0800\n"
+"PO-Revision-Date: 2013-10-23 21:54+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
-"Language-Team: British English <kde-i18n-doc@kde.org>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,121 +17,105 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:119
-msgid "<i>Loading...</i>"
-msgstr "<i>正在载入...</i>"
+#: ../ui/BAIDU.qml:27
+msgid "Baidu API key is empty."
+msgstr "百度API Key 是空值。"
 
-#: ../ui/main.qml:132
-msgid "<i>No result.</i>"
-msgstr "<i>无结果</i>"
+#: ../ui/BAIDU.qml:27 ../ui/ICB.qml:49 ../ui/MWCD.qml:41 ../ui/YOUDAO.qml:44
+msgid "Help?"
+msgstr "需要帮助？"
 
-#: ../ui/main.qml:160
-msgid "<b>Phonetic:</b> "
-msgstr "<b>发音：</b>"
+#: ../ui/BAIDU.qml:47
+msgid "Baidu Translation:"
+msgstr "百度翻译："
 
-#: ../ui/main.qml:164
-msgid "<b>Definitions:</b>"
-msgstr "<b>释义：</b>"
+#: ../ui/BAIDU.qml:47
+msgid "Original: "
+msgstr "原文："
 
-#: ../ui/main.qml:171
-msgid "<b>Examples:</b>"
-msgstr "<b>示例：</b>"
+#: ../ui/BAIDU.qml:47
+msgid "Translation: "
+msgstr "翻译："
 
-#: ../ui/main.qml:178
-msgid "<b>Morphology:</b>"
-msgstr "<b>词形变化：</b>"
+#: ../ui/ICB.qml:49
+msgid "iCiBa API key is empty."
+msgstr "爱词霸API Key是空值"
 
-#: ../ui/main.qml:185
-msgid "<b>Synonym:</b>"
-msgstr "<b>近义词：</b>"
+#: ../ui/ICB.qml:57 ../ui/MWCD.qml:51 ../ui/QQ.qml:50 ../ui/YOUDAO.qml:52
+msgid "Phonetic:"
+msgstr "发音："
 
-#: ../ui/main.qml:192
-msgid "<b>Phrases:</b>"
-msgstr "<b>词组/短语：</b>"
+#: ../ui/ICB.qml:58 ../ui/MWCD.qml:55 ../ui/QQ.qml:54 ../ui/YOUDAO.qml:53
+msgid "Definitions:"
+msgstr "释义："
 
-#: ../ui/main.qml:200
-msgid "<b>Web Definitions:</b>"
-msgstr "<b>网络释义：</b>"
+#: ../ui/ICB.qml:59 ../ui/QQ.qml:63
+msgid "Examples:"
+msgstr "示例："
 
-#: ../ui/main.qml:207
-msgid "\">SOSO Baike</a>"
-msgstr "\">搜搜百科</a>"
+#: ../ui/main.qml:86
+msgid "Loading..."
+msgstr "正在载入..."
 
-#: ../ui/main.qml:214
-msgid ""
-"YOUDAO API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
-msgstr ""
-"有道API key是空值。<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">需要帮助？</a>"
+#: ../ui/main.qml:100
+msgid "No result."
+msgstr "无结果"
 
-#: ../ui/main.qml:222 ../ui/main.qml:264 ../ui/main.qml:281
-msgid "<b>Phonetic:</b> <i>/"
-msgstr "<b>发音：</b> <i>/"
+#: ../ui/main.qml:125
+msgid "Enter word(s) here"
+msgstr "在此输入单词或句子"
 
-#: ../ui/main.qml:223 ../ui/main.qml:265 ../ui/main.qml:285
-msgid "<b>Definitions:</b><br />"
-msgstr "<b>释义：</b><br />"
+#: ../ui/MWCD.qml:41
+msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
+msgstr "梅里亚姆-韦伯斯特大学词典® API key是空值"
 
-#: ../ui/main.qml:224
-msgid "<b>Translation:</b><br />"
-msgstr "<b>翻译：</b><br />"
+#: ../ui/MWCD.qml:50
+msgid "Entry"
+msgstr "词条"
 
-#: ../ui/main.qml:225
-msgid "<b>Web Definitions:</b><br />"
-msgstr "<b>网络释义：</b><br />"
+#: ../ui/MWCD.qml:50
+msgid ":"
+msgstr "："
 
-#: ../ui/main.qml:230
-msgid ""
-"Baidu API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
-msgstr ""
-"百度API key是空值。<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">需要帮助？</a>"
+#: ../ui/MWCD.qml:56
+msgid "Origin:"
+msgstr "起源："
 
-#: ../ui/main.qml:250
-msgid "<b>Baidu Translation</b>:<br /><br />Original: "
-msgstr "<b>百度翻译</b>：<br /><br />原文： "
+#: ../ui/MWCD.qml:59
+msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
+msgstr "由梅里亚姆-韦伯斯特大学词典® 驱动"
 
-#: ../ui/main.qml:250
-msgid "<br /><br />Translation: "
-msgstr "<br /><br />翻译： "
+#: ../ui/QQ.qml:71
+msgid "Morphology:"
+msgstr "词形变化："
 
-#: ../ui/main.qml:256
-msgid ""
-"iCiBa API key is empty.<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">Help?</a>"
-msgstr ""
-"爱词霸API key是空值。<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">需要帮助？</a>"
+#: ../ui/QQ.qml:79
+msgid "Synonym:"
+msgstr "近义词："
 
-#: ../ui/main.qml:266
-msgid "<b>Examples:</b><br />"
-msgstr "<b>示例：</b><br />"
+#: ../ui/QQ.qml:87
+msgid "Phrases:"
+msgstr "词组/短语："
 
-#: ../ui/main.qml:271
-msgid ""
-"Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
-"href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
-msgstr ""
-"梅里亚姆-韦伯斯特大学词典® API key是空值。<br /><a href=\"https://github.com/"
-"librehat/kdictionary#advanced-usage\">需要帮助？</a>"
+#: ../ui/QQ.qml:96 ../ui/YOUDAO.qml:55
+msgid "Web Definitions:"
+msgstr "网络释义："
 
-#: ../ui/main.qml:280
-msgid "<b>Entry "
-msgstr "<b>词条"
+#: ../ui/QQ.qml:104
+msgid "SOSO Baike"
+msgstr "搜搜百科"
 
-#: ../ui/main.qml:286
-msgid "<b>Origin:</b><br />"
-msgstr "<b>起源：</b><br />"
+#: ../ui/YOUDAO.qml:44
+msgid "YOUDAO API key is empty."
+msgstr "有道API Key是空值"
 
-#: ../ui/main.qml:289
-msgid "<i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
-msgstr "<i>由梅里亚姆-韦伯斯特大学词典® 驱动</i>"
+#: ../ui/YOUDAO.qml:54
+msgid "Translation:"
+msgstr "翻译："
 
-#: ../ui/main.qml:307
-msgid "<i>Enter word(s) here</i>"
-msgstr "<i>在此输入单词或句子</i>"
+#: ../ui/YOUDAO.qml:55
+msgid ": "
+msgstr "："
 
 #: rc.js:3
 msgid "Form"
@@ -251,3 +235,51 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"
 
+#~ msgid "\">SOSO Baike</a>"
+#~ msgstr "\">搜搜百科</a>"
+
+#~ msgid ""
+#~ "YOUDAO API key is empty.<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">Help?</a>"
+#~ msgstr ""
+#~ "有道API key是空值。<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">需要帮助？</a>"
+
+#~ msgid "<b>Phonetic:</b> <i>/"
+#~ msgstr "<b>发音：</b> <i>/"
+
+#~ msgid "<b>Definitions:</b><br />"
+#~ msgstr "<b>释义：</b><br />"
+
+#~ msgid "<b>Web Definitions:</b><br />"
+#~ msgstr "<b>网络释义：</b><br />"
+
+#~ msgid ""
+#~ "Baidu API key is empty.<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">Help?</a>"
+#~ msgstr ""
+#~ "百度API key是空值。<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">需要帮助？</a>"
+
+#~ msgid "<b>Baidu Translation</b>:<br /><br />Original: "
+#~ msgstr "<b>百度翻译</b>：<br /><br />原文： "
+
+#~ msgid ""
+#~ "iCiBa API key is empty.<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">Help?</a>"
+#~ msgstr ""
+#~ "爱词霸API key是空值。<br /><a href=\"https://github.com/librehat/"
+#~ "kdictionary#advanced-usage\">需要帮助？</a>"
+
+#~ msgid "<b>Examples:</b><br />"
+#~ msgstr "<b>示例：</b><br />"
+
+#~ msgid ""
+#~ "Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
+#~ "href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
+#~ msgstr ""
+#~ "梅里亚姆-韦伯斯特大学词典® API key是空值。<br /><a href=\"https://github."
+#~ "com/librehat/kdictionary#advanced-usage\">需要帮助？</a>"
+
+#~ msgid "<b>Origin:</b><br />"
+#~ msgstr "<b>起源：</b><br />"
