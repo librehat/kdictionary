@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 18:40+0800\n"
-"PO-Revision-Date: 2013-10-23 18:45+0800\n"
+"POT-Creation-Date: 2013-10-23 18:58+0800\n"
+"PO-Revision-Date: 2013-10-23 18:58+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
@@ -114,8 +114,8 @@ msgid ""
 "Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
 "href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
 msgstr ""
-"梅里亚姆-韦伯斯特大学词典® API key是空值。<br /><a href=\"https://github.com/librehat/"
-"kdictionary#advanced-usage\">需要帮助？</a>"
+"梅里亚姆-韦伯斯特大学词典® API key是空值。<br /><a href=\"https://github.com/"
+"librehat/kdictionary#advanced-usage\">需要帮助？</a>"
 
 #: ../ui/main.qml:280
 msgid "<b>Entry "
@@ -125,11 +125,11 @@ msgstr "<b>词条"
 msgid "<b>Origin:</b><br />"
 msgstr "<b>起源：</b><br />"
 
-#: ../ui/main.qml:287
-msgid "<br /><i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
-msgstr "<br /><i>由梅里亚姆-韦伯斯特大学词典® 驱动</i>"
+#: ../ui/main.qml:289
+msgid "<i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
+msgstr "<i>由梅里亚姆-韦伯斯特大学词典® 驱动</i>"
 
-#: ../ui/main.qml:306
+#: ../ui/main.qml:307
 msgid "<i>Enter word(s) here</i>"
 msgstr "<i>在此输入单词或句子</i>"
 

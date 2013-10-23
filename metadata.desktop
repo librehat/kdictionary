@@ -2,7 +2,7 @@
 Comment=A Simple Dictionary/Translator Plasmoid Written in Pure QML.
 Encoding=UTF-8
 Icon=accessories-dictionary
-Keywords=dictionary;translator;
+Keywords=dictionary;translator;linguist;
 Name=KDictionary
 Type=Service
 X-KDE-Library=kcm_kwin4_genericscripted

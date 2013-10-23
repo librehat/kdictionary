@@ -300,6 +300,13 @@ Item {
             icon: QIcon('accessories-dictionary');
             width: 28;
             height: 28;
+
+            MouseArea {//Make a hovering effect just like the original Dictionary plasmoid in Plasma Addons
+                anchors.fill: topIcon;
+                hoverEnabled: true;
+                onEntered: topIcon.state = QIconItem.ActiveState;
+                onExited: topIcon.state = QIconItem.DisabledState;
+            }
         }
 
         PlasmaComponents.TextField {
