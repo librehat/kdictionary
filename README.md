@@ -1,5 +1,5 @@
 ## KDictionary
-#### Yet Another Simple English-Chinese Dictionary Plasmoid
+#### Yet Another Simple Dictionary/Translator Plasmoid
 
 Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content=161349), please vote 5 stars if you think it make your life more convenient.
 
