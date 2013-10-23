@@ -31,6 +31,7 @@
                 <choice name="YOUDAO"/>
                 <choice name="Baidu"/>
                 <choice name="iCiBa"/>
+                <choice name="Merriam-Webster"/>
             </choices>
         </entry>
         <entry name="youdao_key" type="string">
@@ -48,6 +49,10 @@
         <entry name="iciba_key" type="string">
             <label>iCiBa API key</label>
             <default>40AAB9CEFD02DA381C2DCB7A512BCB0F</default>
+        </entry>
+        <entry name="mwcd_key" type="string">
+            <label>Merriam-Webster's Collegiate® Dictionary API key</label>
+            <default></default>
         </entry>
     </group>
 </kcfg>

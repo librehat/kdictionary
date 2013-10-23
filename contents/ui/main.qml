@@ -40,6 +40,7 @@ Item {
     property string youdao_name;
     property string baidu_key;
     property string iciba_key;
+    property string mwcd_key;//Merriam-Webster's Collegiate® Dictionary
 
     XmlListModel {
         id: ydModel;
@@ -80,6 +81,20 @@ Item {
         onCountChanged: parseCB();
     }
 
+    XmlListModel {//Merriam-Webster's Collegiate® Dictionary XML Model
+        id: mwcdModel;
+        query: '/entry_list/entry';
+
+        XmlRole { name: 'pho'; query: 'pr/string()' }
+        XmlRole { name: 'fl'; query: 'fl/string()' }
+        XmlRole { name: 'lb'; query: 'lb/string()' }
+        XmlRole { name: 'origin'; query: 'et/string()' }//Origin
+        //XmlRole { name: 'date'; query: 'def/date/string()' }//why keep date under def?
+        XmlRole { name: 'def'; query: 'def/string()' }
+
+        onCountChanged: parseMWCD();
+    }
+
     function configChanged() {
         autoClear = plasmoid.readConfig('autoClear');
         showSentences = plasmoid.readConfig('showSentences');
@@ -91,6 +106,7 @@ Item {
         youdao_name = plasmoid.readConfig('youdao_name');
         baidu_key = plasmoid.readConfig('baidu_key');
         iciba_key = plasmoid.readConfig('iciba_key');
+        mwcd_key = plasmoid.readConfig('mwcd_key');
     }
 
     function enterTriggered() {
@@ -101,6 +117,7 @@ Item {
                 case 1: { queryYD(inputEntry.text); break; }
                 case 2: { queryBD(inputEntry.text); break; }
                 case 3: { queryCB(inputEntry.text); break; }
+                case 4: { queryMWCD(inputEntry.text); break; }
                 default: { console.log('No such provider. Use QQDict instead.');    queryQQ(inputEntry.text); }
         }}
     }
@@ -235,7 +252,6 @@ Item {
         else {
             var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + iciba_key;
             cbModel.source = cburl;
-            console.log(cburl);
         }
     }
 
@@ -243,6 +259,28 @@ Item {
         if (cbModel.get(0).pho1 != '')  desresult += i18n('<b>Phonetic:</b> <i>/') + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
         if (cbModel.get(0).ex1 != '')  desresult += i18n('<b>Definitions:</b><br />') + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
         if (showSentences && cbModel.get(0).seno1 != '')  desresult += i18n('<b>Examples:</b><br />') + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
+        parseDone();
+    }
+
+    function queryMWCD(words) {
+        if (mwcd_key == '') displayText.text = i18n("Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>");
+        else {
+            var mwcdurl = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=' + mwcd_key;
+            mwcdModel.source = mwcdurl;
+        }
+    }
+
+    function parseMWCD() {
+        for(var i=0; i<mwcdModel.count; i++) {
+            desresult += i18n('<b>Entry ') + (i+1) + ':</b><br />';
+            if (mwcdModel.get(i).pho != '')  desresult += i18n('<b>Phonetic:</b> <i>/') + mwcdModel.get(i).pho + '/</i><br />';
+            if (mwcdModel.get(i).fl != '')  desresult += mwcdModel.get(i).fl;
+            if (mwcdModel.get(i).lb != '')  desresult += ', ' + mwcdModel.get(i).lb;
+            desresult += '<br />';
+            if (mwcdModel.get(i).def != '')  desresult+= mwcdModel.get(i).def + '<br />';
+            if (mwcdModel.get(i).origin != '')  desresult += i18n('<b>Origin:</b><br />') + mwcdModel.get(i).origin + '<br />';
+            desresult += '<br />';
+        }
         parseDone();
     }
 

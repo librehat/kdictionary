@@ -38,7 +38,7 @@
     <widget class="QCheckBox" name="kcfg_autoClear">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>10</y>
        <width>230</width>
        <height>20</height>
@@ -54,7 +54,7 @@
     <widget class="QCheckBox" name="kcfg_showPhrases">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>40</y>
        <width>230</width>
        <height>20</height>
@@ -73,9 +73,9 @@
     <widget class="QComboBox" name="kcfg_dictProvider">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>140</x>
        <y>170</y>
-       <width>120</width>
+       <width>221</width>
        <height>23</height>
       </rect>
      </property>
@@ -99,11 +99,16 @@
        <string>iCiBa</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Merriam-Webster's Collegiate® Dictionary</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_dictProvider">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>170</y>
        <width>110</width>
        <height>20</height>
@@ -116,7 +121,7 @@
     <widget class="QCheckBox" name="kcfg_showWebdict">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>100</y>
        <width>230</width>
        <height>20</height>
@@ -135,7 +140,7 @@
     <widget class="QCheckBox" name="kcfg_showBaike">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>130</y>
        <width>230</width>
        <height>20</height>
@@ -157,7 +162,7 @@
     <widget class="QCheckBox" name="kcfg_showSentences">
      <property name="geometry">
       <rect>
-       <x>70</x>
+       <x>25</x>
        <y>70</y>
        <width>230</width>
        <height>20</height>
@@ -182,7 +187,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>26</y>
+       <y>20</y>
        <width>200</width>
        <height>20</height>
       </rect>
@@ -198,7 +203,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>76</y>
+       <y>55</y>
        <width>200</width>
        <height>20</height>
       </rect>
@@ -214,7 +219,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>126</y>
+       <y>90</y>
        <width>200</width>
        <height>20</height>
       </rect>
@@ -230,7 +235,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>176</y>
+       <y>125</y>
        <width>200</width>
        <height>20</height>
       </rect>
@@ -246,7 +251,7 @@
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>26</y>
+       <y>20</y>
        <width>120</width>
        <height>20</height>
       </rect>
@@ -259,7 +264,7 @@
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>76</y>
+       <y>55</y>
        <width>120</width>
        <height>20</height>
       </rect>
@@ -272,7 +277,7 @@
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>126</y>
+       <y>90</y>
        <width>120</width>
        <height>20</height>
       </rect>
@@ -285,7 +290,7 @@
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>176</y>
+       <y>125</y>
        <width>120</width>
        <height>20</height>
       </rect>
@@ -294,11 +299,41 @@
       <string>iCiBa API Key</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_mwcd">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>155</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Merriam-Webster's Collegiate® Dictionary API key</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="kcfg_mwcd_key">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>165</y>
+       <width>200</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>100</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="i18n.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
