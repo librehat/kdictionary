@@ -38,3 +38,7 @@ _Note: iCiBa API key is provided by default, though you could still use your own
 1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box.
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to iCiBa
+
+#### More Providers?
+
+Check [Wiki Pages](https://github.com/librehat/kdictionary/wiki). You could make KDictionary more powerful.
