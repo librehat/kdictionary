@@ -297,6 +297,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="i18n.qrc"/>
+ </resources>
  <connections/>
 </ui>
