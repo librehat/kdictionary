@@ -25,28 +25,16 @@ KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons
 2. Fill in your API key and name in KDictionary Advanced Setting
 3. Change Dictionary Provider to YOUDAO
 
-#### Baidu (TODO)
+#### Baidu
 
 1. Apply for a [Baidu](http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91/%E7%BF%BB%E8%AF%91API) API to use Baidu Translation service
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to Baidu
 
-#### iCiBa (TODO)
+#### iCiBa
+
+_Note: iCiBa API key is provided by default, though you could still use your own API key._
 
 1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box.
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to iCiBa
-
-### TO-DO List (0.x)
-
-- [x] Configuration XML File (0.2.0)
-- [x] Configuration UI (0.2.0)
-- [x] Add YOUDAO API (0.2.0)
-- [x] Add sentence examples for QQdict API (0.2.1)
-- [x] Add synonym, morphology and baike for QQdict API (0.2.2)
-- [x] Add setting on content control (0.2.3)
-- [x] Add Baidu Translate API (0.4.0)
-- [x] Add iCiBa API (0.4.0)
-- [ ] Modular scripts (0.4.x)
-- [ ] i18n (0.4.x)
-- [ ] Offline dictionary (0.9.x)
