@@ -107,6 +107,11 @@ Item {
         baidu_key = plasmoid.readConfig('baidu_key');
         iciba_key = plasmoid.readConfig('iciba_key');
         mwcd_key = plasmoid.readConfig('mwcd_key');
+
+        if (dictProvider == 4)
+            displayText.logoVisible = true;
+        else
+            displayText.logoVisible = false;
     }
 
     function enterTriggered() {
@@ -277,9 +282,9 @@ Item {
             if (mwcdModel.get(i).fl != '')  desresult += mwcdModel.get(i).fl;
             if (mwcdModel.get(i).lb != '')  desresult += ', ' + mwcdModel.get(i).lb;
             desresult += '<br />';
-            if (mwcdModel.get(i).def != '')  desresult+= mwcdModel.get(i).def + '<br />';
+            if (mwcdModel.get(i).def != '')  desresult+= i18n('<b>Definitions:</b><br />') + mwcdModel.get(i).def + '<br />';
             if (mwcdModel.get(i).origin != '')  desresult += i18n('<b>Origin:</b><br />') + mwcdModel.get(i).origin + '<br />';
-            desresult += '<br />';
+            desresult += i18n("<br /><i>Powered by Merriam-Webster's Collegiate® Dictionary</i>");
         }
         parseDone();
     }
@@ -290,15 +295,16 @@ Item {
         anchors { left: parent.left; right: parent.right }
 
         QIconItem {
+            id: topIcon;
             icon: QIcon('accessories-dictionary');
-            width: 26;
-            height: 26;
+            width: 28;
+            height: 28;
         }
 
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: i18n('<i>Enter word(s) here</i>');
-            width: parent.width - 26 - headrow.spacing;//22:QIconItem's width
+            width: parent.width - 28 - headrow.spacing;//22:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;

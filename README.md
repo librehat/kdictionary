@@ -29,7 +29,7 @@ KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons
 
 #### Baidu
 
-_Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic. _
+_Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
 
 1. Apply for a [Baidu](http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91/%E7%BF%BB%E8%AF%91API) API to use Baidu Translation service
 2. Fill in your API key in KDictionary Advanced Setting
@@ -39,9 +39,17 @@ _Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic. _
 
 _Note: iCiBa API key is provided by default, though you could still use your own API key._
 
-1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box.
+1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to iCiBa
+
+#### Merriam-Webster's Collegiate® Dictionary
+
+1. Apply for a [Merriam-Webster's Dictionary](http://www.dictionaryapi.com) API to use Merriam-Webster's Collegiate® Dictionary. You'll get API key once you finished your E-mail verification
+2. Fill in your API key in KDictionary Advanced Setting
+3. Change Dictionary Provider to Merriam-Webster's Collegiate® Dictionary
+
+_Notice: Merriam-Webster provide different kinds of API keys. What KDictionary supports is Merriam-Webster's Collegiate® Dictionary. Please don't make mistakes._
 
 #### More Providers?
 

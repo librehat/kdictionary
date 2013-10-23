@@ -171,6 +171,7 @@ Item {
      */
     property alias wrapMode: textEdit.wrapMode
 
+    property alias logoVisible: mwLogo.visible
     /**
      * The text displayed when the text property is empty.
      *
@@ -312,6 +313,15 @@ Item {
         // TODO: see what is the best policy for margins
         //imagePath: "widgets/lineedit"
         prefix: "base"
+    }
+    
+    Image {
+        id: mwLogo;
+        visible: false;//Unless user choose Merriam-Webster's Collegiate® Dictionary as provider
+        anchors { right:flickArea.right; bottom: flickArea.bottom;}
+        source: '../images/mw.png';
+        fillMode: Image.PreserveAspectFit;
+        opacity: 0.5;
     }
 
     Flickable {

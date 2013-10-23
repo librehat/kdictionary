@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 12:50+0800\n"
-"PO-Revision-Date: 2013-10-22 22:42+0800\n"
+"POT-Creation-Date: 2013-10-23 18:40+0800\n"
+"PO-Revision-Date: 2013-10-23 18:45+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
-"Language-Team: Chinese (simplified)<kde-i18n-doc@kde.org>\n"
+"Language-Team: British English <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:98
+#: ../ui/main.qml:119
 msgid "<i>Loading...</i>"
 msgstr "<i>正在载入...</i>"
 
-#: ../ui/main.qml:110
+#: ../ui/main.qml:132
 msgid "<i>No result.</i>"
 msgstr "<i>无结果</i>"
 
-#: ../ui/main.qml:138
+#: ../ui/main.qml:160
 msgid "<b>Phonetic:</b> "
 msgstr "<b>发音：</b>"
 
-#: ../ui/main.qml:142
+#: ../ui/main.qml:164
 msgid "<b>Definitions:</b>"
 msgstr "<b>释义：</b>"
 
-#: ../ui/main.qml:149
+#: ../ui/main.qml:171
 msgid "<b>Examples:</b>"
 msgstr "<b>示例：</b>"
 
-#: ../ui/main.qml:156
+#: ../ui/main.qml:178
 msgid "<b>Morphology:</b>"
 msgstr "<b>词形变化：</b>"
 
-#: ../ui/main.qml:163
+#: ../ui/main.qml:185
 msgid "<b>Synonym:</b>"
 msgstr "<b>近义词：</b>"
 
-#: ../ui/main.qml:170
+#: ../ui/main.qml:192
 msgid "<b>Phrases:</b>"
 msgstr "<b>词组/短语：</b>"
 
-#: ../ui/main.qml:178
+#: ../ui/main.qml:200
 msgid "<b>Web Definitions:</b>"
 msgstr "<b>网络释义：</b>"
 
-#: ../ui/main.qml:185
+#: ../ui/main.qml:207
 msgid "\">SOSO Baike</a>"
 msgstr "\">搜搜百科</a>"
 
-#: ../ui/main.qml:192
+#: ../ui/main.qml:214
 msgid ""
 "YOUDAO API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
@@ -65,23 +65,23 @@ msgstr ""
 "有道API key是空值。<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">需要帮助？</a>"
 
-#: ../ui/main.qml:200 ../ui/main.qml:243
+#: ../ui/main.qml:222 ../ui/main.qml:264 ../ui/main.qml:281
 msgid "<b>Phonetic:</b> <i>/"
 msgstr "<b>发音：</b> <i>/"
 
-#: ../ui/main.qml:201 ../ui/main.qml:244
+#: ../ui/main.qml:223 ../ui/main.qml:265 ../ui/main.qml:285
 msgid "<b>Definitions:</b><br />"
 msgstr "<b>释义：</b><br />"
 
-#: ../ui/main.qml:202
+#: ../ui/main.qml:224
 msgid "<b>Translation:</b><br />"
 msgstr "<b>翻译：</b><br />"
 
-#: ../ui/main.qml:203
+#: ../ui/main.qml:225
 msgid "<b>Web Definitions:</b><br />"
 msgstr "<b>网络释义：</b><br />"
 
-#: ../ui/main.qml:208
+#: ../ui/main.qml:230
 msgid ""
 "Baidu API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
@@ -89,15 +89,15 @@ msgstr ""
 "百度API key是空值。<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">需要帮助？</a>"
 
-#: ../ui/main.qml:228
+#: ../ui/main.qml:250
 msgid "<b>Baidu Translation</b>:<br /><br />Original: "
 msgstr "<b>百度翻译</b>：<br /><br />原文： "
 
-#: ../ui/main.qml:228
+#: ../ui/main.qml:250
 msgid "<br /><br />Translation: "
 msgstr "<br /><br />翻译： "
 
-#: ../ui/main.qml:234
+#: ../ui/main.qml:256
 msgid ""
 "iCiBa API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
@@ -105,11 +105,31 @@ msgstr ""
 "爱词霸API key是空值。<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">需要帮助？</a>"
 
-#: ../ui/main.qml:245
+#: ../ui/main.qml:266
 msgid "<b>Examples:</b><br />"
 msgstr "<b>示例：</b><br />"
 
-#: ../ui/main.qml:262
+#: ../ui/main.qml:271
+msgid ""
+"Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
+"href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
+msgstr ""
+"梅里亚姆-韦伯斯特大学词典® API key是空值。<br /><a href=\"https://github.com/librehat/"
+"kdictionary#advanced-usage\">需要帮助？</a>"
+
+#: ../ui/main.qml:280
+msgid "<b>Entry "
+msgstr "<b>词条"
+
+#: ../ui/main.qml:286
+msgid "<b>Origin:</b><br />"
+msgstr "<b>起源：</b><br />"
+
+#: ../ui/main.qml:287
+msgid "<br /><i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
+msgstr "<br /><i>由梅里亚姆-韦伯斯特大学词典® 驱动</i>"
+
+#: ../ui/main.qml:306
 msgid "<i>Enter word(s) here</i>"
 msgstr "<i>在此输入单词或句子</i>"
 
@@ -121,15 +141,15 @@ msgstr ""
 msgid "General"
 msgstr "常规"
 
-#: rc.js:9 rc.js:65
+#: rc.js:9 rc.js:71
 msgid "Clear once input text changed"
 msgstr "输入时清空之前的结果"
 
-#: rc.js:12 rc.js:39 rc.js:45
+#: rc.js:12 rc.js:42 rc.js:48
 msgid "Only available when you use QQ dictionary"
 msgstr "仅当您使用QQ词典时生效"
 
-#: rc.js:15 rc.js:69
+#: rc.js:15 rc.js:75
 msgid "Show phrases"
 msgstr "显示词组/短语"
 
@@ -150,10 +170,14 @@ msgid "iCiBa"
 msgstr "爱词霸"
 
 #: rc.js:30
+msgid "Merriam-Webster's Collegiate® Dictionary"
+msgstr "梅里亚姆-韦伯斯特大学词典®"
+
+#: rc.js:33
 msgid "Dictionary Provider"
 msgstr "词典提供商"
 
-#: rc.js:33
+#: rc.js:36
 msgid ""
 "<html><head/><body><p>Show description from web content.</p><p>Note: It's "
 "different from online dictionary providers.</p></body></html>"
@@ -161,64 +185,69 @@ msgstr ""
 "<html><head/><body><p>显示网络释义。</p><p>注意：网络释义并非指网络词典提供商"
 "</p></body></html>"
 
-#: rc.js:36 rc.js:71
+#: rc.js:39 rc.js:77
 msgid "Show description from web"
 msgstr "显示网络释义"
 
-#: rc.js:42
+#: rc.js:45
 msgid "Show SOSO Baike link"
 msgstr "显示搜搜百科词条链接"
 
-#: rc.js:48 rc.js:67
+#: rc.js:51 rc.js:73
 msgid "Show sentences"
 msgstr "显示例句"
 
-#: rc.js:51
+#: rc.js:54
 msgid "Advanced"
 msgstr "高级"
 
-#: rc.js:54
+#: rc.js:57
 msgid "YOUDAO API Key"
 msgstr "有道API Key"
 
-#: rc.js:57
+#: rc.js:60
 msgid "YOUDAO API Name"
 msgstr "有道API名称"
 
-#: rc.js:60
+#: rc.js:63
 msgid "Baidu API Key"
 msgstr "百度API Key"
 
-#: rc.js:63
+#: rc.js:66
 msgid "iCiBa API Key"
 msgstr "爱词霸API Key"
 
-#: rc.js:73
+#: rc.js:69 rc.js:89
+msgid "Merriam-Webster's Collegiate® Dictionary API key"
+msgstr "由梅里亚姆-韦伯斯特大学词典® API key"
+
+#: rc.js:79
 msgid "Show SOSO Baike"
 msgstr "显示搜搜百科词条"
 
-#: rc.js:75
+#: rc.js:81
 msgid "YouDao API key"
 msgstr "有道API Key"
 
-#: rc.js:77
+#: rc.js:83
 msgid "YouDao API name"
 msgstr "有道API名称"
 
-#: rc.js:79
+#: rc.js:85
 msgid "Baidu API key"
 msgstr "百度API Key"
 
-#: rc.js:81
+#: rc.js:87
 msgid "iCiBa API key"
 msgstr "爱词霸API Key"
 
-#: rc.js:82
+#: rc.js:90
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "您的名字"
 
-#: rc.js:83
+#: rc.js:91
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"
+

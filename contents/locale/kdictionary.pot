@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.4.0\n"
+"Project-Id-Version: 0.5.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 13:00+0800\n"
+"POT-Creation-Date: 2013-10-23 18:45+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,93 +17,111 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:98
+#: ../ui/main.qml:119
 msgid "<i>Loading...</i>"
 msgstr ""
 
-#: ../ui/main.qml:110
+#: ../ui/main.qml:132
 msgid "<i>No result.</i>"
 msgstr ""
 
-#: ../ui/main.qml:138
+#: ../ui/main.qml:160
 msgid "<b>Phonetic:</b> "
 msgstr ""
 
-#: ../ui/main.qml:142
+#: ../ui/main.qml:164
 msgid "<b>Definitions:</b>"
 msgstr ""
 
-#: ../ui/main.qml:149
+#: ../ui/main.qml:171
 msgid "<b>Examples:</b>"
 msgstr ""
 
-#: ../ui/main.qml:156
+#: ../ui/main.qml:178
 msgid "<b>Morphology:</b>"
 msgstr ""
 
-#: ../ui/main.qml:163
+#: ../ui/main.qml:185
 msgid "<b>Synonym:</b>"
 msgstr ""
 
-#: ../ui/main.qml:170
+#: ../ui/main.qml:192
 msgid "<b>Phrases:</b>"
 msgstr ""
 
-#: ../ui/main.qml:178
+#: ../ui/main.qml:200
 msgid "<b>Web Definitions:</b>"
 msgstr ""
 
-#: ../ui/main.qml:185
+#: ../ui/main.qml:207
 msgid "\">SOSO Baike</a>"
 msgstr ""
 
-#: ../ui/main.qml:192
+#: ../ui/main.qml:214
 msgid ""
 "YOUDAO API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
 msgstr ""
 
-#: ../ui/main.qml:200 ../ui/main.qml:243
+#: ../ui/main.qml:222 ../ui/main.qml:264 ../ui/main.qml:281
 msgid "<b>Phonetic:</b> <i>/"
 msgstr ""
 
-#: ../ui/main.qml:201 ../ui/main.qml:244
+#: ../ui/main.qml:223 ../ui/main.qml:265 ../ui/main.qml:285
 msgid "<b>Definitions:</b><br />"
 msgstr ""
 
-#: ../ui/main.qml:202
+#: ../ui/main.qml:224
 msgid "<b>Translation:</b><br />"
 msgstr ""
 
-#: ../ui/main.qml:203
+#: ../ui/main.qml:225
 msgid "<b>Web Definitions:</b><br />"
 msgstr ""
 
-#: ../ui/main.qml:208
+#: ../ui/main.qml:230
 msgid ""
 "Baidu API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
 msgstr ""
 
-#: ../ui/main.qml:228
+#: ../ui/main.qml:250
 msgid "<b>Baidu Translation</b>:<br /><br />Original: "
 msgstr ""
 
-#: ../ui/main.qml:228
+#: ../ui/main.qml:250
 msgid "<br /><br />Translation: "
 msgstr ""
 
-#: ../ui/main.qml:234
+#: ../ui/main.qml:256
 msgid ""
 "iCiBa API key is empty.<br /><a href=\"https://github.com/librehat/"
 "kdictionary#advanced-usage\">Help?</a>"
 msgstr ""
 
-#: ../ui/main.qml:245
+#: ../ui/main.qml:266
 msgid "<b>Examples:</b><br />"
 msgstr ""
 
-#: ../ui/main.qml:262
+#: ../ui/main.qml:271
+msgid ""
+"Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a "
+"href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>"
+msgstr ""
+
+#: ../ui/main.qml:280
+msgid "<b>Entry "
+msgstr ""
+
+#: ../ui/main.qml:286
+msgid "<b>Origin:</b><br />"
+msgstr ""
+
+#: ../ui/main.qml:287
+msgid "<br /><i>Powered by Merriam-Webster's Collegiate® Dictionary</i>"
+msgstr ""
+
+#: ../ui/main.qml:306
 msgid "<i>Enter word(s) here</i>"
 msgstr ""
 
@@ -115,15 +133,15 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: rc.js:9 rc.js:65
+#: rc.js:9 rc.js:71
 msgid "Clear once input text changed"
 msgstr ""
 
-#: rc.js:12 rc.js:39 rc.js:45
+#: rc.js:12 rc.js:42 rc.js:48
 msgid "Only available when you use QQ dictionary"
 msgstr ""
 
-#: rc.js:15 rc.js:69
+#: rc.js:15 rc.js:75
 msgid "Show phrases"
 msgstr ""
 
@@ -144,73 +162,81 @@ msgid "iCiBa"
 msgstr ""
 
 #: rc.js:30
-msgid "Dictionary Provider"
+msgid "Merriam-Webster's Collegiate® Dictionary"
 msgstr ""
 
 #: rc.js:33
+msgid "Dictionary Provider"
+msgstr ""
+
+#: rc.js:36
 msgid ""
 "<html><head/><body><p>Show description from web content.</p><p>Note: It's "
 "different from online dictionary providers.</p></body></html>"
 msgstr ""
 
-#: rc.js:36 rc.js:71
+#: rc.js:39 rc.js:77
 msgid "Show description from web"
 msgstr ""
 
-#: rc.js:42
+#: rc.js:45
 msgid "Show SOSO Baike link"
 msgstr ""
 
-#: rc.js:48 rc.js:67
+#: rc.js:51 rc.js:73
 msgid "Show sentences"
 msgstr ""
 
-#: rc.js:51
+#: rc.js:54
 msgid "Advanced"
 msgstr ""
 
-#: rc.js:54
+#: rc.js:57
 msgid "YOUDAO API Key"
 msgstr ""
 
-#: rc.js:57
+#: rc.js:60
 msgid "YOUDAO API Name"
 msgstr ""
 
-#: rc.js:60
+#: rc.js:63
 msgid "Baidu API Key"
 msgstr ""
 
-#: rc.js:63
+#: rc.js:66
 msgid "iCiBa API Key"
 msgstr ""
 
-#: rc.js:73
-msgid "Show SOSO Baike"
-msgstr ""
-
-#: rc.js:75
-msgid "YouDao API key"
-msgstr ""
-
-#: rc.js:77
-msgid "YouDao API name"
+#: rc.js:69 rc.js:89
+msgid "Merriam-Webster's Collegiate® Dictionary API key"
 msgstr ""
 
 #: rc.js:79
-msgid "Baidu API key"
+msgid "Show SOSO Baike"
 msgstr ""
 
 #: rc.js:81
+msgid "YouDao API key"
+msgstr ""
+
+#: rc.js:83
+msgid "YouDao API name"
+msgstr ""
+
+#: rc.js:85
+msgid "Baidu API key"
+msgstr ""
+
+#: rc.js:87
 msgid "iCiBa API key"
 msgstr ""
 
-#: rc.js:82
+#: rc.js:90
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:83
+#: rc.js:91
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
