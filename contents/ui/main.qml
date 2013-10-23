@@ -284,8 +284,9 @@ Item {
             desresult += '<br />';
             if (mwcdModel.get(i).def != '')  desresult+= i18n('<b>Definitions:</b><br />') + mwcdModel.get(i).def + '<br />';
             if (mwcdModel.get(i).origin != '')  desresult += i18n('<b>Origin:</b><br />') + mwcdModel.get(i).origin + '<br />';
-            desresult += i18n("<br /><i>Powered by Merriam-Webster's Collegiate® Dictionary</i>");
+            desresult += '<br />';
         }
+        desresult += i18n("<i>Powered by Merriam-Webster's Collegiate® Dictionary</i>");
         parseDone();
     }
 
