@@ -5,6 +5,8 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 
 ### Installation
 
+**Require KDE >= 4.11** (KDE 4.10 may works but I didn't test it)
+
 1. Download KDictionary plasmoid from [releases](https://github.com/librehat/kdictionary/releases)
 2. Run `plasmapkg -i kdictionary-<ver>.plasmoid` to install it
 3. Run `kbuildsycoca4` to refresh desktop cache
@@ -13,7 +15,7 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 ##### NOTICE
 
 - If you've installed an early version of KDictionary, you need to run `plasmapkg -u kdictionary-<ver>.plasmoid` instead to **upgrade** KDictionary.
-- Any upgrade will lose previous settings data.
+- Any upgrade may lose previous settings data.
 
 ### Advanced Usage
 
@@ -26,6 +28,8 @@ KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons
 3. Change Dictionary Provider to YOUDAO
 
 #### Baidu
+
+_Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic. _
 
 1. Apply for a [Baidu](http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91/%E7%BF%BB%E8%AF%91API) API to use Baidu Translation service
 2. Fill in your API key in KDictionary Advanced Setting
