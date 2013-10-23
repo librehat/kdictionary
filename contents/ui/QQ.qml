@@ -39,63 +39,70 @@ Item {
     
     function parseQQ(resText) {
         var jsonObj = JSON.parse(resText);//Generate JSON Object
-        
+
         if (typeof jsonObj == 'object') {
             var localdes = jsonObj.local;
             var netdes = jsonObj.netdes;
             var baike = jsonObj.baike;
-            
+
             if (typeof localdes == 'object' && typeof localdes[0] == 'object') {
                 if (typeof localdes[0].pho == 'object') {
-                    main.desresult += i18n('<b>Phonetic:</b> ') + '<i>/' + localdes[0].pho[0] + '/</i><br /><br />';
+                    main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + localdes[0].pho[0] + '/</i><br /><br />';
                 }
-                
+
                 if (typeof localdes[0].des == 'object' && typeof localdes[0].des[0] == 'object') {
-                    main.desresult += i18n('<b>Definitions:</b>') + '<br />';
-                    for (var i=0;;i++){//get all of them
+                    main.desresult += '<b>' + i18n('Definitions:') + '</b><br />';
+                    for (var i=0;;i++){
                         if (typeof localdes[0].des[i] != 'object') {main.desresult += '<br />';break;}
-                        main.desresult += localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';//don't bold it, make it the same style as YOUDAO
-                    }}
+                        main.desresult += localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';
+                    }
                     
-                    if (showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
-                        main.desresult += i18n('<b>Examples:</b>') + '<br />';
-                        for (var i=0;;i++){
-                            if (typeof localdes[0].sen[0].s[i] != 'object') {main.desresult += '<br />';break;}
-                            main.desresult += localdes[0].sen[0].s[i].es + '<br />' + localdes[0].sen[0].s[i].cs + '<br />';
-                        }}
-                        
-                        if (typeof localdes[0].mor == 'object' && typeof localdes[0].mor[0] == 'object') {
-                            main.desresult += i18n('<b>Morphology:</b>') + '<br />';
-                            for (var i=0;;i++){//get all of them
-                                if (typeof localdes[0].mor[i] != 'object') {main.desresult += '<br />';break;}
-                                main.desresult += localdes[0].mor[i].c + ' ' + localdes[0].mor[i].m + '<br />';
-                            }}
+                }
+
+                if (showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
+                    main.desresult += '<b>' + i18n('Examples:') + '</b><br />';
+                    for (var i=0;;i++){
+                        if (typeof localdes[0].sen[0].s[i] != 'object') {main.desresult += '<br />';break;}
+                        main.desresult += localdes[0].sen[0].s[i].es + '<br />' + localdes[0].sen[0].s[i].cs + '<br />';
+                    }
+                }
+
+                if (typeof localdes[0].mor == 'object' && typeof localdes[0].mor[0] == 'object') {
+                    main.desresult += '<b>' + i18n('Morphology:') + '</b><br />';
+                    for (var i=0;;i++){
+                        if (typeof localdes[0].mor[i] != 'object') {main.desresult += '<br />';break;}
+                        main.desresult += localdes[0].mor[i].c + ' ' + localdes[0].mor[i].m + '<br />';
+                        }
+                }
                             
-                            if (typeof localdes[0].syn == 'object' && typeof localdes[0].syn[0] == 'object') {
-                                main.desresult += i18n('<b>Synonym:</b>') + '<br />';
-                                for (var i=0;;i++){//get all of them
-                                    if (typeof localdes[0].syn[i] != 'object') {main.desresult += '<br />';break;}
-                                    main.desresult += localdes[0].syn[i].p + ' ' + localdes[0].syn[i].c + '<br />';
-                                }}
+                if (typeof localdes[0].syn == 'object' && typeof localdes[0].syn[0] == 'object') {
+                    main.desresult += '<b>' + i18n('Synonym:') + '</b><br />';
+                    for (var i=0;;i++){
+                        if (typeof localdes[0].syn[i] != 'object') {main.desresult += '<br />';break;}
+                        main.desresult += localdes[0].syn[i].p + ' ' + localdes[0].syn[i].c + '<br />';
+                    }
+                }
                                 
-                                if (showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
-                                    main.desresult += i18n('<b>Phrases:</b>') + '<br />';
-                                    for (var i=0;;i++){//get all of them
-                                        if (typeof localdes[0].ph[i] != 'object') {main.desresult += '<br />';break;}
-                                        main.desresult += localdes[0].ph[i].phs + '<br />' + localdes[0].ph[i].phd + '<br />';
-                                    }}
+                if (showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
+                    main.desresult += '<b>' + i18n('Phrases:') + '</b><br />';
+                    for (var i=0;;i++){
+                        if (typeof localdes[0].ph[i] != 'object') {main.desresult += '<br />';break;}
+                        main.desresult += localdes[0].ph[i].phs + '<br />' + localdes[0].ph[i].phd + '<br />';
+                    }
+                }
             }
-            
+
             if (showWebdict &&  typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
-                main.desresult += i18n('<b>Web Definitions:</b>') + '<br />';
+                main.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />';
                 for (var i=0 ; i<5 ; i++) {//5 is enough for netdes for it's often ridiculous
                     if (typeof netdes[0].des[i] != 'object') {main.desresult += '<br />';break;}
                     main.desresult += netdes[0].des[i].d + ' ; ';
-                }}
-                
-                if (showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
-                    main.desresult += '<br /><a href="' + baike[0].link + i18n('">SOSO Baike</a>');
                 }
+            }
+
+            if (showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
+                main.desresult += '<br /><a href="' + baike[0].link + '">' + i18n('SOSO Baike') + '</a>';
+            }
         }
         main.parseDone();
     }

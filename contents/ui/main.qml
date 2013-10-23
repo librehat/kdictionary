@@ -83,7 +83,7 @@ Item {
 
     function enterTriggered() {
         if (inputEntry.text != '') {
-            displayText.text = i18n('<i>Loading...</i>');//it's not instantaneous!
+            displayText.text = '<i>' + i18n('Loading...') + '</i>';//it's not instantaneous!
             switch(dictProvider) {
                 case 0: { qq.queryQQ(inputEntry.text); break; }
                 case 1: { yd.queryYD(inputEntry.text); break; }
@@ -91,12 +91,13 @@ Item {
                 case 3: { cb.queryCB(inputEntry.text); break; }
                 case 4: { mwcd.queryMWCD(inputEntry.text); break; }
                 default: { console.log('No such provider. Use QQDict instead.');    queryQQ(inputEntry.text); }
-        }}
+            }
+        }
     }
 
-    function parseDone() {
+    function parseDone() {//use this function to change displayText.text, never change displayText.text directly!
         if (desresult != '')    displayText.text = desresult;
-        else    displayText.text = i18n('<i>No result.</i>');
+        else    displayText.text = '<i>' + i18n('No result.') + '</i>';
         desresult = '';
     }
 
@@ -121,7 +122,7 @@ Item {
 
         PlasmaComponents.TextField {
             id: inputEntry;
-            placeholderText: i18n('<i>Enter word(s) here</i>');
+            placeholderText: '<i>' + i18n('Enter word(s) here') + '</i>';
             width: parent.width - 28 - headrow.spacing;//22:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;

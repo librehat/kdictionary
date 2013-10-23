@@ -24,7 +24,7 @@ Item {
     id: baiduAPI;
 
     function queryBD(words) {
-        if(baidu_key == '')  displayText.text = i18n('Baidu API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
+        if(baidu_key == '')  displayText.text = i18n('Baidu API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#baidu">' + i18n('Help?') + '</a>';
             else {
                 var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=' + baidu_key + '&q=' + words + '&from=auto&to=auto';
                 var resText;
@@ -44,7 +44,7 @@ Item {
         var jsonObj = JSON.parse(resText);
         
         if (typeof jsonObj == 'object' && typeof jsonObj.trans_result == 'object') {
-            main.desresult += i18n('<b>Baidu Translation</b>:<br /><br />Original: ') + jsonObj.trans_result[0].src + i18n('<br /><br />Translation: ') + jsonObj.trans_result[0].dst;
+            main.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
         }
         main.parseDone();
     }

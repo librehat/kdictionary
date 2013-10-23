@@ -41,7 +41,7 @@ Item {
     }
 
     function queryYD(words) {
-        if(youdao_key == '' || youdao_name == '')  displayText.text = i18n('YOUDAO API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
+        if(youdao_key == '' || youdao_name == '')  displayText.text = i18n('YOUDAO API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#youdao">' + i18n('Help?') + '</a>';
             else {
                 var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
                 ydModel.source = ydurl;
@@ -49,10 +49,10 @@ Item {
     }
 
     function parseYD() {
-        if (ydModel.get(0).phonetic != '')  main.desresult += i18n('<b>Phonetic:</b> <i>/') + ydModel.get(0).phonetic + '/</i><br /><br />'
-            if (ydModel.get(0).explains != '')  main.desresult += i18n('<b>Definitions:</b><br />') + ydModel.get(0).explains + '<br /><br />';
-            if (ydModel.get(0).translation != '')  main.desresult += i18n('<b>Translation:</b><br />') + ydModel.get(0).translation + '<br /><br />';
-            if (showWebdict && ydModel.get(0).webkey != '')  main.desresult += i18n('<b>Web Definitions:</b><br />') + ydModel.get(0).webkey + ': ' + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + ': ' + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + ': ' + ydModel.get(0).web3;
+        if (ydModel.get(0).phonetic != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'
+            if (ydModel.get(0).explains != '')  main.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
+            if (ydModel.get(0).translation != '')  main.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';
+            if (showWebdict && ydModel.get(0).webkey != '')  main.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />' + ydModel.get(0).webkey + i18n(': ') + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + i18n(': ') + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + i18n(': ') + ydModel.get(0).web3;
             main.parseDone();
     }
 }

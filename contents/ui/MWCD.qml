@@ -38,7 +38,7 @@ Item {
     }
 
     function queryMWCD(words) {
-        if (mwcd_key == '') displayText.text = i18n("Merriam-Webster's Collegiate® Dictionary API key is empty.<br /><a href='https://github.com/librehat/kdictionary#advanced-usage'>Help?</a>");
+        if (mwcd_key == '') displayText.text = i18n("Merriam-Webster's Collegiate® Dictionary API key is empty.") + '<br /><a href="https://github.com/librehat/kdictionary#merriam-websters-collegiate-dictionary">' + i18n('Help?') + '</a>';
             else {
                 var mwcdurl = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=' + mwcd_key;
                 mwcdModel.source = mwcdurl;
@@ -47,16 +47,16 @@ Item {
 
     function parseMWCD() {
         for(var i=0; i<mwcdModel.count; i++) {
-            main.desresult += i18n('<b>Entry ') + (i+1) + ':</b><br />';
-            if (mwcdModel.get(i).pho != '')  main.desresult += i18n('<b>Phonetic:</b> <i>/') + mwcdModel.get(i).pho + '/</i><br />';
+            main.desresult += '<b>' + i18n('Entry') + ' ' + (i+1) + i18n(':') +'</b><br />';
+            if (mwcdModel.get(i).pho != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + mwcdModel.get(i).pho + '/</i><br />';
             if (mwcdModel.get(i).fl != '')  main.desresult += mwcdModel.get(i).fl;
             if (mwcdModel.get(i).lb != '')  main.desresult += ', ' + mwcdModel.get(i).lb;
             main.desresult += '<br />';
-            if (mwcdModel.get(i).def != '')  main.desresult+= i18n('<b>Definitions:</b><br />') + mwcdModel.get(i).def + '<br />';
-            if (mwcdModel.get(i).origin != '')  main.desresult += i18n('<b>Origin:</b><br />') + mwcdModel.get(i).origin + '<br />';
+            if (mwcdModel.get(i).def != '')  main.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwcdModel.get(i).def + '<br />';
+            if (mwcdModel.get(i).origin != '')  main.desresult += '<b>' + i18n('Origin:') + '</b><br />' + mwcdModel.get(i).origin + '<br />';
             main.desresult += '<br />';
         }
-        main.desresult += i18n("<i>Powered by Merriam-Webster's Collegiate® Dictionary</i>");
+        main.desresult += '<i>' + i18n("Powered by Merriam-Webster's Collegiate® Dictionary") + '</i>';
         main.parseDone();
     }
 }

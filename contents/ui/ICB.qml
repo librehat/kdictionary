@@ -46,7 +46,7 @@ Item {
     }
     
     function queryCB(words) {
-        if (iciba_key == '')  displayText.text = i18n('iCiBa API key is empty.<br /><a href="https://github.com/librehat/kdictionary#advanced-usage">Help?</a>');
+        if (iciba_key == '')  displayText.text = i18n('iCiBa API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#iciba">' + i18n('Help?') + '</a>';
             else {
                 var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + iciba_key;
                 cbModel.source = cburl;
@@ -54,9 +54,9 @@ Item {
     }
 
     function parseCB() {
-        if (cbModel.get(0).pho1 != '')  main.desresult += i18n('<b>Phonetic:</b> <i>/') + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
-            if (cbModel.get(0).ex1 != '')  main.desresult += i18n('<b>Definitions:</b><br />') + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
-            if (showSentences && cbModel.get(0).seno1 != '')  main.desresult += i18n('<b>Examples:</b><br />') + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
+        if (cbModel.get(0).pho1 != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
+            if (cbModel.get(0).ex1 != '')  main.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
+            if (showSentences && cbModel.get(0).seno1 != '')  main.desresult += '<b>' + i18n('Examples:') + '</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
             main.parseDone();
     }
 }
