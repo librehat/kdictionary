@@ -26,14 +26,14 @@ Item {
     XmlListModel {//Merriam-Webster's Collegiate® Dictionary XML Model
         id: mwcdModel;
         query: '/entry_list/entry';
-        
+
         XmlRole { name: 'pho'; query: 'pr/string()' }
         XmlRole { name: 'fl'; query: 'fl/string()' }
         XmlRole { name: 'lb'; query: 'lb/string()' }
         XmlRole { name: 'origin'; query: 'et/string()' }//Origin
         //XmlRole { name: 'date'; query: 'def/date/string()' }//why keep date under def?
         XmlRole { name: 'def'; query: 'def/string()' }
-        
+
         onCountChanged: parseMWCD();
     }
 
@@ -47,16 +47,16 @@ Item {
 
     function parseMWCD() {
         for(var i=0; i<mwcdModel.count; i++) {
-            main.desresult += '<b>' + i18n('Entry') + ' ' + (i+1) + i18n(':') +'</b><br />';
-            if (mwcdModel.get(i).pho != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + mwcdModel.get(i).pho + '/</i><br />';
-            if (mwcdModel.get(i).fl != '')  main.desresult += mwcdModel.get(i).fl;
-            if (mwcdModel.get(i).lb != '')  main.desresult += ', ' + mwcdModel.get(i).lb;
-            main.desresult += '<br />';
-            if (mwcdModel.get(i).def != '')  main.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwcdModel.get(i).def + '<br />';
-            if (mwcdModel.get(i).origin != '')  main.desresult += '<b>' + i18n('Origin:') + '</b><br />' + mwcdModel.get(i).origin + '<br />';
-            main.desresult += '<br />';
+            mainWindow.desresult += '<b>' + i18n('Entry') + ' ' + (i+1) + i18n(':') +'</b><br />';
+            if (mwcdModel.get(i).pho != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + mwcdModel.get(i).pho + '/</i><br />';
+            if (mwcdModel.get(i).fl != '')  mainWindow.desresult += mwcdModel.get(i).fl;
+            if (mwcdModel.get(i).lb != '')  mainWindow.desresult += ', ' + mwcdModel.get(i).lb;
+            mainWindow.desresult += '<br />';
+            if (mwcdModel.get(i).def != '')  mainWindow.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwcdModel.get(i).def + '<br />';
+            if (mwcdModel.get(i).origin != '')  mainWindow.desresult += '<b>' + i18n('Origin:') + '</b><br />' + mwcdModel.get(i).origin + '<br />';
+            mainWindow.desresult += '<br />';
         }
-        main.desresult += '<i>' + i18n("Powered by Merriam-Webster's Collegiate® Dictionary") + '</i>';
-        main.parseDone();
+        mainWindow.desresult += '<i>' + i18n("Powered by Merriam-Webster's Collegiate® Dictionary") + '</i>';
+        mainWindow.parseDone();
     }
 }

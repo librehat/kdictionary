@@ -26,7 +26,7 @@ Item {
     XmlListModel {
         id: ydModel;
         query: '/youdao-fanyi';
-        
+
         XmlRole { name: 'translation'; query: 'translation/string()' }//YOUDAO Translation
         XmlRole { name: 'phonetic'; query: 'basic/phonetic/string()' }//YOUDAO Basic Dictionary
         XmlRole { name: 'explains'; query: 'basic/explains/string()' }
@@ -36,7 +36,7 @@ Item {
         XmlRole { name: 'web2'; query: 'web/explain[2]/value/string()' }
         XmlRole { name: 'webkey3' ; query: 'web/explain[3]/key/string()' }
         XmlRole { name: 'web3'; query: 'web/explain[3]/value/string()' }
-        
+
         onCountChanged: parseYD();
     }
 
@@ -49,10 +49,10 @@ Item {
     }
 
     function parseYD() {
-        if (ydModel.get(0).phonetic != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'
-            if (ydModel.get(0).explains != '')  main.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
-            if (ydModel.get(0).translation != '')  main.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';
-            if (showWebdict && ydModel.get(0).webkey != '')  main.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />' + ydModel.get(0).webkey + i18n(': ') + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + i18n(': ') + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + i18n(': ') + ydModel.get(0).web3;
-            main.parseDone();
+        if (ydModel.get(0).phonetic != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'
+            if (ydModel.get(0).explains != '')  mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
+            if (ydModel.get(0).translation != '')  mainWindow.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';
+            if (showWebdict && ydModel.get(0).webkey != '')  mainWindow.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />' + ydModel.get(0).webkey + i18n(': ') + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + i18n(': ') + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + i18n(': ') + ydModel.get(0).web3;
+            mainWindow.parseDone();
     }
 }

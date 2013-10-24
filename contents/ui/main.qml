@@ -26,7 +26,7 @@ import org.kde.plasma.extras 0.1 as PlasmaExtras
 import org.kde.locale 0.1
 
 Item {
-    id: main;
+    id: mainWindow;
     property int minimumWidth: 200;
     property int minimumHeight: 100;
     property string desresult;//description result
@@ -135,7 +135,7 @@ Item {
 
     DictArea {//Modified from PlasmaComponents.TextArea
         id: displayText;
-        anchors { top: headrow.bottom; left: main.left; right: main.right; bottom: main.bottom; topMargin: 2 }
+        anchors { top: headrow.bottom; left: mainWindow.left; right: mainWindow.right; bottom: mainWindow.bottom; topMargin: 2 }
         contentMaxHeight: text.height + 1;//QML says text.height type is 'undefined', so let it plus 1
         contentMaxWidth: width - font.pointSize * 2.2;
         readOnly: true;

@@ -42,10 +42,10 @@ Item {
 
     function parseBD(resText) {
         var jsonObj = JSON.parse(resText);
-        
+
         if (typeof jsonObj == 'object' && typeof jsonObj.trans_result == 'object') {
-            main.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
+            mainWindow.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
         }
-        main.parseDone();
+        mainWindow.parseDone();
     }
 }

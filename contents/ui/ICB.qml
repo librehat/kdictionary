@@ -22,11 +22,11 @@ import QtQuick 1.1
 
 Item {
     id: iCiBaAPI;
-    
+
     XmlListModel {//Kingsoft PowerWord iCiBa
         id: cbModel;
         query: '/dict';
-        
+
         XmlRole { name: 'pho1'; query: 'ps[1]/string()' }
         XmlRole { name: 'pho2'; query: 'ps[2]/string()' }
         XmlRole { name: 'ex1'; query: 'acceptation[1]/string()' }
@@ -41,10 +41,10 @@ Item {
         XmlRole { name: 'sent1'; query: 'sent[1]/trans/string()' }
         XmlRole { name: 'sent2'; query: 'sent[2]/trans/string()' }
         XmlRole { name: 'sent3'; query: 'sent[3]/trans/string()' }
-        
+
         onCountChanged: parseCB();
     }
-    
+
     function queryCB(words) {
         if (iciba_key == '')  displayText.text = i18n('iCiBa API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#iciba">' + i18n('Help?') + '</a>';
             else {
@@ -54,9 +54,9 @@ Item {
     }
 
     function parseCB() {
-        if (cbModel.get(0).pho1 != '')  main.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
-            if (cbModel.get(0).ex1 != '')  main.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
-            if (showSentences && cbModel.get(0).seno1 != '')  main.desresult += '<b>' + i18n('Examples:') + '</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
-            main.parseDone();
+        if (cbModel.get(0).pho1 != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
+            if (cbModel.get(0).ex1 != '')  mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
+            if (showSentences && cbModel.get(0).seno1 != '')  mainWindow.desresult += '<b>' + i18n('Examples:') + '</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
+            mainWindow.parseDone();
     }
 }
