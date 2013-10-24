@@ -27,8 +27,8 @@ import org.kde.locale 0.1
 
 Item {
     id: mainWindow;
-    property int minimumWidth: 200;
-    property int minimumHeight: 100;
+    property int minimumWidth: 250;
+    property int minimumHeight: 300;
     property string desresult;//description result
     property bool autoClear;
     property bool showSentences;
@@ -144,6 +144,7 @@ Item {
     }
 
     Component.onCompleted: {
+        plasmoid.popupIcon = 'accessories-dictionary';
         plasmoid.addEventListener('configChanged', configChanged);
     }
 }
