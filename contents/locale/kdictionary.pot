@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-24 12:21+0800\n"
+"POT-Creation-Date: 2013-10-24 12:58+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,16 +53,20 @@ msgstr ""
 msgid "Examples:"
 msgstr ""
 
-#: ../ui/main.qml:86
+#: ../ui/main.qml:87
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:100
+#: ../ui/main.qml:101
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:125
+#: ../ui/main.qml:126
 msgid "Enter word(s) here"
+msgstr ""
+
+#: ../ui/main.qml:152
+msgid "KDictionary"
 msgstr ""
 
 #: ../ui/MWCD.qml:41
@@ -125,7 +129,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: rc.js:9 rc.js:71
+#: rc.js:9 rc.js:79
 msgid "Clear once input text changed"
 msgstr ""
 
@@ -133,7 +137,7 @@ msgstr ""
 msgid "Only available when you use QQ dictionary"
 msgstr ""
 
-#: rc.js:15 rc.js:75
+#: rc.js:15 rc.js:83
 msgid "Show phrases"
 msgstr ""
 
@@ -167,7 +171,7 @@ msgid ""
 "different from online dictionary providers.</p></body></html>"
 msgstr ""
 
-#: rc.js:39 rc.js:77
+#: rc.js:39 rc.js:85
 msgid "Show description from web"
 msgstr ""
 
@@ -175,60 +179,72 @@ msgstr ""
 msgid "Show SOSO Baike link"
 msgstr ""
 
-#: rc.js:51 rc.js:73
+#: rc.js:51 rc.js:81
 msgid "Show sentences"
 msgstr ""
 
 #: rc.js:54
-msgid "Advanced"
+msgid "Only available when used as a popupapplet"
 msgstr ""
 
 #: rc.js:57
-msgid "YOUDAO API Key"
+msgid "Auto hide popup when other windows gain focus"
 msgstr ""
 
 #: rc.js:60
-msgid "YOUDAO API Name"
+msgid "Advanced"
 msgstr ""
 
 #: rc.js:63
-msgid "Baidu API Key"
+msgid "YOUDAO API Key"
 msgstr ""
 
 #: rc.js:66
+msgid "YOUDAO API Name"
+msgstr ""
+
+#: rc.js:69
+msgid "Baidu API Key"
+msgstr ""
+
+#: rc.js:72
 msgid "iCiBa API Key"
 msgstr ""
 
-#: rc.js:69 rc.js:89
+#: rc.js:75 rc.js:97
 msgid "Merriam-Webster's Collegiate® Dictionary API key"
 msgstr ""
 
-#: rc.js:79
-msgid "Show SOSO Baike"
-msgstr ""
-
-#: rc.js:81
-msgid "YouDao API key"
-msgstr ""
-
-#: rc.js:83
-msgid "YouDao API name"
-msgstr ""
-
-#: rc.js:85
-msgid "Baidu API key"
+#: rc.js:77
+msgid "Auto hide popup dialog"
 msgstr ""
 
 #: rc.js:87
+msgid "Show SOSO Baike"
+msgstr ""
+
+#: rc.js:89
+msgid "YouDao API key"
+msgstr ""
+
+#: rc.js:91
+msgid "YouDao API name"
+msgstr ""
+
+#: rc.js:93
+msgid "Baidu API key"
+msgstr ""
+
+#: rc.js:95
 msgid "iCiBa API key"
 msgstr ""
 
-#: rc.js:90
+#: rc.js:98
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:91
+#: rc.js:99
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""

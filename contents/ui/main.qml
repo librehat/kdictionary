@@ -27,10 +27,11 @@ import org.kde.locale 0.1
 
 Item {
     id: mainWindow;
-    property int minimumWidth: 250;
-    property int minimumHeight: 300;
+    property int minimumWidth: 200;
+    property int minimumHeight: 200;
     property string desresult;//description result
     property bool autoClear;
+    property bool autoHide;
     property bool showSentences;
     property bool showPhrases;
     property bool showWebdict;
@@ -74,11 +75,20 @@ Item {
         baidu_key = plasmoid.readConfig('baidu_key');
         iciba_key = plasmoid.readConfig('iciba_key');
         mwcd_key = plasmoid.readConfig('mwcd_key');
+        autoHide = plasmoid.readConfig('autoHide');
+        plasmoid.passivePopup =  !autoHide;
 
         if (dictProvider == 4)
             displayText.logoVisible = true;
         else
             displayText.logoVisible = false;
+    }
+
+    function popupEventSlot(popped) {//reset content when collapsed
+        if (!popped && autoClear) {
+            displayText.text = '';
+            inputEntry.text = '';
+        }
     }
 
     function enterTriggered() {
@@ -144,7 +154,14 @@ Item {
     }
 
     Component.onCompleted: {
+        configChanged();
         plasmoid.popupIcon = 'accessories-dictionary';
-        plasmoid.addEventListener('configChanged', configChanged);
+        var toolTip = new Object;
+        toolTip['image'] = 'accessories-dictionary';
+        toolTip['mainText'] = i18n('KDictionary');
+        plasmoid.popupIconToolTip = toolTip;
+        plasmoid.aspectRatioMode = IgnoreAspectRatio;
+        plasmoid.addEventListener('configChanged', mainWindow.configChanged);
+        plasmoid.popupEvent.connect(popupEventSlot);
     }
 }

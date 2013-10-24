@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-23 21:51+0800\n"
-"PO-Revision-Date: 2013-10-24 12:21+0800\n"
+"POT-Creation-Date: 2013-10-24 12:56+0800\n"
+"PO-Revision-Date: 2013-10-24 12:58+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
@@ -53,17 +53,21 @@ msgstr "释义："
 msgid "Examples:"
 msgstr "示例："
 
-#: ../ui/main.qml:86
+#: ../ui/main.qml:87
 msgid "Loading..."
 msgstr "正在载入..."
 
-#: ../ui/main.qml:100
+#: ../ui/main.qml:101
 msgid "No result."
 msgstr "无结果"
 
-#: ../ui/main.qml:125
+#: ../ui/main.qml:126
 msgid "Enter word(s) here"
 msgstr "在此输入单词或句子"
+
+#: ../ui/main.qml:152
+msgid "KDictionary"
+msgstr "K词典"
 
 #: ../ui/MWCD.qml:41
 msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
@@ -125,7 +129,7 @@ msgstr ""
 msgid "General"
 msgstr "常规"
 
-#: rc.js:9 rc.js:71
+#: rc.js:9 rc.js:79
 msgid "Clear once input text changed"
 msgstr "输入时清空之前的结果"
 
@@ -133,7 +137,7 @@ msgstr "输入时清空之前的结果"
 msgid "Only available when you use QQ dictionary"
 msgstr "仅当您使用QQ词典时生效"
 
-#: rc.js:15 rc.js:75
+#: rc.js:15 rc.js:83
 msgid "Show phrases"
 msgstr "显示词组/短语"
 
@@ -169,7 +173,7 @@ msgstr ""
 "<html><head/><body><p>显示网络释义。</p><p>注意：网络释义并非指网络词典提供商"
 "</p></body></html>"
 
-#: rc.js:39 rc.js:77
+#: rc.js:39 rc.js:85
 msgid "Show description from web"
 msgstr "显示网络释义"
 
@@ -177,60 +181,72 @@ msgstr "显示网络释义"
 msgid "Show SOSO Baike link"
 msgstr "显示搜搜百科词条链接"
 
-#: rc.js:51 rc.js:73
+#: rc.js:51 rc.js:81
 msgid "Show sentences"
 msgstr "显示例句"
 
 #: rc.js:54
+msgid "Only available when used as a popupapplet"
+msgstr "仅在面板上作为弹出部件使用时生效"
+
+#: rc.js:57
+msgid "Auto hide popup when other windows gain focus"
+msgstr "当其它窗口获取焦点时自动隐藏弹出框"
+
+#: rc.js:60
 msgid "Advanced"
 msgstr "高级"
 
-#: rc.js:57
+#: rc.js:63
 msgid "YOUDAO API Key"
 msgstr "有道API Key"
 
-#: rc.js:60
+#: rc.js:66
 msgid "YOUDAO API Name"
 msgstr "有道API名称"
 
-#: rc.js:63
+#: rc.js:69
 msgid "Baidu API Key"
 msgstr "百度API Key"
 
-#: rc.js:66
+#: rc.js:72
 msgid "iCiBa API Key"
 msgstr "爱词霸API Key"
 
-#: rc.js:69 rc.js:89
+#: rc.js:75 rc.js:97
 msgid "Merriam-Webster's Collegiate® Dictionary API key"
 msgstr "由梅里亚姆-韦伯斯特大学词典® API key"
 
-#: rc.js:79
+#: rc.js:77
+msgid "Auto hide popup dialog"
+msgstr "自动隐藏弹出窗口"
+
+#: rc.js:87
 msgid "Show SOSO Baike"
 msgstr "显示搜搜百科词条"
 
-#: rc.js:81
+#: rc.js:89
 msgid "YouDao API key"
 msgstr "有道API Key"
 
-#: rc.js:83
+#: rc.js:91
 msgid "YouDao API name"
 msgstr "有道API名称"
 
-#: rc.js:85
+#: rc.js:93
 msgid "Baidu API key"
 msgstr "百度API Key"
 
-#: rc.js:87
+#: rc.js:95
 msgid "iCiBa API key"
 msgstr "爱词霸API Key"
 
-#: rc.js:90
+#: rc.js:98
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "您的名字"
 
-#: rc.js:91
+#: rc.js:99
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"

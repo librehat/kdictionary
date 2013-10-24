@@ -5,6 +5,10 @@
      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
     <kcfgfile name=""/>
     <group name="kdict">
+        <entry name="autoHide" type="Bool">
+            <label>Auto hide popup dialog</label>
+            <default>true</default>
+        </entry>
         <entry name="autoClear" type="Bool">
             <label>Clear once input text changed</label>
             <default>true</default>

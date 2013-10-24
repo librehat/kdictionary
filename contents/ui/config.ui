@@ -40,7 +40,7 @@
       <rect>
        <x>25</x>
        <y>10</y>
-       <width>230</width>
+       <width>321</width>
        <height>20</height>
       </rect>
      </property>
@@ -55,8 +55,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>40</y>
-       <width>230</width>
+       <y>70</y>
+       <width>321</width>
        <height>20</height>
       </rect>
      </property>
@@ -74,7 +74,7 @@
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>170</y>
+       <y>190</y>
        <width>221</width>
        <height>23</height>
       </rect>
@@ -109,7 +109,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>170</y>
+       <y>190</y>
        <width>110</width>
        <height>20</height>
       </rect>
@@ -122,8 +122,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>100</y>
-       <width>230</width>
+       <y>130</y>
+       <width>321</width>
        <height>20</height>
       </rect>
      </property>
@@ -141,8 +141,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>130</y>
-       <width>230</width>
+       <y>160</y>
+       <width>321</width>
        <height>20</height>
       </rect>
      </property>
@@ -163,8 +163,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>70</y>
-       <width>230</width>
+       <y>100</y>
+       <width>311</width>
        <height>20</height>
       </rect>
      </property>
@@ -173,6 +173,25 @@
      </property>
      <property name="text">
       <string>Show sentences</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="kcfg_autoHide">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>40</y>
+       <width>331</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Only available when used as a popupapplet</string>
+     </property>
+     <property name="text">
+      <string>Auto hide popup when other windows gain focus</string>
      </property>
      <property name="checked">
       <bool>true</bool>
