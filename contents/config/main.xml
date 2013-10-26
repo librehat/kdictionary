@@ -9,6 +9,10 @@
             <label>Auto hide popup dialog</label>
             <default>true</default>
         </entry>
+        <entry name="clearCollapsed" type="Bool">
+            <label>Clear once popup collapsed</label>
+            <default>true</default>
+        </entry>
         <entry name="autoClear" type="Bool">
             <label>Clear once input text changed</label>
             <default>true</default>

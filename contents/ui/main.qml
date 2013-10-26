@@ -30,6 +30,7 @@ Item {
     property int minimumWidth: 200;
     property int minimumHeight: 200;
     property string desresult;//description result
+    property bool clearCollapsed;
     property bool autoClear;
     property bool autoHide;
     property bool showSentences;
@@ -65,6 +66,7 @@ Item {
 
     function configChanged() {
         autoClear = plasmoid.readConfig('autoClear');
+        clearCollapsed = plasmoid.readConfig('clearCollapsed');
         showSentences = plasmoid.readConfig('showSentences');
         showPhrases = plasmoid.readConfig('showPhrases');
         showWebdict = plasmoid.readConfig('showWebdict');
@@ -84,8 +86,8 @@ Item {
             displayText.logoVisible = false;
     }
 
-    function popupEventSlot(popped) {//reset content when collapsed
-        if (!popped && autoClear) {
+    function popupEventSlot(popped) {
+        if (!popped && clearCollapsed) {//reset content when collapsed
             displayText.text = '';
             inputEntry.text = '';
         }
