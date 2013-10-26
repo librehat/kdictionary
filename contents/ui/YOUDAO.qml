@@ -27,6 +27,7 @@ Item {
         id: ydModel;
         query: '/youdao-fanyi';
 
+        XmlRole { name: 'errcode'; query: 'errorCode/string()' }
         XmlRole { name: 'translation'; query: 'translation/string()' }//YOUDAO Translation
         XmlRole { name: 'phonetic'; query: 'basic/phonetic/string()' }//YOUDAO Basic Dictionary
         XmlRole { name: 'explains'; query: 'basic/explains/string()' }
@@ -41,7 +42,7 @@ Item {
     }
 
     function queryYD(words) {
-        if(youdao_key == '' || youdao_name == '')  displayText.text = i18n('YOUDAO API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#youdao">' + i18n('Help?') + '</a>';
+        if (youdao_key == '' || youdao_name == '')  displayText.text = i18n('YOUDAO API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#youdao">' + i18n('Help?') + '</a>';
             else {
                 var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
                 ydModel.source = ydurl;
@@ -49,6 +50,18 @@ Item {
     }
 
     function parseYD() {
+        if (ydModel.get(0).errcode != '0') {
+            switch (ydModel.get(0).errcode) {
+                case '20': { mainWindow.desresult += i18n('The input text is too long.'); break; }
+                case '30': { mainWindow.desresult += i18n('Cannot translate it correctly.'); break; }
+                case '40': { mainWindow.desresult += i18n('Unsupported language.'); break; }
+                case '50': { mainWindow.desresult += i18n('Invalid key.'); break; }
+                default: mainWindow.desresult += i18n('Unknown error.');
+            }
+            mainWindow.parseDone();
+            return;//stop it
+        }
+        
         if (ydModel.get(0).phonetic != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'
             if (ydModel.get(0).explains != '')  mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
             if (ydModel.get(0).translation != '')  mainWindow.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';

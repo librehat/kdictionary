@@ -43,8 +43,17 @@ Item {
     function parseBD(resText) {
         var jsonObj = JSON.parse(resText);
 
-        if (typeof jsonObj == 'object' && typeof jsonObj.trans_result == 'object') {
-            mainWindow.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
+        if (typeof jsonObj == 'object') {
+            if (typeof jsonObj.trans_result == 'object')// if something went wrong it won't be an object.
+                mainWindow.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
+            else {
+                switch (jsonObj.error_code) {
+                    case '52001':  { mainWindow.desresult += i18n('Timeout.'); break; }
+                    case '52002':  { mainWindow.desresult += i18n('Remote server error.'); break; }
+                    case '52003':  { mainWindow.desresult += i18n('Invalid key.'); break; }
+                    default: { mainWindow.desresult += i18n('Unknown error.'); break; }
+                }
+            }
         }
         mainWindow.parseDone();
     }
