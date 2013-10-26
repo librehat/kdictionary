@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-24 12:58+0800\n"
+"POT-Creation-Date: 2013-10-26 14:41+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,31 +21,47 @@ msgstr ""
 msgid "Baidu API key is empty."
 msgstr ""
 
-#: ../ui/BAIDU.qml:27 ../ui/ICB.qml:49 ../ui/MWCD.qml:41 ../ui/YOUDAO.qml:44
+#: ../ui/BAIDU.qml:27 ../ui/ICB.qml:49 ../ui/MWCD.qml:41 ../ui/YOUDAO.qml:45
 msgid "Help?"
 msgstr ""
 
-#: ../ui/BAIDU.qml:47
+#: ../ui/BAIDU.qml:48
 msgid "Baidu Translation:"
 msgstr ""
 
-#: ../ui/BAIDU.qml:47
+#: ../ui/BAIDU.qml:48
 msgid "Original: "
 msgstr ""
 
-#: ../ui/BAIDU.qml:47
+#: ../ui/BAIDU.qml:48
 msgid "Translation: "
+msgstr ""
+
+#: ../ui/BAIDU.qml:51
+msgid "Timeout."
+msgstr ""
+
+#: ../ui/BAIDU.qml:52
+msgid "Remote server error."
+msgstr ""
+
+#: ../ui/BAIDU.qml:53 ../ui/YOUDAO.qml:58
+msgid "Invalid key."
+msgstr ""
+
+#: ../ui/BAIDU.qml:54 ../ui/YOUDAO.qml:59
+msgid "Unknown error."
 msgstr ""
 
 #: ../ui/ICB.qml:49
 msgid "iCiBa API key is empty."
 msgstr ""
 
-#: ../ui/ICB.qml:57 ../ui/MWCD.qml:51 ../ui/QQ.qml:50 ../ui/YOUDAO.qml:52
+#: ../ui/ICB.qml:57 ../ui/MWCD.qml:51 ../ui/QQ.qml:50 ../ui/YOUDAO.qml:65
 msgid "Phonetic:"
 msgstr ""
 
-#: ../ui/ICB.qml:58 ../ui/MWCD.qml:55 ../ui/QQ.qml:54 ../ui/YOUDAO.qml:53
+#: ../ui/ICB.qml:58 ../ui/MWCD.qml:55 ../ui/QQ.qml:54 ../ui/YOUDAO.qml:66
 msgid "Definitions:"
 msgstr ""
 
@@ -53,19 +69,19 @@ msgstr ""
 msgid "Examples:"
 msgstr ""
 
-#: ../ui/main.qml:87
+#: ../ui/main.qml:98
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:101
+#: ../ui/main.qml:112
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:126
+#: ../ui/main.qml:137
 msgid "Enter word(s) here"
 msgstr ""
 
-#: ../ui/main.qml:152
+#: ../ui/main.qml:163
 msgid "KDictionary"
 msgstr ""
 
@@ -101,7 +117,7 @@ msgstr ""
 msgid "Phrases:"
 msgstr ""
 
-#: ../ui/QQ.qml:96 ../ui/YOUDAO.qml:55
+#: ../ui/QQ.qml:96 ../ui/YOUDAO.qml:68
 msgid "Web Definitions:"
 msgstr ""
 
@@ -109,15 +125,27 @@ msgstr ""
 msgid "SOSO Baike"
 msgstr ""
 
-#: ../ui/YOUDAO.qml:44
+#: ../ui/YOUDAO.qml:45
 msgid "YOUDAO API key is empty."
 msgstr ""
 
-#: ../ui/YOUDAO.qml:54
+#: ../ui/YOUDAO.qml:55
+msgid "The input text is too long."
+msgstr ""
+
+#: ../ui/YOUDAO.qml:56
+msgid "Cannot translate it correctly."
+msgstr ""
+
+#: ../ui/YOUDAO.qml:57
+msgid "Unsupported language."
+msgstr ""
+
+#: ../ui/YOUDAO.qml:67
 msgid "Translation:"
 msgstr ""
 
-#: ../ui/YOUDAO.qml:55
+#: ../ui/YOUDAO.qml:68
 msgid ": "
 msgstr ""
 
@@ -129,15 +157,15 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: rc.js:9 rc.js:79
-msgid "Clear once input text changed"
+#: rc.js:9
+msgid "Clear display text once input text changed"
 msgstr ""
 
 #: rc.js:12 rc.js:42 rc.js:48
 msgid "Only available when you use QQ dictionary"
 msgstr ""
 
-#: rc.js:15 rc.js:83
+#: rc.js:15 rc.js:91
 msgid "Show phrases"
 msgstr ""
 
@@ -171,7 +199,7 @@ msgid ""
 "different from online dictionary providers.</p></body></html>"
 msgstr ""
 
-#: rc.js:39 rc.js:85
+#: rc.js:39 rc.js:93
 msgid "Show description from web"
 msgstr ""
 
@@ -179,11 +207,11 @@ msgstr ""
 msgid "Show SOSO Baike link"
 msgstr ""
 
-#: rc.js:51 rc.js:81
+#: rc.js:51 rc.js:89
 msgid "Show sentences"
 msgstr ""
 
-#: rc.js:54
+#: rc.js:54 rc.js:60
 msgid "Only available when used as a popupapplet"
 msgstr ""
 
@@ -191,60 +219,72 @@ msgstr ""
 msgid "Auto hide popup when other windows gain focus"
 msgstr ""
 
-#: rc.js:60
-msgid "Advanced"
-msgstr ""
-
 #: rc.js:63
-msgid "YOUDAO API Key"
+msgid "Clear input entry and display text when popup collapsed"
 msgstr ""
 
 #: rc.js:66
-msgid "YOUDAO API Name"
+msgid "Advanced"
 msgstr ""
 
 #: rc.js:69
-msgid "Baidu API Key"
+msgid "YOUDAO API Key"
 msgstr ""
 
 #: rc.js:72
+msgid "YOUDAO API Name"
+msgstr ""
+
+#: rc.js:75
+msgid "Baidu API Key"
+msgstr ""
+
+#: rc.js:78
 msgid "iCiBa API Key"
 msgstr ""
 
-#: rc.js:75 rc.js:97
+#: rc.js:81 rc.js:105
 msgid "Merriam-Webster's Collegiate® Dictionary API key"
 msgstr ""
 
-#: rc.js:77
+#: rc.js:83
 msgid "Auto hide popup dialog"
 msgstr ""
 
+#: rc.js:85
+msgid "Clear once popup collapsed"
+msgstr ""
+
 #: rc.js:87
-msgid "Show SOSO Baike"
-msgstr ""
-
-#: rc.js:89
-msgid "YouDao API key"
-msgstr ""
-
-#: rc.js:91
-msgid "YouDao API name"
-msgstr ""
-
-#: rc.js:93
-msgid "Baidu API key"
+msgid "Clear once input text changed"
 msgstr ""
 
 #: rc.js:95
+msgid "Show SOSO Baike"
+msgstr ""
+
+#: rc.js:97
+msgid "YouDao API key"
+msgstr ""
+
+#: rc.js:99
+msgid "YouDao API name"
+msgstr ""
+
+#: rc.js:101
+msgid "Baidu API key"
+msgstr ""
+
+#: rc.js:103
 msgid "iCiBa API key"
 msgstr ""
 
-#: rc.js:98
+#: rc.js:106
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:99
+#: rc.js:107
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
