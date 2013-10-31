@@ -52,7 +52,7 @@ Item {
             if (mwcdModel.get(i).fl != '')  mainWindow.desresult += mwcdModel.get(i).fl;
             if (mwcdModel.get(i).lb != '')  mainWindow.desresult += ', ' + mwcdModel.get(i).lb;
             mainWindow.desresult += '<br />';
-            if (mwcdModel.get(i).def != '')  mainWindow.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwcdModel.get(i).def + '<br />';
+            if (mwcdModel.get(i).def != '')  mainWindow.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwcdModel.get(i).def.replace(/\s\d\s+:?/g, "<br />✒ ").replace(/\b(a|b|c)\s+:/g, " ✽ ") + '<br />';
             if (mwcdModel.get(i).origin != '')  mainWindow.desresult += '<b>' + i18n('Origin:') + '</b><br />' + mwcdModel.get(i).origin + '<br />';
             mainWindow.desresult += '<br />';
         }

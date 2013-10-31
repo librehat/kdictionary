@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>412</width>
+    <width>542</width>
     <height>312</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>412</width>
+    <width>542</width>
     <height>312</height>
    </size>
   </property>
@@ -24,7 +24,7 @@
     <rect>
      <x>6</x>
      <y>6</y>
-     <width>400</width>
+     <width>530</width>
      <height>300</height>
     </rect>
    </property>
@@ -55,8 +55,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>100</y>
-       <width>321</width>
+       <y>115</y>
+       <width>251</width>
        <height>20</height>
       </rect>
      </property>
@@ -73,9 +73,9 @@
     <widget class="QComboBox" name="kcfg_dictProvider">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>150</x>
        <y>220</y>
-       <width>241</width>
+       <width>350</width>
        <height>23</height>
       </rect>
      </property>
@@ -104,6 +104,11 @@
        <string>Merriam-Webster's Collegiate® Dictionary</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Merriam-Webster's Spanish-English Dictionary</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_dictProvider">
      <property name="geometry">
@@ -122,8 +127,8 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>160</y>
-       <width>321</width>
+       <y>150</y>
+       <width>251</width>
        <height>20</height>
       </rect>
      </property>
@@ -140,9 +145,9 @@
     <widget class="QCheckBox" name="kcfg_showBaike">
      <property name="geometry">
       <rect>
-       <x>25</x>
-       <y>190</y>
-       <width>321</width>
+       <x>290</x>
+       <y>150</y>
+       <width>260</width>
        <height>20</height>
       </rect>
      </property>
@@ -162,9 +167,9 @@
     <widget class="QCheckBox" name="kcfg_showSentences">
      <property name="geometry">
       <rect>
-       <x>25</x>
-       <y>130</y>
-       <width>311</width>
+       <x>290</x>
+       <y>115</y>
+       <width>260</width>
        <height>20</height>
       </rect>
      </property>
@@ -182,7 +187,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>40</y>
+       <y>45</y>
        <width>331</width>
        <height>20</height>
       </rect>
@@ -201,7 +206,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>70</y>
+       <y>80</y>
        <width>351</width>
        <height>20</height>
       </rect>
@@ -224,9 +229,9 @@
     <widget class="QLineEdit" name="kcfg_youdao_key">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>230</x>
        <y>20</y>
-       <width>231</width>
+       <width>280</width>
        <height>20</height>
       </rect>
      </property>
@@ -240,9 +245,9 @@
     <widget class="QLineEdit" name="kcfg_youdao_name">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>230</x>
        <y>55</y>
-       <width>231</width>
+       <width>280</width>
        <height>20</height>
       </rect>
      </property>
@@ -256,9 +261,9 @@
     <widget class="QLineEdit" name="kcfg_baidu_key">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>230</x>
        <y>90</y>
-       <width>231</width>
+       <width>280</width>
        <height>20</height>
       </rect>
      </property>
@@ -272,9 +277,9 @@
     <widget class="QLineEdit" name="kcfg_iciba_key">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>230</x>
        <y>125</y>
-       <width>231</width>
+       <width>280</width>
        <height>20</height>
       </rect>
      </property>
@@ -290,12 +295,15 @@
       <rect>
        <x>16</x>
        <y>20</y>
-       <width>120</width>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>YOUDAO API Key</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_ydname">
@@ -303,12 +311,15 @@
       <rect>
        <x>16</x>
        <y>55</y>
-       <width>120</width>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>YOUDAO API Name</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_baidu">
@@ -316,12 +327,15 @@
       <rect>
        <x>16</x>
        <y>90</y>
-       <width>120</width>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>Baidu API Key</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
     </widget>
     <widget class="QLabel" name="label_iciba">
@@ -329,25 +343,31 @@
       <rect>
        <x>16</x>
        <y>125</y>
-       <width>120</width>
+       <width>191</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
       <string>iCiBa API Key</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
     </widget>
     <widget class="QLabel" name="label_mwcd">
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>155</y>
-       <width>111</width>
+       <y>160</y>
+       <width>191</width>
        <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string>Merriam-Webster's Collegiate® Dictionary API key</string>
+      <string>Merriam-Webster's Collegiate® Dictionary API Key</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -356,9 +376,44 @@
     <widget class="QLineEdit" name="kcfg_mwcd_key">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>165</y>
-       <width>231</width>
+       <x>230</x>
+       <y>170</y>
+       <width>280</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>100</number>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_mwsd">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>210</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Merriam-Webster's Spanish-English Dictionary API Key</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="kcfg_mwsd_key">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>220</y>
+       <width>280</width>
        <height>20</height>
       </rect>
      </property>

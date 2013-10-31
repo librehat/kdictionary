@@ -39,20 +39,21 @@
                 <choice name="YOUDAO"/>
                 <choice name="Baidu"/>
                 <choice name="iCiBa"/>
-                <choice name="Merriam-Webster"/>
+                <choice name="Merriam-Webster-Collegiate"/>
+                <choice name="Merriam-Webster-Spanish"/>
             </choices>
         </entry>
         <entry name="youdao_key" type="string">
             <label>YouDao API key</label>
-            <default></default>
+            <default>813148993</default>
         </entry>
         <entry name="youdao_name" type="string">
             <label>YouDao API name</label>
-            <default></default>
+            <default>KDictionary</default>
         </entry>
         <entry name="baidu_key" type="string">
             <label>Baidu API key</label>
-            <default></default>
+            <default>TmPWj1UVYRQMdKGe3U7UIrvG</default>
         </entry>
         <entry name="iciba_key" type="string">
             <label>iCiBa API key</label>
@@ -60,6 +61,10 @@
         </entry>
         <entry name="mwcd_key" type="string">
             <label>Merriam-Webster's Collegiate® Dictionary API key</label>
+            <default></default>
+        </entry>
+        <entry name="mwsd_key" type="string">
+            <label>Merriam-Webster's Spanish-English Dictionary API key</label>
             <default></default>
         </entry>
     </group>

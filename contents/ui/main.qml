@@ -24,6 +24,7 @@ import org.kde.qtextracomponents 0.1
 import org.kde.plasma.components 0.1 as PlasmaComponents
 import org.kde.plasma.extras 0.1 as PlasmaExtras
 import org.kde.locale 0.1
+import "api" as API
 
 Item {
     id: mainWindow;
@@ -42,26 +43,31 @@ Item {
     property string youdao_name;
     property string baidu_key;
     property string iciba_key;
-    property string mwcd_key;//Merriam-Webster's Collegiate® Dictionary
+    property string mwcd_key;
+    property string mwsd_key;
 
-    QQ {
+    API.QQ {//Tencent QQ Dict
         id: qq;
     }
 
-    ICB {
+    API.ICB {//Kingsoft PowerWord iCiBa
         id: cb;
     }
 
-    YOUDAO {
+    API.YOUDAO {//NetEase YOUDAO Dictionary/Translation
         id: yd;
     }
 
-    BAIDU {
+    API.BAIDU {//BAIDU Translation
         id: bd;
     }
 
-    MWCD {
+    API.MWCD {//Merriam-Webster's Collegiate® Dictionary
         id: mwcd;
+    }
+
+    API.MWSD {//Merriam-Webster's Spanish-English Dictionary
+        id: mwsd;
     }
 
     function configChanged() {
@@ -77,10 +83,11 @@ Item {
         baidu_key = plasmoid.readConfig('baidu_key');
         iciba_key = plasmoid.readConfig('iciba_key');
         mwcd_key = plasmoid.readConfig('mwcd_key');
+        mwsd_key = plasmoid.readConfig('mwsd_key');
         autoHide = plasmoid.readConfig('autoHide');
         plasmoid.passivePopup =  !autoHide;
 
-        if (dictProvider == 4)
+        if (dictProvider == 4 || dictProvider == 5)
             displayText.logoVisible = true;
         else
             displayText.logoVisible = false;
@@ -102,7 +109,8 @@ Item {
                 case 2: { bd.queryBD(inputEntry.text); break; }
                 case 3: { cb.queryCB(inputEntry.text); break; }
                 case 4: { mwcd.queryMWCD(inputEntry.text); break; }
-                default: { console.log('No such provider. Use QQDict instead.');    queryQQ(inputEntry.text); }
+                case 5: { mwsd.query(inputEntry.text); break; }
+                default: { console.log('No such provider. Use QQDict instead.');    qq.queryQQ(inputEntry.text); }
             }
         }
     }

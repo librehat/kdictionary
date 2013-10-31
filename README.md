@@ -15,7 +15,6 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 ##### NOTICE
 
 - If you've installed an early version of KDictionary, you need to run `plasmapkg -u kdictionary-<ver>.plasmoid` instead to **upgrade** KDictionary.
-- Any upgrade may lose previous settings data.
 
 ### Advanced Usage
 
@@ -23,11 +22,15 @@ KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons
 
 #### YOUDAO
 
+_Note: YOUDAO API key is built-in, but you're encouraged to use your own API key._
+
 1. Apply for a [YOUDAO](http://fanyi.youdao.com/openapi?path=data-mode) API to use YOUDAO Dictionary
 2. Fill in your API key and name in KDictionary Advanced Setting
 3. Change Dictionary Provider to YOUDAO
 
 #### Baidu
+
+_Note: Baidu API key is built-in, but you're encouraged to use your own API key._
 
 _Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
 
@@ -37,7 +40,7 @@ _Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
 
 #### iCiBa
 
-_Note: iCiBa API key is provided by default, though you could still use your own API key._
+_Note: iCiBa API key is built-in, though you could still use your own API key._
 
 1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box
 2. Fill in your API key in KDictionary Advanced Setting
@@ -45,11 +48,17 @@ _Note: iCiBa API key is provided by default, though you could still use your own
 
 #### Merriam-Webster's Collegiate® Dictionary
 
-1. Apply for a [Merriam-Webster's Dictionary](http://www.dictionaryapi.com) API to use Merriam-Webster's Collegiate® Dictionary. You'll get API key once you finished your E-mail verification
+1. Apply for a [Merriam-Webster's Dictionary](http://www.dictionaryapi.com) API to use Merriam-Webster's **Collegiate®** Dictionary. You'll get API key once you finished your E-mail verification
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to Merriam-Webster's Collegiate® Dictionary
 
 _Notice: Merriam-Webster provide different kinds of API keys. What KDictionary supports is Merriam-Webster's Collegiate® Dictionary. Please don't make mistakes._
+
+#### Merriam-Webster's Spanish Dictionary
+
+1. Apply for a [Merriam-Webster's Dictionary](http://www.dictionaryapi.com) API to use Merriam-Webster's **Spanish** Dictionary. You'll get API key once you finished your E-mail verification
+2. Fill in your API key in KDictionary Advanced Setting
+3. Change Dictionary Provider to Merriam-Webster's Spanish Dictionary
 
 #### More Providers?
 

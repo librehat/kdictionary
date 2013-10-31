@@ -54,9 +54,12 @@ Item {
     }
 
     function parseCB() {
-        if (cbModel.get(0).pho1 != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
-            if (cbModel.get(0).ex1 != '')  mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
-            if (showSentences && cbModel.get(0).seno1 != '')  mainWindow.desresult += '<b>' + i18n('Examples:') + '</b><br />' + cbModel.get(0).seno1 + '<br />' + cbModel.get(0).sent1 + '<br />' + cbModel.get(0).seno2 + '<br />' + cbModel.get(0).sent2 + '<br />' + cbModel.get(0).seno3 + '<br />' + cbModel.get(0).sent3;
+        if (cbModel.get(0).pho1 != '')
+            mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + cbModel.get(0).pho1 + '/   /' + cbModel.get(0).pho2 + '/</i><br /><br />'
+        if (cbModel.get(0).ex1 != '')
+            mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + cbModel.get(0).pos1 + ' ' + cbModel.get(0).ex1 + '<br />' + cbModel.get(0).pos2 + ' ' + cbModel.get(0).ex2 + '<br />' + cbModel.get(0).pos3 + ' ' + cbModel.get(0).ex3 + '<br /><br />';
+        if (mainWindow.showSentences && cbModel.get(0).seno1 != '')
+            mainWindow.desresult += '<b>' + i18n('Examples:') + '</b><br />✒ ' + cbModel.get(0).seno1 + '<br />✑ ' + cbModel.get(0).sent1 + '<br />✒ ' + cbModel.get(0).seno2 + '<br />✑ ' + cbModel.get(0).sent2 + '<br />✒ ' + cbModel.get(0).seno3 + '<br />✑ ' + cbModel.get(0).sent3;
             mainWindow.parseDone();
     }
 }

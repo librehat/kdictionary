@@ -54,7 +54,7 @@ Item {
                     mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].des[i] != 'object') {mainWindow.desresult += '<br />';break;}
-                        mainWindow.desresult += localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';
+                        mainWindow.desresult += '✒  ' + localdes[0].des[i].p + ' ' + localdes[0].des[i].d + '<br />';
                     }
 
                 }
@@ -63,7 +63,7 @@ Item {
                     mainWindow.desresult += '<b>' + i18n('Examples:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].sen[0].s[i] != 'object') {mainWindow.desresult += '<br />';break;}
-                        mainWindow.desresult += localdes[0].sen[0].s[i].es + '<br />' + localdes[0].sen[0].s[i].cs + '<br />';
+                        mainWindow.desresult += '✒ ' + localdes[0].sen[0].s[i].es + '<br />✑ ' + localdes[0].sen[0].s[i].cs + '<br />';
                     }
                 }
 
@@ -87,7 +87,7 @@ Item {
                     mainWindow.desresult += '<b>' + i18n('Phrases:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].ph[i] != 'object') {mainWindow.desresult += '<br />';break;}
-                        mainWindow.desresult += localdes[0].ph[i].phs + '<br />' + localdes[0].ph[i].phd + '<br />';
+                        mainWindow.desresult += '✒ ' + localdes[0].ph[i].phs + '<br />✑ ' + localdes[0].ph[i].phd + '<br />';
                     }
                 }
             }
@@ -96,7 +96,7 @@ Item {
                 mainWindow.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />';
                 for (var i=0 ; i<5 ; i++) {//5 is enough for netdes for it's often ridiculous
                     if (typeof netdes[0].des[i] != 'object') {mainWindow.desresult += '<br />';break;}
-                    mainWindow.desresult += netdes[0].des[i].d + ' ; ';
+                    mainWindow.desresult += ' ✽ ' + netdes[0].des[i].d;
                 }
             }
 
