@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 19:23+0800\n"
-"PO-Revision-Date: 2013-10-31 19:25+0800\n"
+"POT-Creation-Date: 2013-11-01 13:34+0800\n"
+"PO-Revision-Date: 2013-11-01 13:35+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
@@ -33,6 +33,133 @@ msgstr "在此输入单词或句子"
 msgid "KDictionary"
 msgstr "K词典"
 
+#: ../ui/api/BAIDU.qml:27
+msgid "Baidu API key is empty."
+msgstr "百度API Key 是空值。"
+
+#: ../ui/api/BAIDU.qml:27 ../ui/api/ICB.qml:49 ../ui/api/MWCD.qml:41
+#: ../ui/api/MWSD.qml:38 ../ui/api/YOUDAO.qml:45
+msgid "Help?"
+msgstr "需要帮助？"
+
+#: ../ui/api/BAIDU.qml:48
+msgid "Baidu Translation:"
+msgstr "百度翻译："
+
+#: ../ui/api/BAIDU.qml:48
+msgid "Original: "
+msgstr "原文："
+
+#: ../ui/api/BAIDU.qml:48
+msgid "Translation: "
+msgstr "翻译："
+
+#: ../ui/api/BAIDU.qml:51
+msgid "Timeout."
+msgstr "超时。"
+
+#: ../ui/api/BAIDU.qml:52
+msgid "Remote server error."
+msgstr "远程服务器错误。"
+
+#: ../ui/api/BAIDU.qml:53 ../ui/api/YOUDAO.qml:58
+msgid "Invalid key."
+msgstr "无效的key。"
+
+#: ../ui/api/BAIDU.qml:54 ../ui/api/YOUDAO.qml:59
+msgid "Unknown error."
+msgstr "未知错误。"
+
+#: ../ui/api/ICB.qml:49
+msgid "iCiBa API key is empty."
+msgstr "爱词霸API Key是空值"
+
+#: ../ui/api/ICB.qml:58 ../ui/api/MWCD.qml:51 ../ui/api/MWSD.qml:49
+#: ../ui/api/QQ.qml:50 ../ui/api/YOUDAO.qml:66
+msgid "Phonetic:"
+msgstr "发音："
+
+#: ../ui/api/ICB.qml:60 ../ui/api/MWCD.qml:55 ../ui/api/MWSD.qml:55
+#: ../ui/api/QQ.qml:54 ../ui/api/YOUDAO.qml:68
+msgid "Definitions:"
+msgstr "释义："
+
+#: ../ui/api/ICB.qml:62 ../ui/api/QQ.qml:63
+msgid "Examples:"
+msgstr "示例："
+
+#: ../ui/api/MWCD.qml:41
+msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
+msgstr "梅里亚姆-韦伯斯特大学词典® API key是空值"
+
+#: ../ui/api/MWCD.qml:50 ../ui/api/MWSD.qml:47
+msgid "Entry"
+msgstr "词条"
+
+#: ../ui/api/MWCD.qml:50 ../ui/api/MWSD.qml:47
+msgid ":"
+msgstr "："
+
+#: ../ui/api/MWCD.qml:56
+msgid "Origin:"
+msgstr "起源："
+
+#: ../ui/api/MWCD.qml:59
+msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
+msgstr "由梅里亚姆-韦伯斯特大学词典® 驱动"
+
+#: ../ui/api/MWSD.qml:38
+msgid "Merriam-Webster's Spanish-English Dictionary API key is empty."
+msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API key是空值。"
+
+#: ../ui/api/MWSD.qml:58
+msgid "Powered by Merriam-Webster's Spanish-English Dictionary"
+msgstr "由梅里亚姆-韦伯斯特西班牙语-英语词典驱动"
+
+#: ../ui/api/QQ.qml:71
+msgid "Morphology:"
+msgstr "词形变化："
+
+#: ../ui/api/QQ.qml:79
+msgid "Synonym:"
+msgstr "近义词："
+
+#: ../ui/api/QQ.qml:87
+msgid "Phrases:"
+msgstr "词组/短语："
+
+#: ../ui/api/QQ.qml:96 ../ui/api/YOUDAO.qml:72
+msgid "Web Definitions:"
+msgstr "网络释义："
+
+#: ../ui/api/QQ.qml:104
+msgid "SOSO Baike"
+msgstr "搜搜百科"
+
+#: ../ui/api/YOUDAO.qml:45
+msgid "YOUDAO API key is empty."
+msgstr "有道API Key是空值"
+
+#: ../ui/api/YOUDAO.qml:55
+msgid "The input text is too long."
+msgstr "输入的文字太长了。"
+
+#: ../ui/api/YOUDAO.qml:56
+msgid "Cannot translate it correctly."
+msgstr "无法获取有效翻译。"
+
+#: ../ui/api/YOUDAO.qml:57
+msgid "Unsupported language."
+msgstr "不支持的语言。"
+
+#: ../ui/api/YOUDAO.qml:70
+msgid "Translation:"
+msgstr "翻译："
+
+#: ../ui/api/YOUDAO.qml:72
+msgid ": "
+msgstr "： "
+
 #: rc.js:3
 msgid "Form"
 msgstr "表单"
@@ -49,7 +176,7 @@ msgstr "输入时清空之前的显示内容"
 msgid "Only available when you use QQ dictionary"
 msgstr "仅当您使用QQ词典时生效"
 
-#: rc.js:15 rc.js:97
+#: rc.js:15
 msgid "Show phrases"
 msgstr "显示词组/短语"
 
@@ -89,7 +216,7 @@ msgstr ""
 "<html><head/><body><p>显示网络释义。</p><p>注意：网络释义并非指网络词典提供商"
 "</p></body></html>"
 
-#: rc.js:42 rc.js:99
+#: rc.js:42
 msgid "Show description from web"
 msgstr "显示网络释义"
 
@@ -97,7 +224,7 @@ msgstr "显示网络释义"
 msgid "Show SOSO Baike link"
 msgstr "显示搜搜百科词条链接"
 
-#: rc.js:54 rc.js:95
+#: rc.js:54
 msgid "Show sentences"
 msgstr "显示例句"
 
@@ -141,142 +268,42 @@ msgstr "梅里亚姆-韦伯斯特大学词典® API Key"
 msgid "Merriam-Webster's Spanish-English Dictionary API Key"
 msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API Key"
 
-#: rc.js:89
-msgid "Auto hide popup dialog"
-msgstr "自动隐藏弹出窗口"
-
-#: rc.js:91
-msgid "Clear once popup collapsed"
-msgstr "弹出框收缩后清空内容"
-
-#: rc.js:93
-msgid "Clear once input text changed"
-msgstr "输入时清空之前的结果"
-
-#: rc.js:101
-msgid "Show SOSO Baike"
-msgstr "显示搜搜百科词条"
-
-#: rc.js:103
-msgid "YouDao API key"
-msgstr "有道API Key"
-
-#: rc.js:105
-msgid "YouDao API name"
-msgstr "有道API名称"
-
-#: rc.js:107
-msgid "Baidu API key"
-msgstr "百度API Key"
-
-#: rc.js:109
-msgid "iCiBa API key"
-msgstr "爱词霸API Key"
-
-#: rc.js:111
-msgid "Merriam-Webster's Collegiate® Dictionary API key"
-msgstr "梅里亚姆-韦伯斯特大学词典® API key"
-
-#: rc.js:113
-msgid "Merriam-Webster's Spanish-English Dictionary API key"
-msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API key"
-
-#: rc.js:114
+#: rc.js:88
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "您的名字"
 
-#: rc.js:115
+#: rc.js:89
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"
 
-#~ msgid "Baidu API key is empty."
-#~ msgstr "百度API Key 是空值。"
+#~ msgid "Auto hide popup dialog"
+#~ msgstr "自动隐藏弹出窗口"
 
-#~ msgid "Help?"
-#~ msgstr "需要帮助？"
+#~ msgid "Clear once popup collapsed"
+#~ msgstr "弹出框收缩后清空内容"
 
-#~ msgid "Baidu Translation:"
-#~ msgstr "百度翻译："
+#~ msgid "Clear once input text changed"
+#~ msgstr "输入时清空之前的结果"
 
-#~ msgid "Original: "
-#~ msgstr "原文："
+#~ msgid "Show SOSO Baike"
+#~ msgstr "显示搜搜百科词条"
 
-#~ msgid "Translation: "
-#~ msgstr "翻译："
+#~ msgid "YouDao API key"
+#~ msgstr "有道API Key"
 
-#~ msgid "Timeout."
-#~ msgstr "超时。"
+#~ msgid "YouDao API name"
+#~ msgstr "有道API名称"
 
-#~ msgid "Remote server error."
-#~ msgstr "远程服务器错误。"
+#~ msgid "Baidu API key"
+#~ msgstr "百度API Key"
 
-#~ msgid "Invalid key."
-#~ msgstr "无效的key。"
+#~ msgid "iCiBa API key"
+#~ msgstr "爱词霸API Key"
 
-#~ msgid "Unknown error."
-#~ msgstr "未知错误。"
-
-#~ msgid "iCiBa API key is empty."
-#~ msgstr "爱词霸API Key是空值"
-
-#~ msgid "Phonetic:"
-#~ msgstr "发音："
-
-#~ msgid "Definitions:"
-#~ msgstr "释义："
-
-#~ msgid "Examples:"
-#~ msgstr "示例："
-
-#~ msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
-#~ msgstr "梅里亚姆-韦伯斯特大学词典® API key是空值"
-
-#~ msgid "Entry"
-#~ msgstr "词条"
-
-#~ msgid ":"
-#~ msgstr "："
-
-#~ msgid "Origin:"
-#~ msgstr "起源："
-
-#~ msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
-#~ msgstr "由梅里亚姆-韦伯斯特大学词典® 驱动"
-
-#~ msgid "Morphology:"
-#~ msgstr "词形变化："
-
-#~ msgid "Synonym:"
-#~ msgstr "近义词："
-
-#~ msgid "Phrases:"
-#~ msgstr "词组/短语："
-
-#~ msgid "Web Definitions:"
-#~ msgstr "网络释义："
-
-#~ msgid "SOSO Baike"
-#~ msgstr "搜搜百科"
-
-#~ msgid "YOUDAO API key is empty."
-#~ msgstr "有道API Key是空值"
-
-#~ msgid "The input text is too long."
-#~ msgstr "输入的文字太长了。"
-
-#~ msgid "Cannot translate it correctly."
-#~ msgstr "无法获取有效翻译。"
-
-#~ msgid "Unsupported language."
-#~ msgstr "不支持的语言。"
-
-#~ msgid "Translation:"
-#~ msgstr "翻译："
-
-#~ msgid ": "
-#~ msgstr "： "
+#~ msgid "Merriam-Webster's Collegiate® Dictionary API key"
+#~ msgstr "梅里亚姆-韦伯斯特大学词典® API key"
 
 #~ msgid "\">SOSO Baike</a>"
 #~ msgstr "\">搜搜百科</a>"
