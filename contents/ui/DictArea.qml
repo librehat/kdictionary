@@ -312,9 +312,10 @@ Item {
 
         // TODO: see what is the best policy for margins
         //imagePath: "widgets/lineedit"
+        visible: false
         prefix: "base"
     }
-    
+
     Image {
         id: mwLogo;
         visible: false;//Unless user choose Merriam-Webster's Collegiate® Dictionary as provider
@@ -360,7 +361,7 @@ Item {
             font.underline: theme.defaultFont.underline
             font.weight: theme.defaultFont.weight
             font.wordSpacing: theme.defaultFont.wordSpacing
-            color: theme.buttonTextColor
+            color: theme.viewTextColor
             selectByMouse: verticalScroll.interactive
 
             onCursorPositionChanged: {
@@ -388,7 +389,7 @@ Item {
                     return;
                 }
             }
-            
+
             onLinkActivated: Qt.openUrlExternally(link);
 
             // Proxying keys events  is not required by the
