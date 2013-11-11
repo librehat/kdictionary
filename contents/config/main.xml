@@ -61,11 +61,11 @@
         </entry>
         <entry name="mwcd_key" type="string">
             <label>Merriam-Webster's Collegiate® Dictionary API key</label>
-            <default></default>
+            <default>51027fa3-3ded-4e50-b572-a0f1ed89de41</default>
         </entry>
         <entry name="mwsd_key" type="string">
             <label>Merriam-Webster's Spanish-English Dictionary API key</label>
-            <default></default>
+            <default>acd5df54-076a-46c0-902e-4e31eacafbcb</default>
         </entry>
     </group>
 </kcfg>

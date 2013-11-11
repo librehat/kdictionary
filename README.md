@@ -20,17 +20,17 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 
 KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons. But you can choose other providers, instructions are shown below.
 
-#### YOUDAO
+##### Note
 
-_Note: YOUDAO API key is built-in, but you're encouraged to use your own API key._
+All Dictionary API keys are built-in, but you're encouraged to use your own API keys because there're limitations. Take Merriam-Webster's as an example, it cannot exceed **1000** queries per day.
+
+#### YOUDAO
 
 1. Apply for a [YOUDAO](http://fanyi.youdao.com/openapi?path=data-mode) API to use YOUDAO Dictionary
 2. Fill in your API key and name in KDictionary Advanced Setting
 3. Change Dictionary Provider to YOUDAO
 
 #### Baidu
-
-_Note: Baidu API key is built-in, but you're encouraged to use your own API key._
 
 _Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
 
@@ -39,8 +39,6 @@ _Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
 3. Change Dictionary Provider to Baidu
 
 #### iCiBa
-
-_Note: iCiBa API key is built-in, though you could still use your own API key._
 
 1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box
 2. Fill in your API key in KDictionary Advanced Setting
@@ -52,7 +50,7 @@ _Note: iCiBa API key is built-in, though you could still use your own API key._
 2. Fill in your API key in KDictionary Advanced Setting
 3. Change Dictionary Provider to Merriam-Webster's Collegiate® Dictionary
 
-_Notice: Merriam-Webster provide different kinds of API keys. What KDictionary supports is Merriam-Webster's Collegiate® Dictionary. Please don't make mistakes._
+_Notice: Merriam-Webster provide different kinds of API keys. What KDictionary supports is Merriam-Webster's Collegiate® Dictionary and Spanish Dictionary. Please don't make mistakes._
 
 #### Merriam-Webster's Spanish Dictionary
 

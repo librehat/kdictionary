@@ -227,6 +227,9 @@
      <string>Advanced</string>
     </attribute>
     <widget class="QLineEdit" name="kcfg_youdao_key">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -243,6 +246,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_youdao_name">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -259,6 +265,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_baidu_key">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -275,6 +284,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_iciba_key">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -374,6 +386,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_mwcd_key">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -409,6 +424,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="kcfg_mwsd_key">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>230</x>
@@ -422,6 +440,9 @@
      </property>
      <property name="echoMode">
       <enum>QLineEdit::PasswordEchoOnEdit</enum>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
