@@ -39,7 +39,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>10</y>
+       <y>15</y>
        <width>321</width>
        <height>20</height>
       </rect>
@@ -55,7 +55,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>115</y>
+       <y>155</y>
        <width>251</width>
        <height>20</height>
       </rect>
@@ -74,7 +74,7 @@
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>220</y>
+       <y>225</y>
        <width>350</width>
        <height>23</height>
       </rect>
@@ -114,7 +114,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>220</y>
+       <y>225</y>
        <width>110</width>
        <height>20</height>
       </rect>
@@ -127,7 +127,7 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>150</y>
+       <y>190</y>
        <width>251</width>
        <height>20</height>
       </rect>
@@ -146,7 +146,7 @@
      <property name="geometry">
       <rect>
        <x>290</x>
-       <y>150</y>
+       <y>190</y>
        <width>260</width>
        <height>20</height>
       </rect>
@@ -168,7 +168,7 @@
      <property name="geometry">
       <rect>
        <x>290</x>
-       <y>115</y>
+       <y>155</y>
        <width>260</width>
        <height>20</height>
       </rect>
@@ -187,13 +187,13 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>45</y>
+       <y>50</y>
        <width>331</width>
        <height>20</height>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Only available when used as a popupapplet</string>
+      <string>Only available when used as a popup applet.</string>
      </property>
      <property name="text">
       <string>Auto hide popup when other windows gain focus</string>
@@ -206,19 +206,38 @@
      <property name="geometry">
       <rect>
        <x>25</x>
-       <y>80</y>
+       <y>120</y>
        <width>351</width>
        <height>20</height>
       </rect>
      </property>
      <property name="toolTip">
-      <string>Only available when used as a popupapplet</string>
+      <string>Only available when used as a popup applet.</string>
      </property>
      <property name="text">
       <string>Clear input entry and display text when popup collapsed</string>
      </property>
      <property name="checked">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="kcfg_autoQuery">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>85</y>
+       <width>381</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Only available when used as a popup applet.</string>
+     </property>
+     <property name="text">
+      <string>Auto query the text in system clipboard when pop up</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>

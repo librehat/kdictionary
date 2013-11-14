@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 13:34+0800\n"
-"PO-Revision-Date: 2013-11-01 13:35+0800\n"
+"POT-Creation-Date: 2013-11-13 22:29+0800\n"
+"PO-Revision-Date: 2013-11-13 22:29+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:105
+#: ../ui/main.qml:111
 msgid "Loading..."
 msgstr "正在载入..."
 
-#: ../ui/main.qml:120
+#: ../ui/main.qml:126
 msgid "No result."
 msgstr "无结果"
 
-#: ../ui/main.qml:145
+#: ../ui/main.qml:151
 msgid "Enter word(s) here"
 msgstr "在此输入单词或句子"
 
-#: ../ui/main.qml:171
+#: ../ui/main.qml:177
 msgid "KDictionary"
 msgstr "K词典"
 
@@ -228,9 +228,9 @@ msgstr "显示搜搜百科词条链接"
 msgid "Show sentences"
 msgstr "显示例句"
 
-#: rc.js:57 rc.js:63
-msgid "Only available when used as a popupapplet"
-msgstr "仅在面板上作为弹出部件使用时生效"
+#: rc.js:57 rc.js:63 rc.js:69
+msgid "Only available when used as a popup applet."
+msgstr "仅在面板上作为弹出部件使用时生效。"
 
 #: rc.js:60
 msgid "Auto hide popup when other windows gain focus"
@@ -240,40 +240,44 @@ msgstr "当其它窗口获取焦点时自动隐藏弹出框"
 msgid "Clear input entry and display text when popup collapsed"
 msgstr "当弹出框收缩后清空输入框和结果显示区的文字"
 
-#: rc.js:69
+#: rc.js:72
+msgid "Auto query the text in system clipboard when pop up"
+msgstr "弹出时自动查询系统剪贴板中的文字"
+
+#: rc.js:75
 msgid "Advanced"
 msgstr "高级"
 
-#: rc.js:72
+#: rc.js:78
 msgid "YOUDAO API Key"
 msgstr "有道API Key"
 
-#: rc.js:75
+#: rc.js:81
 msgid "YOUDAO API Name"
 msgstr "有道API名称"
 
-#: rc.js:78
+#: rc.js:84
 msgid "Baidu API Key"
 msgstr "百度API Key"
 
-#: rc.js:81
+#: rc.js:87
 msgid "iCiBa API Key"
 msgstr "爱词霸API Key"
 
-#: rc.js:84
+#: rc.js:90
 msgid "Merriam-Webster's Collegiate® Dictionary API Key"
 msgstr "梅里亚姆-韦伯斯特大学词典® API Key"
 
-#: rc.js:87
+#: rc.js:93
 msgid "Merriam-Webster's Spanish-English Dictionary API Key"
 msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API Key"
 
-#: rc.js:88
+#: rc.js:94
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "您的名字"
 
-#: rc.js:89
+#: rc.js:95
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"

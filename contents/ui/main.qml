@@ -33,6 +33,7 @@ Item {
     property bool clearCollapsed;
     property bool autoClear;
     property bool autoHide;
+    property bool autoQuery;
     property bool showSentences;
     property bool showPhrases;
     property bool showWebdict;
@@ -72,6 +73,7 @@ Item {
     function configChanged() {
         autoClear = plasmoid.readConfig('autoClear');
         clearCollapsed = plasmoid.readConfig('clearCollapsed');
+        autoQuery = plasmoid.readConfig('autoQuery');
         showSentences = plasmoid.readConfig('showSentences');
         showPhrases = plasmoid.readConfig('showPhrases');
         showWebdict = plasmoid.readConfig('showWebdict');
@@ -96,6 +98,11 @@ Item {
         if (!popped && clearCollapsed) {//reset content when collapsed
             displayText.text = '';
             inputEntry.text = '';
+        }
+        else if (autoQuery) {
+            inputEntry.forceActiveFocus();
+            inputEntry.paste();
+            enterTriggered();
         }
     }
 

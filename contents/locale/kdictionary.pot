@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.0\n"
+"Project-Id-Version: 0.7.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 13:35+0800\n"
+"POT-Creation-Date: 2013-11-13 22:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:105
+#: ../ui/main.qml:111
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:120
+#: ../ui/main.qml:126
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:145
+#: ../ui/main.qml:151
 msgid "Enter word(s) here"
 msgstr ""
 
-#: ../ui/main.qml:171
+#: ../ui/main.qml:177
 msgid "KDictionary"
 msgstr ""
 
@@ -226,8 +226,8 @@ msgstr ""
 msgid "Show sentences"
 msgstr ""
 
-#: rc.js:57 rc.js:63
-msgid "Only available when used as a popupapplet"
+#: rc.js:57 rc.js:63 rc.js:69
+msgid "Only available when used as a popup applet."
 msgstr ""
 
 #: rc.js:60
@@ -238,40 +238,44 @@ msgstr ""
 msgid "Clear input entry and display text when popup collapsed"
 msgstr ""
 
-#: rc.js:69
-msgid "Advanced"
-msgstr ""
-
 #: rc.js:72
-msgid "YOUDAO API Key"
+msgid "Auto query the text in system clipboard when pop up"
 msgstr ""
 
 #: rc.js:75
-msgid "YOUDAO API Name"
+msgid "Advanced"
 msgstr ""
 
 #: rc.js:78
-msgid "Baidu API Key"
+msgid "YOUDAO API Key"
 msgstr ""
 
 #: rc.js:81
-msgid "iCiBa API Key"
+msgid "YOUDAO API Name"
 msgstr ""
 
 #: rc.js:84
-msgid "Merriam-Webster's Collegiate® Dictionary API Key"
+msgid "Baidu API Key"
 msgstr ""
 
 #: rc.js:87
+msgid "iCiBa API Key"
+msgstr ""
+
+#: rc.js:90
+msgid "Merriam-Webster's Collegiate® Dictionary API Key"
+msgstr ""
+
+#: rc.js:93
 msgid "Merriam-Webster's Spanish-English Dictionary API Key"
 msgstr ""
 
-#: rc.js:88
+#: rc.js:94
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:89
+#: rc.js:95
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""

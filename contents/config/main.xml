@@ -17,6 +17,10 @@
             <label>Clear once input text changed</label>
             <default>true</default>
         </entry>
+        <entry name="autoQuery" type="Bool">
+            <label>Query the text immediately when pop up</label>
+            <default>false</default>
+        </entry>
         <entry name="showSentences" type="Bool">
             <label>Show sentences</label>
             <default>true</default>
