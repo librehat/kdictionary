@@ -1,13 +1,13 @@
 ## KDictionary
-#### Yet Another Simple Dictionary/Translator Plasmoid
+#### Simple Dictionary/Translator Applet/PopUpApplet for Plasma Desktop
 
-Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content=161349), please vote 5 stars if you think it make your life more convenient.
+Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content=161349), please vote up if you like it.
 
 ### Installation
 
 **Require KDE >= 4.11** (KDE 4.10 may works but I didn't test it)
 
-1. Download KDictionary plasmoid from [releases](https://github.com/librehat/kdictionary/releases)
+1. Download KDictionary plasmoid from [KDE-Apps](http://kde-apps.org/content/show.php?content=161349)
 2. Run `plasmapkg -i kdictionary-<ver>.plasmoid` to install it
 3. Run `kbuildsycoca4` to refresh desktop cache
 4. Have fun
@@ -18,31 +18,31 @@ Check this widget on [kde-apps.org](http://kde-apps.org/content/show.php?content
 
 ### Advanced Usage
 
-KDictionary invokes [QQDict](http://dict.qq.com) API by default for some reasons. But you can choose other providers, instructions are shown below.
+KDictionary invokes [QQ Dictionary](http://dict.qq.com) API by default for some reasons. But you can choose other providers, instructions are shown below.
 
 ##### Note
 
 All Dictionary API keys are built-in, but you're encouraged to use your own API keys because there're limitations. Take Merriam-Webster's as an example, it cannot exceed **1000** queries per day.
 
-#### YOUDAO
+#### YouDao
 
-1. Apply for a [YOUDAO](http://fanyi.youdao.com/openapi?path=data-mode) API to use YOUDAO Dictionary
+1. Apply for a [YouDao Translate](http://fanyi.youdao.com/openapi?path=data-mode) API to use YouDao Dictionary and Translate.
 2. Fill in your API key and name in KDictionary Advanced Setting
-3. Change Dictionary Provider to YOUDAO
+3. Change Dictionary Provider to YouDao Dictionary and Translate
 
 #### Baidu
 
-_Tip: Baidu Translation support English, Japanese, Spanish, Thai and Arabic._
+_Tip: Baidu Translate service supports English, Japanese, Spanish, Thai and Arabic._
 
-1. Apply for a [Baidu](http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91/%E7%BF%BB%E8%AF%91API) API to use Baidu Translation service
+1. Apply for a [Baidu](http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91/%E7%BF%BB%E8%AF%91API) API to use Baidu Translate service
 2. Fill in your API key in KDictionary Advanced Setting
-3. Change Dictionary Provider to Baidu
+3. Change Dictionary Provider to Baidu Translate
 
 #### iCiBa
 
 1. Apply for a [iCiBa](http://open.iciba.com/?c=api) API to use Kingsoft PowerWord Dictionary. You'll get API key immediately in your E-mail inbox, if not, check your spam box
 2. Fill in your API key in KDictionary Advanced Setting
-3. Change Dictionary Provider to iCiBa
+3. Change Dictionary Provider to Kingsoft iCiBa
 
 #### Merriam-Webster's Collegiate® Dictionary
 
