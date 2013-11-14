@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 22:29+0800\n"
-"PO-Revision-Date: 2013-11-13 22:29+0800\n"
+"POT-Creation-Date: 2013-11-14 19:20+0800\n"
+"PO-Revision-Date: 2013-11-14 19:21+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
 "Language: zh_CN\n"
@@ -17,21 +17,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:111
+#: ../ui/main.qml:85 rc.js:18
+msgid "QQ Dictionary"
+msgstr "QQ词典"
+
+#: ../ui/main.qml:89 rc.js:21
+msgid "YouDao Dictionary and Translate"
+msgstr "有道词典与翻译"
+
+#: ../ui/main.qml:93 rc.js:24
+msgid "Baidu Translate"
+msgstr "百度翻译"
+
+#: ../ui/main.qml:97 rc.js:27
+msgid "Kingsoft iCiBa"
+msgstr "金山爱词霸"
+
+#: ../ui/main.qml:101 rc.js:30
+msgid "Merriam-Webster's Collegiate® Dictionary"
+msgstr "梅里亚姆-韦伯斯特大学词典®"
+
+#: ../ui/main.qml:105 rc.js:33
+msgid "Merriam-Webster's Spanish-English Dictionary"
+msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典"
+
+#: ../ui/main.qml:129
+msgid "KDictionary"
+msgstr "K词典"
+
+#: ../ui/main.qml:148
 msgid "Loading..."
 msgstr "正在载入..."
 
-#: ../ui/main.qml:126
+#: ../ui/main.qml:186
 msgid "No result."
 msgstr "无结果"
 
-#: ../ui/main.qml:151
+#: ../ui/main.qml:211
 msgid "Enter word(s) here"
 msgstr "在此输入单词或句子"
-
-#: ../ui/main.qml:177
-msgid "KDictionary"
-msgstr "K词典"
 
 #: ../ui/api/BAIDU.qml:27
 msgid "Baidu API key is empty."
@@ -43,7 +67,7 @@ msgid "Help?"
 msgstr "需要帮助？"
 
 #: ../ui/api/BAIDU.qml:48
-msgid "Baidu Translation:"
+msgid "Baidu Translate:"
 msgstr "百度翻译："
 
 #: ../ui/api/BAIDU.qml:48
@@ -137,8 +161,8 @@ msgid "SOSO Baike"
 msgstr "搜搜百科"
 
 #: ../ui/api/YOUDAO.qml:45
-msgid "YOUDAO API key is empty."
-msgstr "有道API Key是空值"
+msgid "YouDao API key is empty."
+msgstr "有道API Key是空值。"
 
 #: ../ui/api/YOUDAO.qml:55
 msgid "The input text is too long."
@@ -179,30 +203,6 @@ msgstr "仅当您使用QQ词典时生效"
 #: rc.js:15
 msgid "Show phrases"
 msgstr "显示词组/短语"
-
-#: rc.js:18
-msgid "QQ"
-msgstr "QQ"
-
-#: rc.js:21
-msgid "YOUDAO"
-msgstr "有道"
-
-#: rc.js:24
-msgid "Baidu"
-msgstr "百度"
-
-#: rc.js:27
-msgid "iCiBa"
-msgstr "爱词霸"
-
-#: rc.js:30
-msgid "Merriam-Webster's Collegiate® Dictionary"
-msgstr "梅里亚姆-韦伯斯特大学词典®"
-
-#: rc.js:33
-msgid "Merriam-Webster's Spanish-English Dictionary"
-msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典"
 
 #: rc.js:36
 msgid "Dictionary Provider"
@@ -249,20 +249,20 @@ msgid "Advanced"
 msgstr "高级"
 
 #: rc.js:78
-msgid "YOUDAO API Key"
-msgstr "有道API Key"
+msgid "YouDao Translate API Key"
+msgstr "有道翻译API Key"
 
 #: rc.js:81
-msgid "YOUDAO API Name"
-msgstr "有道API名称"
+msgid "YouDao Translate API Name"
+msgstr "有道翻译API名称"
 
 #: rc.js:84
-msgid "Baidu API Key"
-msgstr "百度API Key"
+msgid "Baidu Translate API Key"
+msgstr "百度翻译API Key"
 
 #: rc.js:87
-msgid "iCiBa API Key"
-msgstr "爱词霸API Key"
+msgid "Kingsoft iCiBa API Key"
+msgstr "金山爱词霸API Key"
 
 #: rc.js:90
 msgid "Merriam-Webster's Collegiate® Dictionary API Key"
@@ -282,6 +282,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"
 
+#~ msgid "QQ"
+#~ msgstr "QQ"
+
+#~ msgid "YOUDAO"
+#~ msgstr "有道"
+
+#~ msgid "Baidu"
+#~ msgstr "百度"
+
+#~ msgid "iCiBa"
+#~ msgstr "爱词霸"
+
+#~ msgid "YOUDAO API Key"
+#~ msgstr "有道API Key"
+
+#~ msgid "YOUDAO API Name"
+#~ msgstr "有道API名称"
+
 #~ msgid "Auto hide popup dialog"
 #~ msgstr "自动隐藏弹出窗口"
 
@@ -293,12 +311,6 @@ msgstr "您的邮箱"
 
 #~ msgid "Show SOSO Baike"
 #~ msgstr "显示搜搜百科词条"
-
-#~ msgid "YouDao API key"
-#~ msgstr "有道API Key"
-
-#~ msgid "YouDao API name"
-#~ msgstr "有道API名称"
 
 #~ msgid "Baidu API key"
 #~ msgstr "百度API Key"

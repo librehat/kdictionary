@@ -39,6 +39,7 @@ Item {
     property bool showWebdict;
     property bool showBaike;
     property int dictProvider;
+    property string dictProviderName;
     property string youdao_key;
     property string youdao_name;
     property string baidu_key;
@@ -46,7 +47,7 @@ Item {
     property string mwcd_key;
     property string mwsd_key;
 
-    API.QQ {//Tencent QQ Dict
+    API.QQ {//Tencent QQ Dictionary
         id: qq;
     }
 
@@ -54,11 +55,11 @@ Item {
         id: cb;
     }
 
-    API.YOUDAO {//NetEase YOUDAO Dictionary/Translation
+    API.YOUDAO {//NetEase YOUDAO Dictionary&Translate
         id: yd;
     }
 
-    API.BAIDU {//BAIDU Translation
+    API.BAIDU {//BAIDU Translate
         id: bd;
     }
 
@@ -79,6 +80,32 @@ Item {
         showWebdict = plasmoid.readConfig('showWebdict');
         showBaike = plasmoid.readConfig('showBaike');
         dictProvider = plasmoid.readConfig('dictProvider');
+        switch(dictProvider) {
+            case 0: {
+                dictProviderName = i18n('QQ Dictionary');
+                break;
+            }
+            case 1: {
+                dictProviderName = i18n('YouDao Dictionary and Translate');
+                break;
+            }
+            case 2: {
+                dictProviderName = i18n('Baidu Translate');
+                break;
+            }
+            case 3: {
+                dictProviderName = i18n('Kingsoft iCiBa');
+                break;
+            }
+            case 4: {
+                dictProviderName = i18n("Merriam-Webster's Collegiate® Dictionary");
+                break;
+            }
+            case 5: {
+                dictProviderName = i18n("Merriam-Webster's Spanish-English Dictionary");
+                break;
+            }
+        }
         youdao_key = plasmoid.readConfig('youdao_key');
         youdao_name = plasmoid.readConfig('youdao_name');
         baidu_key = plasmoid.readConfig('baidu_key');
@@ -92,6 +119,16 @@ Item {
             displayText.logoVisible = true;
         else
             displayText.logoVisible = false;
+
+        updateTooltip();
+    }
+
+    function updateTooltip() {
+        var toolTip = new Object;
+        toolTip['image'] = 'accessories-dictionary';
+        toolTip['mainText'] = i18n('KDictionary');
+        toolTip['subText'] = dictProviderName;
+        plasmoid.popupIconToolTip = toolTip;
     }
 
     function popupEventSlot(popped) {
@@ -110,20 +147,43 @@ Item {
         if (inputEntry.text != '') {
             displayText.text = '<i>' + i18n('Loading...') + '</i>';//it's not instantaneous!
             switch(dictProvider) {
-                case 0: { qq.queryQQ(inputEntry.text); break; }
-                case 1: { yd.queryYD(inputEntry.text); break; }
-                case 2: { bd.queryBD(inputEntry.text); break; }
-                case 3: { cb.queryCB(inputEntry.text); break; }
-                case 4: { mwcd.queryMWCD(inputEntry.text); break; }
-                case 5: { mwsd.query(inputEntry.text); break; }
-                default: { console.log('No such provider. Use QQDict instead.');    qq.queryQQ(inputEntry.text); }
+                case 0: {
+                    qq.queryQQ(inputEntry.text);
+                    break;
+                }
+                case 1: {
+                    yd.queryYD(inputEntry.text);
+                    break;
+                }
+                case 2: {
+                    bd.queryBD(inputEntry.text);
+                    break;
+                }
+                case 3: {
+                    cb.queryCB(inputEntry.text);
+                    break;
+                }
+                case 4: {
+                    mwcd.queryMWCD(inputEntry.text);
+                    break;
+                }
+                case 5: {
+                    mwsd.query(inputEntry.text);
+                    break;
+                }
+                default: {
+                    console.log('No such provider. Use QQDict instead.');
+                    qq.queryQQ(inputEntry.text);
+                }
             }
         }
     }
 
     function parseDone() {//use this function to change displayText.text, never change displayText.text directly!
-        if (desresult != '')    displayText.text = desresult;
-        else    displayText.text = '<i>' + i18n('No result.') + '</i>';
+        if (desresult != '')
+            displayText.text = desresult;
+        else
+            displayText.text = '<i>' + i18n('No result.') + '</i>';
         desresult = '';
     }
 
@@ -149,7 +209,7 @@ Item {
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: '<i>' + i18n('Enter word(s) here') + '</i>';
-            width: parent.width - 28 - headrow.spacing;//22:QIconItem's width
+            width: parent.width - 28 - headrow.spacing;//28:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;
@@ -172,10 +232,6 @@ Item {
     Component.onCompleted: {
         configChanged();
         plasmoid.popupIcon = 'accessories-dictionary';
-        var toolTip = new Object;
-        toolTip['image'] = 'accessories-dictionary';
-        toolTip['mainText'] = i18n('KDictionary');
-        plasmoid.popupIconToolTip = toolTip;
         plasmoid.aspectRatioMode = IgnoreAspectRatio;
         plasmoid.addEventListener('configChanged', mainWindow.configChanged);
         plasmoid.popupEvent.connect(popupEventSlot);

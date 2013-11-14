@@ -81,22 +81,22 @@
      </property>
      <item>
       <property name="text">
-       <string>QQ</string>
+       <string>QQ Dictionary</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>YOUDAO</string>
+       <string>YouDao Dictionary and Translate</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Baidu</string>
+       <string>Baidu Translate</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>iCiBa</string>
+       <string>Kingsoft iCiBa</string>
       </property>
      </item>
      <item>
@@ -331,7 +331,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>YOUDAO API Key</string>
+      <string>YouDao Translate API Key</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -347,7 +347,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>YOUDAO API Name</string>
+      <string>YouDao Translate API Name</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -363,7 +363,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Baidu API Key</string>
+      <string>Baidu Translate API Key</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -379,7 +379,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>iCiBa API Key</string>
+      <string>Kingsoft iCiBa API Key</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

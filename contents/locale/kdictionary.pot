@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.7.2\n"
+"Project-Id-Version: 0.7.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-13 22:30+0800\n"
+"POT-Creation-Date: 2013-11-14 19:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:111
+#: ../ui/main.qml:85 rc.js:18
+msgid "QQ Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:89 rc.js:21
+msgid "YouDao Dictionary and Translate"
+msgstr ""
+
+#: ../ui/main.qml:93 rc.js:24
+msgid "Baidu Translate"
+msgstr ""
+
+#: ../ui/main.qml:97 rc.js:27
+msgid "Kingsoft iCiBa"
+msgstr ""
+
+#: ../ui/main.qml:101 rc.js:30
+msgid "Merriam-Webster's Collegiate® Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:105 rc.js:33
+msgid "Merriam-Webster's Spanish-English Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:129
+msgid "KDictionary"
+msgstr ""
+
+#: ../ui/main.qml:148
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:126
+#: ../ui/main.qml:186
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:151
+#: ../ui/main.qml:211
 msgid "Enter word(s) here"
-msgstr ""
-
-#: ../ui/main.qml:177
-msgid "KDictionary"
 msgstr ""
 
 #: ../ui/api/BAIDU.qml:27
@@ -43,7 +67,7 @@ msgid "Help?"
 msgstr ""
 
 #: ../ui/api/BAIDU.qml:48
-msgid "Baidu Translation:"
+msgid "Baidu Translate:"
 msgstr ""
 
 #: ../ui/api/BAIDU.qml:48
@@ -137,7 +161,7 @@ msgid "SOSO Baike"
 msgstr ""
 
 #: ../ui/api/YOUDAO.qml:45
-msgid "YOUDAO API key is empty."
+msgid "YouDao API key is empty."
 msgstr ""
 
 #: ../ui/api/YOUDAO.qml:55
@@ -178,30 +202,6 @@ msgstr ""
 
 #: rc.js:15
 msgid "Show phrases"
-msgstr ""
-
-#: rc.js:18
-msgid "QQ"
-msgstr ""
-
-#: rc.js:21
-msgid "YOUDAO"
-msgstr ""
-
-#: rc.js:24
-msgid "Baidu"
-msgstr ""
-
-#: rc.js:27
-msgid "iCiBa"
-msgstr ""
-
-#: rc.js:30
-msgid "Merriam-Webster's Collegiate® Dictionary"
-msgstr ""
-
-#: rc.js:33
-msgid "Merriam-Webster's Spanish-English Dictionary"
 msgstr ""
 
 #: rc.js:36
@@ -247,19 +247,19 @@ msgid "Advanced"
 msgstr ""
 
 #: rc.js:78
-msgid "YOUDAO API Key"
+msgid "YouDao Translate API Key"
 msgstr ""
 
 #: rc.js:81
-msgid "YOUDAO API Name"
+msgid "YouDao Translate API Name"
 msgstr ""
 
 #: rc.js:84
-msgid "Baidu API Key"
+msgid "Baidu Translate API Key"
 msgstr ""
 
 #: rc.js:87
-msgid "iCiBa API Key"
+msgid "Kingsoft iCiBa API Key"
 msgstr ""
 
 #: rc.js:90

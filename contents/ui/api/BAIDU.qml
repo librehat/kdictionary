@@ -45,7 +45,7 @@ Item {
 
         if (typeof jsonObj == 'object') {
             if (typeof jsonObj.trans_result == 'object')// if something went wrong it won't be an object.
-                mainWindow.desresult += '<b>' + i18n('Baidu Translation:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
+                mainWindow.desresult += '<b>' + i18n('Baidu Translate:') + '</b><br /><br />' + i18n('Original: ') + jsonObj.trans_result[0].src + '<br /><br />' + i18n('Translation: ') + jsonObj.trans_result[0].dst;
             else {
                 switch (jsonObj.error_code) {
                     case '52001':  { mainWindow.desresult += i18n('Timeout.'); break; }
