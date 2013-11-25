@@ -44,7 +44,7 @@ Item {
 
     function parseMWSD() {
         for(var i=0; i<mwsdModel.count; i++) {
-            mainWindow.desresult += '<b>' + i18n('Entry') + ' ' + (i+1) + i18n(':') +'</b><br />';
+            mainWindow.desresult += '<h4>' + i18n('Definition') + ' ' + (i+1) + '</h4>';
             if (mwsdModel.get(i).pho != '')
                 mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + mwsdModel.get(i).pho + '/</i><br />';
             if (mwsdModel.get(i).fl != '')

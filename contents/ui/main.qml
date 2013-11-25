@@ -46,6 +46,7 @@ Item {
     property string iciba_key;
     property string mwcd_key;
     property string mwsd_key;
+    property string yandex_key;
 
     API.QQ {//Tencent QQ Dictionary
         id: qq;
@@ -69,6 +70,10 @@ Item {
 
     API.MWSD {//Merriam-Webster's Spanish-English Dictionary
         id: mwsd;
+    }
+
+    API.YANDEX {//Yandex Dictionary, including both Russian-English and English-Russian
+        id: yandex;
     }
 
     function configChanged() {
@@ -105,6 +110,14 @@ Item {
                 dictProviderName = i18n("Merriam-Webster's Spanish-English Dictionary");
                 break;
             }
+            case 6: {
+                dictProviderName = i18n("Yandex Russian-English Dictionary");
+                break;
+            }
+            case 7: {
+                dictProviderName = i18n("Yandex English-Russian Dictionary");
+                break;
+            }
         }
         youdao_key = plasmoid.readConfig('youdao_key');
         youdao_name = plasmoid.readConfig('youdao_name');
@@ -112,6 +125,7 @@ Item {
         iciba_key = plasmoid.readConfig('iciba_key');
         mwcd_key = plasmoid.readConfig('mwcd_key');
         mwsd_key = plasmoid.readConfig('mwsd_key');
+        yandex_key = plasmoid.readConfig('yandex_key');
         autoHide = plasmoid.readConfig('autoHide');
         plasmoid.passivePopup =  !autoHide;
 
@@ -169,6 +183,14 @@ Item {
                 }
                 case 5: {
                     mwsd.query(inputEntry.text);
+                    break;
+                }
+                case 6: {
+                    yandex.query(inputEntry.text, 0);
+                    break;
+                }
+                case 7: {
+                    yandex.query(inputEntry.text, 1);
                     break;
                 }
                 default: {

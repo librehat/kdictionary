@@ -63,13 +63,13 @@ Item {
         }
         
         if (ydModel.get(0).phonetic != '')
-            mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />'
+            mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + ydModel.get(0).phonetic + '/</i><br /><br />';
         if (ydModel.get(0).explains != '')
             mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
         if (ydModel.get(0).translation != '')
             mainWindow.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';
         if (showWebdict && ydModel.get(0).webkey != '')
             mainWindow.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />' + ydModel.get(0).webkey + i18n(': ') + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + i18n(': ') + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + i18n(': ') + ydModel.get(0).web3;
-            mainWindow.parseDone();
+        mainWindow.parseDone();
     }
 }

@@ -47,7 +47,7 @@ Item {
 
     function parseMWCD() {
         for(var i=0; i<mwcdModel.count; i++) {
-            mainWindow.desresult += '<b>' + i18n('Entry') + ' ' + (i+1) + i18n(':') +'</b><br />';
+            mainWindow.desresult += '<h4>' + i18n('Definition') + ' ' + (i+1) + '</h4>';
             if (mwcdModel.get(i).pho != '')  mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + mwcdModel.get(i).pho + '/</i><br />';
             if (mwcdModel.get(i).fl != '')  mainWindow.desresult += mwcdModel.get(i).fl;
             if (mwcdModel.get(i).lb != '')  mainWindow.desresult += ', ' + mwcdModel.get(i).lb;

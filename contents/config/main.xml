@@ -71,5 +71,8 @@
             <label>Merriam-Webster's Spanish-English Dictionary API key</label>
             <default>acd5df54-076a-46c0-902e-4e31eacafbcb</default>
         </entry>
+        <entry name="yandex_key" type="string">
+            <default>dict.1.1.20131125T084206Z.dc20bf579819f175.998288baf871b552664fce64cfde1b2ce89607c6</default>
+        </entry>
     </group>
 </kcfg>

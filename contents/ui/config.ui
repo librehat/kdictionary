@@ -109,6 +109,16 @@
        <string>Merriam-Webster's Spanish-English Dictionary</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Yandex Russian-English Dictionary</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Yandex English-Russian Dictionary</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_dictProvider">
      <property name="geometry">
@@ -242,12 +252,15 @@
     </widget>
    </widget>
    <widget class="QWidget" name="tabAdv">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <attribute name="title">
      <string>Advanced</string>
     </attribute>
     <widget class="QLineEdit" name="kcfg_youdao_key">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -266,7 +279,7 @@
     </widget>
     <widget class="QLineEdit" name="kcfg_youdao_name">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -285,7 +298,7 @@
     </widget>
     <widget class="QLineEdit" name="kcfg_baidu_key">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -304,7 +317,7 @@
     </widget>
     <widget class="QLineEdit" name="kcfg_iciba_key">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -406,7 +419,7 @@
     </widget>
     <widget class="QLineEdit" name="kcfg_mwcd_key">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
@@ -444,7 +457,7 @@
     </widget>
     <widget class="QLineEdit" name="kcfg_mwsd_key">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="geometry">
       <rect>
