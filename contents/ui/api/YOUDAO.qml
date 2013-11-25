@@ -43,10 +43,10 @@ Item {
 
     function queryYD(words) {
         if (youdao_key == '' || youdao_name == '')  displayText.text = i18n('YouDao API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#youdao">' + i18n('Help?') + '</a>';
-            else {
-                var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
-                ydModel.source = ydurl;
-            }
+        else {
+            var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
+            ydModel.source = ydurl;
+        }
     }
 
     function parseYD() {
@@ -68,7 +68,7 @@ Item {
             mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />' + ydModel.get(0).explains + '<br /><br />';
         if (ydModel.get(0).translation != '')
             mainWindow.desresult += '<b>' + i18n('Translation:') + '</b><br />'  + ydModel.get(0).translation + '<br /><br />';
-        if (showWebdict && ydModel.get(0).webkey != '')
+        if (mainWindow.showWebdict && ydModel.get(0).webkey != '')
             mainWindow.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />' + ydModel.get(0).webkey + i18n(': ') + ydModel.get(0).web + '<br />' + ydModel.get(0).webkey2 + i18n(': ') + ydModel.get(0).web2 + '<br />' + ydModel.get(0).webkey3 + i18n(': ') + ydModel.get(0).web3;
         mainWindow.parseDone();
     }

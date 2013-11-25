@@ -201,7 +201,7 @@ Item {
         }
     }
 
-    function parseDone() {//use this function to change displayText.text, never change displayText.text directly!
+    function parsedone() {
         if (desresult != '')
             displayText.text = desresult;
         else

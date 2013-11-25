@@ -46,11 +46,13 @@ Item {
             var baike = jsonObj.baike;
 
             if (typeof localdes == 'object' && typeof localdes[0] == 'object') {
-                if (typeof localdes[0].pho == 'object') {
+                if (typeof localdes[0].pho == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Phonetic:') + '</b> <i>/' + localdes[0].pho[0] + '/</i><br /><br />';
                 }
 
-                if (typeof localdes[0].des == 'object' && typeof localdes[0].des[0] == 'object') {
+                if (typeof localdes[0].des == 'object' && typeof localdes[0].des[0] == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Definitions:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].des[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -59,7 +61,8 @@ Item {
 
                 }
 
-                if (showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object') {
+                if (mainWindow.showSentences && typeof localdes[0].sen == 'object' && typeof localdes[0].sen[0] == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Examples:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].sen[0].s[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -67,7 +70,8 @@ Item {
                     }
                 }
 
-                if (typeof localdes[0].mor == 'object' && typeof localdes[0].mor[0] == 'object') {
+                if (typeof localdes[0].mor == 'object' && typeof localdes[0].mor[0] == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Morphology:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].mor[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -75,7 +79,8 @@ Item {
                         }
                 }
 
-                if (typeof localdes[0].syn == 'object' && typeof localdes[0].syn[0] == 'object') {
+                if (typeof localdes[0].syn == 'object' && typeof localdes[0].syn[0] == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Synonym:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].syn[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -83,7 +88,8 @@ Item {
                     }
                 }
 
-                if (showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object') {
+                if (mainWindow.showPhrases && typeof localdes[0].ph == 'object' && typeof localdes[0].ph[0] == 'object')
+                {
                     mainWindow.desresult += '<b>' + i18n('Phrases:') + '</b><br />';
                     for (var i=0;;i++){
                         if (typeof localdes[0].ph[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -92,7 +98,7 @@ Item {
                 }
             }
 
-            if (showWebdict &&  typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
+            if (mainWindow.showWebdict &&  typeof netdes == 'object' && typeof netdes[0] == 'object' && typeof netdes[0].des == 'object') {
                 mainWindow.desresult += '<b>' + i18n('Web Definitions:') + '</b><br />';
                 for (var i=0 ; i<5 ; i++) {//5 is enough for netdes for it's often ridiculous
                     if (typeof netdes[0].des[i] != 'object') {mainWindow.desresult += '<br />';break;}
@@ -100,7 +106,7 @@ Item {
                 }
             }
 
-            if (showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
+            if (mainWindow.showBaike && typeof baike == 'object' && typeof baike[0] == 'object' && baike[0].link != '') {
                 mainWindow.desresult += '<br /><a href="' + baike[0].link + '">' + i18n('SOSO Baike') + '</a>';
             }
         }
