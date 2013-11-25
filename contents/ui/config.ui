@@ -81,12 +81,12 @@
      </property>
      <item>
       <property name="text">
-       <string>QQ Dictionary</string>
+       <string>QQ English-Chinese Dictionary</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>YouDao Dictionary and Translate</string>
+       <string>YouDao English-Chinese Dictionary and Translate</string>
       </property>
      </item>
      <item>
@@ -96,7 +96,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Kingsoft iCiBa</string>
+       <string>Kingsoft iCiBa English-Chinese Dictionary</string>
       </property>
      </item>
      <item>
@@ -157,15 +157,12 @@
       <rect>
        <x>290</x>
        <y>190</y>
-       <width>260</width>
+       <width>220</width>
        <height>20</height>
       </rect>
      </property>
-     <property name="toolTip">
-      <string>Only available when you use QQ dictionary</string>
-     </property>
      <property name="text">
-      <string>Show SOSO Baike link</string>
+      <string>Show Wikipedia entry link</string>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -179,15 +176,12 @@
       <rect>
        <x>290</x>
        <y>155</y>
-       <width>260</width>
-       <height>20</height>
+       <width>220</width>
+       <height>21</height>
       </rect>
      </property>
-     <property name="toolTip">
-      <string>Only available when you use QQ dictionary</string>
-     </property>
      <property name="text">
-      <string>Show sentences</string>
+      <string>Show sentence examples</string>
      </property>
      <property name="checked">
       <bool>true</bool>
