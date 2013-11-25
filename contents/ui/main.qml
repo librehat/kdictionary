@@ -201,7 +201,7 @@ Item {
         }
     }
 
-    function parsedone() {
+    function parseDone() {
         if (desresult != '')
             displayText.text = desresult;
         else
