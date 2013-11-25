@@ -146,14 +146,16 @@ Item {
     }
 
     function popupEventSlot(popped) {
-        if (!popped && clearCollapsed) {//reset content when collapsed
+        if (popped) {
+            if (autoQuery) {
+                inputEntry.paste();
+                enterTriggered();
+            }
+            inputEntry.forceActiveFocus();
+        }
+        else if (clearCollapsed) {//reset content when collapsed
             displayText.text = '';
             inputEntry.text = '';
-        }
-        else if (autoQuery) {
-            inputEntry.forceActiveFocus();
-            inputEntry.paste();
-            enterTriggered();
         }
     }
 
