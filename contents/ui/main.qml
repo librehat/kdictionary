@@ -37,7 +37,7 @@ Item {
     property bool showSentences;
     property bool showPhrases;
     property bool showWebdict;
-    property bool showBaike;
+    property bool showWiki;
     property int dictProvider;
     property string dictProviderName;
     property string youdao_key;
@@ -47,10 +47,6 @@ Item {
     property string mwcd_key;
     property string mwsd_key;
     property string yandex_key;
-
-    API.QQ {//Tencent QQ Dictionary
-        id: qq;
-    }
 
     API.ICB {//Kingsoft PowerWord iCiBa
         id: cb;
@@ -83,11 +79,11 @@ Item {
         showSentences = plasmoid.readConfig('showSentences');
         showPhrases = plasmoid.readConfig('showPhrases');
         showWebdict = plasmoid.readConfig('showWebdict');
-        showBaike = plasmoid.readConfig('showBaike');
+        showWiki = plasmoid.readConfig('showWiki');
         dictProvider = plasmoid.readConfig('dictProvider');
         switch(dictProvider) {
             case 0: {
-                dictProviderName = i18n('QQ Dictionary');
+                dictProviderName = i18n('Kingsoft iCiBa');
                 break;
             }
             case 1: {
@@ -99,22 +95,18 @@ Item {
                 break;
             }
             case 3: {
-                dictProviderName = i18n('Kingsoft iCiBa');
-                break;
-            }
-            case 4: {
                 dictProviderName = i18n("Merriam-Webster's Collegiate® Dictionary");
                 break;
             }
-            case 5: {
+            case 4: {
                 dictProviderName = i18n("Merriam-Webster's Spanish-English Dictionary");
                 break;
             }
-            case 6: {
+            case 5: {
                 dictProviderName = i18n("Yandex Russian-English Dictionary");
                 break;
             }
-            case 7: {
+            case 6: {
                 dictProviderName = i18n("Yandex English-Russian Dictionary");
                 break;
             }
@@ -164,7 +156,7 @@ Item {
             displayText.text = '<i>' + i18n('Loading...') + '</i>';//it's not instantaneous!
             switch(dictProvider) {
                 case 0: {
-                    qq.queryQQ(inputEntry.text);
+                    cb.queryCB(inputEntry.text);
                     break;
                 }
                 case 1: {
@@ -176,28 +168,23 @@ Item {
                     break;
                 }
                 case 3: {
-                    cb.queryCB(inputEntry.text);
-                    break;
-                }
-                case 4: {
                     mwcd.queryMWCD(inputEntry.text);
                     break;
                 }
-                case 5: {
+                case 4: {
                     mwsd.query(inputEntry.text);
                     break;
                 }
-                case 6: {
+                case 5: {
                     yandex.query(inputEntry.text, 0);
                     break;
                 }
-                case 7: {
+                case 6: {
                     yandex.query(inputEntry.text, 1);
                     break;
                 }
                 default: {
-                    console.log('No such provider. Use QQDict instead.');
-                    qq.queryQQ(inputEntry.text);
+                    console.log('No such provider. ERROR! Please file a bug.');
                 }
             }
         }

@@ -46,11 +46,8 @@ Item {
     }
 
     function queryCB(words) {
-        if (iciba_key == '')  displayText.text = i18n('iCiBa API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#iciba">' + i18n('Help?') + '</a>';
-            else {
-                var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + iciba_key;
-                cbModel.source = cburl;
-            }
+        var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + mainWindow.iciba_key;
+        cbModel.source = cburl;
     }
 
     function parseCB() {

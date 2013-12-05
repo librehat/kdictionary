@@ -35,11 +35,8 @@ Item {
     }
 
     function query(words) {
-        if (mwsd_key == '') displayText.text = i18n("Merriam-Webster's Spanish-English Dictionary API key is empty.") + '<br /><a href="https://github.com/librehat/kdictionary#merriam-websters-spanish-dictionary">' + i18n('Help?') + '</a>';
-        else {
-            var mwsdurl = 'http://www.dictionaryapi.com/api/v1/references/spanish/xml/' + words + '?key=' + mwsd_key;
-            mwsdModel.source = mwsdurl;
-        }
+        var mwsdurl = 'http://www.dictionaryapi.com/api/v1/references/spanish/xml/' + words + '?key=' + mainWindow.mwsd_key;
+        mwsdModel.source = mwsdurl;
     }
 
     function parseMWSD() {

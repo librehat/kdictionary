@@ -24,20 +24,17 @@ Item {
     id: baiduAPI;
 
     function queryBD(words) {
-        if(baidu_key == '')  displayText.text = i18n('Baidu API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#baidu">' + i18n('Help?') + '</a>';
-            else {
-                var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=' + baidu_key + '&q=' + words + '&from=auto&to=auto';
-                var resText;
-                var doc = new XMLHttpRequest();
-                doc.onreadystatechange = function() {
-                    if (doc.readyState == XMLHttpRequest.DONE) {
-                        resText = doc.responseText;
-                        parseBD(resText);
-                    }
-                }
-                doc.open('GET', bdurl, true);
-                doc.send();
+        var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=' + mainWindow.baidu_key + '&q=' + words + '&from=auto&to=auto';
+        var resText;
+        var doc = new XMLHttpRequest();
+        doc.onreadystatechange = function() {
+            if (doc.readyState == XMLHttpRequest.DONE) {
+                resText = doc.responseText;
+                parseBD(resText);
             }
+        }
+        doc.open('GET', bdurl, true);
+        doc.send();
     }
 
     function parseBD(resText) {

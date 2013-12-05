@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.8.0\n"
+"Project-Id-Version: 0.8.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 19:56+0800\n"
+"POT-Creation-Date: 2013-12-05 23:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,178 +17,133 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:90 rc.js:18
-msgid "QQ Dictionary"
-msgstr ""
-
-#: ../ui/main.qml:94 rc.js:21
-msgid "YouDao Dictionary and Translate"
-msgstr ""
-
-#: ../ui/main.qml:98 rc.js:24
-msgid "Baidu Translate"
-msgstr ""
-
-#: ../ui/main.qml:102 rc.js:27
+#: ../ui/main.qml:86
 msgid "Kingsoft iCiBa"
 msgstr ""
 
-#: ../ui/main.qml:106 rc.js:30
+#: ../ui/main.qml:90
+msgid "YouDao Dictionary and Translate"
+msgstr ""
+
+#: ../ui/main.qml:94 rc.js:24
+msgid "Baidu Translate"
+msgstr ""
+
+#: ../ui/main.qml:98 rc.js:27
 msgid "Merriam-Webster's Collegiate® Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:110 rc.js:33
+#: ../ui/main.qml:102 rc.js:30
 msgid "Merriam-Webster's Spanish-English Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:114 rc.js:36
+#: ../ui/main.qml:106 rc.js:33
 msgid "Yandex Russian-English Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:118 rc.js:39
+#: ../ui/main.qml:110 rc.js:36
 msgid "Yandex English-Russian Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:143
+#: ../ui/main.qml:135
 msgid "KDictionary"
 msgstr ""
 
-#: ../ui/main.qml:162
+#: ../ui/main.qml:156
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:208
+#: ../ui/main.qml:197
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:233
+#: ../ui/main.qml:222
 msgid "Enter word(s) here"
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:27
-msgid "Baidu API key is empty."
-msgstr ""
-
-#: ../ui/api/BAIDU.qml:27 ../ui/api/ICB.qml:49 ../ui/api/MWCD.qml:41
-#: ../ui/api/MWSD.qml:38 ../ui/api/YOUDAO.qml:45
-msgid "Help?"
-msgstr ""
-
-#: ../ui/api/BAIDU.qml:48
+#: ../ui/api/BAIDU.qml:45
 msgid "Baidu Translate:"
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:48
+#: ../ui/api/BAIDU.qml:45
 msgid "Original: "
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:48
+#: ../ui/api/BAIDU.qml:45
 msgid "Translation: "
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:51
+#: ../ui/api/BAIDU.qml:48
 msgid "Timeout."
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:52
+#: ../ui/api/BAIDU.qml:49
 msgid "Remote server error."
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:53 ../ui/api/YOUDAO.qml:58
+#: ../ui/api/BAIDU.qml:50 ../ui/api/YOUDAO.qml:55
 msgid "Invalid key."
 msgstr ""
 
-#: ../ui/api/BAIDU.qml:54 ../ui/api/YOUDAO.qml:59
+#: ../ui/api/BAIDU.qml:51 ../ui/api/YOUDAO.qml:56
 msgid "Unknown error."
 msgstr ""
 
-#: ../ui/api/ICB.qml:49
-msgid "iCiBa API key is empty."
-msgstr ""
-
-#: ../ui/api/ICB.qml:58 ../ui/api/MWCD.qml:51 ../ui/api/MWSD.qml:49
-#: ../ui/api/QQ.qml:50 ../ui/api/YOUDAO.qml:66
+#: ../ui/api/ICB.qml:55 ../ui/api/MWCD.qml:48 ../ui/api/MWSD.qml:46
+#: ../ui/api/YOUDAO.qml:63
 msgid "Phonetic:"
 msgstr ""
 
-#: ../ui/api/ICB.qml:60 ../ui/api/MWCD.qml:55 ../ui/api/MWSD.qml:55
-#: ../ui/api/QQ.qml:54 ../ui/api/YOUDAO.qml:68
+#: ../ui/api/ICB.qml:57 ../ui/api/MWCD.qml:52 ../ui/api/MWSD.qml:52
+#: ../ui/api/YOUDAO.qml:65
 msgid "Definitions:"
 msgstr ""
 
-#: ../ui/api/ICB.qml:62 ../ui/api/QQ.qml:63
+#: ../ui/api/ICB.qml:59
 msgid "Examples:"
 msgstr ""
 
-#: ../ui/api/MWCD.qml:41
-msgid "Merriam-Webster's Collegiate® Dictionary API key is empty."
-msgstr ""
-
-#: ../ui/api/MWCD.qml:50 ../ui/api/MWSD.qml:47 ../ui/api/YANDEX.qml:71
+#: ../ui/api/MWCD.qml:47 ../ui/api/MWSD.qml:44 ../ui/api/YANDEX.qml:71
 msgid "Definition"
 msgstr ""
 
-#: ../ui/api/MWCD.qml:56
+#: ../ui/api/MWCD.qml:53
 msgid "Origin:"
 msgstr ""
 
-#: ../ui/api/MWCD.qml:59
+#: ../ui/api/MWCD.qml:56
 msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
 msgstr ""
 
-#: ../ui/api/MWSD.qml:38
-msgid "Merriam-Webster's Spanish-English Dictionary API key is empty."
-msgstr ""
-
-#: ../ui/api/MWSD.qml:58
+#: ../ui/api/MWSD.qml:55
 msgid "Powered by Merriam-Webster's Spanish-English Dictionary"
-msgstr ""
-
-#: ../ui/api/QQ.qml:71
-msgid "Morphology:"
-msgstr ""
-
-#: ../ui/api/QQ.qml:79
-msgid "Synonym:"
-msgstr ""
-
-#: ../ui/api/QQ.qml:87
-msgid "Phrases:"
-msgstr ""
-
-#: ../ui/api/QQ.qml:96 ../ui/api/YOUDAO.qml:72
-msgid "Web Definitions:"
-msgstr ""
-
-#: ../ui/api/QQ.qml:104
-msgid "SOSO Baike"
 msgstr ""
 
 #: ../ui/api/YANDEX.qml:105
 msgid "Powered by Yandex.Dictionary"
 msgstr ""
 
-#: ../ui/api/YOUDAO.qml:45
-msgid "YouDao API key is empty."
-msgstr ""
-
-#: ../ui/api/YOUDAO.qml:55
+#: ../ui/api/YOUDAO.qml:52
 msgid "The input text is too long."
 msgstr ""
 
-#: ../ui/api/YOUDAO.qml:56
+#: ../ui/api/YOUDAO.qml:53
 msgid "Cannot translate it correctly."
 msgstr ""
 
-#: ../ui/api/YOUDAO.qml:57
+#: ../ui/api/YOUDAO.qml:54
 msgid "Unsupported language."
 msgstr ""
 
-#: ../ui/api/YOUDAO.qml:70
+#: ../ui/api/YOUDAO.qml:67
 msgid "Translation:"
 msgstr ""
 
-#: ../ui/api/YOUDAO.qml:72
+#: ../ui/api/YOUDAO.qml:69
+msgid "Web Definitions:"
+msgstr ""
+
+#: ../ui/api/YOUDAO.qml:69
 msgid ": "
 msgstr ""
 
@@ -204,7 +159,7 @@ msgstr ""
 msgid "Clear display text once input text changed"
 msgstr ""
 
-#: rc.js:12 rc.js:51 rc.js:57
+#: rc.js:12
 msgid "Only available when you use QQ dictionary"
 msgstr ""
 
@@ -212,78 +167,86 @@ msgstr ""
 msgid "Show phrases"
 msgstr ""
 
-#: rc.js:42
+#: rc.js:18
+msgid "Kingsoft iCiBa English-Chinese Dictionary"
+msgstr ""
+
+#: rc.js:21
+msgid "YouDao English-Chinese Dictionary and Translate"
+msgstr ""
+
+#: rc.js:39
 msgid "Dictionary Provider"
 msgstr ""
 
-#: rc.js:45
+#: rc.js:42
 msgid ""
 "<html><head/><body><p>Show description from web content.</p><p>Note: It's "
 "different from online dictionary providers.</p></body></html>"
 msgstr ""
 
-#: rc.js:48
+#: rc.js:45
 msgid "Show description from web"
 msgstr ""
 
-#: rc.js:54
-msgid "Show SOSO Baike link"
+#: rc.js:48
+msgid "Show Wikipedia entry link"
 msgstr ""
 
-#: rc.js:60
-msgid "Show sentences"
+#: rc.js:51
+msgid "Show sentence examples"
 msgstr ""
 
-#: rc.js:63 rc.js:69 rc.js:75
+#: rc.js:54 rc.js:60 rc.js:66
 msgid "Only available when used as a popup applet."
 msgstr ""
 
-#: rc.js:66
+#: rc.js:57
 msgid "Auto hide popup when other windows gain focus"
 msgstr ""
 
-#: rc.js:72
+#: rc.js:63
 msgid "Clear input entry and display text when popup collapsed"
 msgstr ""
 
-#: rc.js:78
+#: rc.js:69
 msgid "Auto query the text in system clipboard when pop up"
 msgstr ""
 
-#: rc.js:81
+#: rc.js:72
 msgid "Advanced"
 msgstr ""
 
-#: rc.js:84
+#: rc.js:75
 msgid "YouDao Translate API Key"
 msgstr ""
 
-#: rc.js:87
+#: rc.js:78
 msgid "YouDao Translate API Name"
 msgstr ""
 
-#: rc.js:90
+#: rc.js:81
 msgid "Baidu Translate API Key"
 msgstr ""
 
-#: rc.js:93
+#: rc.js:84
 msgid "Kingsoft iCiBa API Key"
 msgstr ""
 
-#: rc.js:96
+#: rc.js:87
 msgid "Merriam-Webster's Collegiate® Dictionary API Key"
 msgstr ""
 
-#: rc.js:99
+#: rc.js:90
 msgid "Merriam-Webster's Spanish-English Dictionary API Key"
 msgstr ""
 
-#: rc.js:100
+#: rc.js:91
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:101
+#: rc.js:92
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""

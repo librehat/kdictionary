@@ -42,11 +42,8 @@ Item {
     }
 
     function queryYD(words) {
-        if (youdao_key == '' || youdao_name == '')  displayText.text = i18n('YouDao API key is empty.') + '<br /><a href="https://github.com/librehat/kdictionary#youdao">' + i18n('Help?') + '</a>';
-        else {
-            var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + youdao_name + '&key=' + youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
-            ydModel.source = ydurl;
-        }
+        var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + mainWindow.youdao_name + '&key=' + mainWindow.youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
+        ydModel.source = ydurl;
     }
 
     function parseYD() {

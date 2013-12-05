@@ -38,11 +38,8 @@ Item {
     }
 
     function queryMWCD(words) {
-        if (mwcd_key == '') displayText.text = i18n("Merriam-Webster's Collegiate® Dictionary API key is empty.") + '<br /><a href="https://github.com/librehat/kdictionary#merriam-websters-collegiate-dictionary">' + i18n('Help?') + '</a>';
-            else {
-                var mwcdurl = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=' + mwcd_key;
-                mwcdModel.source = mwcdurl;
-            }
+        var mwcdurl = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=' + mainWindow.mwcd_key;
+        mwcdModel.source = mwcdurl;
     }
 
     function parseMWCD() {

@@ -33,8 +33,7 @@
             <label>Show description from web</label>
             <default>true</default>
         </entry>
-        <entry name="showBaike" type="Bool">
-            <label>Show SOSO Baike</label>
+        <entry name="showWiki" type="Bool">
             <default>true</default>
         </entry>
         <entry name="dictProvider" type="Enum">

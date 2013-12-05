@@ -81,7 +81,7 @@
      </property>
      <item>
       <property name="text">
-       <string>QQ English-Chinese Dictionary</string>
+       <string>Kingsoft iCiBa English-Chinese Dictionary</string>
       </property>
      </item>
      <item>
@@ -92,11 +92,6 @@
      <item>
       <property name="text">
        <string>Baidu Translate</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Kingsoft iCiBa English-Chinese Dictionary</string>
       </property>
      </item>
      <item>
@@ -152,7 +147,10 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QCheckBox" name="kcfg_showBaike">
+    <widget class="QCheckBox" name="kcfg_showWiki">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>290</x>
