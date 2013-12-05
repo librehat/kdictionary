@@ -38,8 +38,7 @@ Item {
     }
 
     function queryMWCD(words) {
-        var mwcdurl = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=' + mainWindow.mwcd_key;
-        mwcdModel.source = mwcdurl;
+        mwcdModel.source = 'http://www.dictionaryapi.com/api/v1/references/collegiate/xml/' + words + '?key=51027fa3-3ded-4e50-b572-a0f1ed89de41';
     }
 
     function parseMWCD() {

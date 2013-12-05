@@ -46,8 +46,7 @@ Item {
     }
 
     function queryCB(words) {
-        var cburl = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=' + mainWindow.iciba_key;
-        cbModel.source = cburl;
+        cbModel.source = 'http://dict-co.iciba.com/api/dictionary.php?w=' + words + '&key=40AAB9CEFD02DA381C2DCB7A512BCB0F';
     }
 
     function parseCB() {

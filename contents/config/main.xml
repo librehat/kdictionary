@@ -38,40 +38,14 @@
         </entry>
         <entry name="dictProvider" type="Enum">
             <choices name="dictProviderChoices">
-                <choice name="QQ"/>
+                <choice name="iCiBa"/>
                 <choice name="YOUDAO"/>
                 <choice name="Baidu"/>
-                <choice name="iCiBa"/>
                 <choice name="Merriam-Webster-Collegiate"/>
                 <choice name="Merriam-Webster-Spanish"/>
+                <choice name="Yandex-ru-en"/>
+                <choice name="Yandex-en-ru"/>
             </choices>
-        </entry>
-        <entry name="youdao_key" type="string">
-            <label>YouDao API key</label>
-            <default>813148993</default>
-        </entry>
-        <entry name="youdao_name" type="string">
-            <label>YouDao API name</label>
-            <default>KDictionary</default>
-        </entry>
-        <entry name="baidu_key" type="string">
-            <label>Baidu API key</label>
-            <default>TmPWj1UVYRQMdKGe3U7UIrvG</default>
-        </entry>
-        <entry name="iciba_key" type="string">
-            <label>iCiBa API key</label>
-            <default>40AAB9CEFD02DA381C2DCB7A512BCB0F</default>
-        </entry>
-        <entry name="mwcd_key" type="string">
-            <label>Merriam-Webster's Collegiate® Dictionary API key</label>
-            <default>51027fa3-3ded-4e50-b572-a0f1ed89de41</default>
-        </entry>
-        <entry name="mwsd_key" type="string">
-            <label>Merriam-Webster's Spanish-English Dictionary API key</label>
-            <default>acd5df54-076a-46c0-902e-4e31eacafbcb</default>
-        </entry>
-        <entry name="yandex_key" type="string">
-            <default>dict.1.1.20131125T084206Z.dc20bf579819f175.998288baf871b552664fce64cfde1b2ce89607c6</default>
         </entry>
     </group>
 </kcfg>

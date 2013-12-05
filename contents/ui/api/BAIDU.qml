@@ -24,7 +24,7 @@ Item {
     id: baiduAPI;
 
     function queryBD(words) {
-        var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=' + mainWindow.baidu_key + '&q=' + words + '&from=auto&to=auto';
+        var bdurl = 'http://openapi.baidu.com/public/2.0/bmt/translate?client_id=TmPWj1UVYRQMdKGe3U7UIrvG&q=' + words + '&from=auto&to=auto';
         var resText;
         var doc = new XMLHttpRequest();
         doc.onreadystatechange = function() {

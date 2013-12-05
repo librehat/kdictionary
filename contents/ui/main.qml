@@ -40,13 +40,6 @@ Item {
     property bool showWiki;
     property int dictProvider;
     property string dictProviderName;
-    property string youdao_key;
-    property string youdao_name;
-    property string baidu_key;
-    property string iciba_key;
-    property string mwcd_key;
-    property string mwsd_key;
-    property string yandex_key;
 
     API.ICB {//Kingsoft PowerWord iCiBa
         id: cb;
@@ -111,13 +104,6 @@ Item {
                 break;
             }
         }
-        youdao_key = plasmoid.readConfig('youdao_key');
-        youdao_name = plasmoid.readConfig('youdao_name');
-        baidu_key = plasmoid.readConfig('baidu_key');
-        iciba_key = plasmoid.readConfig('iciba_key');
-        mwcd_key = plasmoid.readConfig('mwcd_key');
-        mwsd_key = plasmoid.readConfig('mwsd_key');
-        yandex_key = plasmoid.readConfig('yandex_key');
         autoHide = plasmoid.readConfig('autoHide');
         plasmoid.passivePopup =  !autoHide;
 

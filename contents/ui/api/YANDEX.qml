@@ -49,7 +49,7 @@ Item {
     }
 
     function query(word, type) {
-        var url="https://dictionary.yandex.net/api/v1/dicservice/lookup?key=" + mainWindow.yandex_key + "&text=" + word;
+        var url='https://dictionary.yandex.net/api/v1/dicservice/lookup?key=dict.1.1.20131125T084206Z.dc20bf579819f175.998288baf871b552664fce64cfde1b2ce89607c6&text=' + word;
         switch(type) {
             case 0://Russian-English
             {

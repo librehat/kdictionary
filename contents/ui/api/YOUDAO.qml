@@ -42,8 +42,7 @@ Item {
     }
 
     function queryYD(words) {
-        var ydurl = 'http://fanyi.youdao.com/openapi.do?keyfrom=' + mainWindow.youdao_name + '&key=' + mainWindow.youdao_key + '&type=data&doctype=xml&version=1.1&q=' + words;
-        ydModel.source = ydurl;
+        ydModel.source = 'http://fanyi.youdao.com/openapi.do?keyfrom=KDictionary&key=813148993&type=data&doctype=xml&version=1.1&q=' + words;
     }
 
     function parseYD() {

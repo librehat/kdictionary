@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-05 23:26+0800\n"
+"POT-Creation-Date: 2013-12-05 23:47+0800\n"
 "PO-Revision-Date: 2013-12-05 23:27+0800\n"
 "Last-Translator: William Wong <librehat@outlook.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -17,47 +17,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../ui/main.qml:86
+#: ../ui/main.qml:79
 msgid "Kingsoft iCiBa"
 msgstr "金山爱词霸"
 
-#: ../ui/main.qml:90
+#: ../ui/main.qml:83
 msgid "YouDao Dictionary and Translate"
 msgstr "有道词典与翻译"
 
-#: ../ui/main.qml:94 rc.js:24
+#: ../ui/main.qml:87 rc.js:48
 msgid "Baidu Translate"
 msgstr "百度翻译"
 
-#: ../ui/main.qml:98 rc.js:27
+#: ../ui/main.qml:91 rc.js:51
 msgid "Merriam-Webster's Collegiate® Dictionary"
 msgstr "梅里亚姆-韦伯斯特大学词典®"
 
-#: ../ui/main.qml:102 rc.js:30
+#: ../ui/main.qml:95 rc.js:54
 msgid "Merriam-Webster's Spanish-English Dictionary"
 msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典"
 
-#: ../ui/main.qml:106 rc.js:33
+#: ../ui/main.qml:99 rc.js:57
 msgid "Yandex Russian-English Dictionary"
 msgstr "Yandex俄英词典"
 
-#: ../ui/main.qml:110 rc.js:36
+#: ../ui/main.qml:103 rc.js:60
 msgid "Yandex English-Russian Dictionary"
 msgstr "Yandex英俄词典"
 
-#: ../ui/main.qml:135
+#: ../ui/main.qml:121
 msgid "KDictionary"
 msgstr "K词典"
 
-#: ../ui/main.qml:156
+#: ../ui/main.qml:142
 msgid "Loading..."
 msgstr "正在载入..."
 
-#: ../ui/main.qml:197
+#: ../ui/main.qml:183
 msgid "No result."
 msgstr "无结果"
 
-#: ../ui/main.qml:222
+#: ../ui/main.qml:208
 msgid "Enter word(s) here"
 msgstr "在此输入单词或句子"
 
@@ -81,41 +81,41 @@ msgstr "超时。"
 msgid "Remote server error."
 msgstr "远程服务器错误。"
 
-#: ../ui/api/BAIDU.qml:50 ../ui/api/YOUDAO.qml:55
+#: ../ui/api/BAIDU.qml:50 ../ui/api/YOUDAO.qml:54
 msgid "Invalid key."
 msgstr "无效的key。"
 
-#: ../ui/api/BAIDU.qml:51 ../ui/api/YOUDAO.qml:56
+#: ../ui/api/BAIDU.qml:51 ../ui/api/YOUDAO.qml:55
 msgid "Unknown error."
 msgstr "未知错误。"
 
-#: ../ui/api/ICB.qml:55 ../ui/api/MWCD.qml:48 ../ui/api/MWSD.qml:46
-#: ../ui/api/YOUDAO.qml:63
+#: ../ui/api/ICB.qml:54 ../ui/api/MWCD.qml:47 ../ui/api/MWSD.qml:45
+#: ../ui/api/YOUDAO.qml:62
 msgid "Phonetic:"
 msgstr "发音："
 
-#: ../ui/api/ICB.qml:57 ../ui/api/MWCD.qml:52 ../ui/api/MWSD.qml:52
-#: ../ui/api/YOUDAO.qml:65
+#: ../ui/api/ICB.qml:56 ../ui/api/MWCD.qml:51 ../ui/api/MWSD.qml:51
+#: ../ui/api/YOUDAO.qml:64
 msgid "Definitions:"
 msgstr "释义："
 
-#: ../ui/api/ICB.qml:59
+#: ../ui/api/ICB.qml:58
 msgid "Examples:"
 msgstr "示例："
 
-#: ../ui/api/MWCD.qml:47 ../ui/api/MWSD.qml:44 ../ui/api/YANDEX.qml:71
+#: ../ui/api/MWCD.qml:46 ../ui/api/MWSD.qml:43 ../ui/api/YANDEX.qml:71
 msgid "Definition"
 msgstr "释义"
 
-#: ../ui/api/MWCD.qml:53
+#: ../ui/api/MWCD.qml:52
 msgid "Origin:"
 msgstr "起源："
 
-#: ../ui/api/MWCD.qml:56
+#: ../ui/api/MWCD.qml:55
 msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
 msgstr "由梅里亚姆-韦伯斯特大学词典® 驱动"
 
-#: ../ui/api/MWSD.qml:55
+#: ../ui/api/MWSD.qml:54
 msgid "Powered by Merriam-Webster's Spanish-English Dictionary"
 msgstr "由梅里亚姆-韦伯斯特西班牙语-英语词典驱动"
 
@@ -123,27 +123,27 @@ msgstr "由梅里亚姆-韦伯斯特西班牙语-英语词典驱动"
 msgid "Powered by Yandex.Dictionary"
 msgstr "由Yandex词典驱动"
 
-#: ../ui/api/YOUDAO.qml:52
+#: ../ui/api/YOUDAO.qml:51
 msgid "The input text is too long."
 msgstr "输入的文字太长了。"
 
-#: ../ui/api/YOUDAO.qml:53
+#: ../ui/api/YOUDAO.qml:52
 msgid "Cannot translate it correctly."
 msgstr "无法获取有效翻译。"
 
-#: ../ui/api/YOUDAO.qml:54
+#: ../ui/api/YOUDAO.qml:53
 msgid "Unsupported language."
 msgstr "不支持的语言。"
 
-#: ../ui/api/YOUDAO.qml:67
+#: ../ui/api/YOUDAO.qml:66
 msgid "Translation:"
 msgstr "翻译："
 
-#: ../ui/api/YOUDAO.qml:69
+#: ../ui/api/YOUDAO.qml:68
 msgid "Web Definitions:"
 msgstr "网络释义："
 
-#: ../ui/api/YOUDAO.qml:69
+#: ../ui/api/YOUDAO.qml:68
 msgid ": "
 msgstr "： "
 
@@ -152,34 +152,34 @@ msgid "Form"
 msgstr "表单"
 
 #: rc.js:6
-msgid "General"
-msgstr "常规"
-
-#: rc.js:9
 msgid "Clear display text once input text changed"
 msgstr "输入时清空之前的显示内容"
 
+#: rc.js:9 rc.js:15 rc.js:21
+msgid "Only available when used as a popup applet."
+msgstr "仅在面板上作为弹出部件使用时生效。"
+
 #: rc.js:12
+msgid "Auto hide popup when other windows gain focus"
+msgstr "当其它窗口获取焦点时自动隐藏弹出框"
+
+#: rc.js:18
+msgid "Auto query the text in system clipboard when pop up"
+msgstr "弹出时自动查询系统剪贴板中的文字"
+
+#: rc.js:24
+msgid "Clear input entry and display text when popup collapsed"
+msgstr "当弹出框收缩后清空输入框和结果显示区的文字"
+
+#: rc.js:27
 msgid "Only available when you use QQ dictionary"
 msgstr "仅当您使用QQ词典时生效"
 
-#: rc.js:15
+#: rc.js:30
 msgid "Show phrases"
 msgstr "显示词组/短语"
 
-#: rc.js:18
-msgid "Kingsoft iCiBa English-Chinese Dictionary"
-msgstr "金山词霸英汉词典"
-
-#: rc.js:21
-msgid "YouDao English-Chinese Dictionary and Translate"
-msgstr "有道英汉词典与多国语言翻译"
-
-#: rc.js:39
-msgid "Dictionary Provider"
-msgstr "词典提供商"
-
-#: rc.js:42
+#: rc.js:33
 msgid ""
 "<html><head/><body><p>Show description from web content.</p><p>Note: It's "
 "different from online dictionary providers.</p></body></html>"
@@ -187,71 +187,63 @@ msgstr ""
 "<html><head/><body><p>显示网络释义。</p><p>注意：网络释义并非指网络词典提供商"
 "</p></body></html>"
 
-#: rc.js:45
+#: rc.js:36
 msgid "Show description from web"
 msgstr "显示网络释义"
 
-#: rc.js:48
-msgid "Show Wikipedia entry link"
-msgstr "显示维基百科词条链接"
+#: rc.js:39
+msgid "Dictionary Provider"
+msgstr "词典提供商"
 
-#: rc.js:51
+#: rc.js:42
+msgid "Kingsoft iCiBa English-Chinese Dictionary"
+msgstr "金山词霸英汉词典"
+
+#: rc.js:45
+msgid "YouDao English-Chinese Dictionary and Translate"
+msgstr "有道英汉词典与多国语言翻译"
+
+#: rc.js:63
 msgid "Show sentence examples"
 msgstr "显示例句"
 
-#: rc.js:54 rc.js:60 rc.js:66
-msgid "Only available when used as a popup applet."
-msgstr "仅在面板上作为弹出部件使用时生效。"
+#: rc.js:66
+msgid "Show Wikipedia entry link"
+msgstr "显示维基百科词条链接"
 
-#: rc.js:57
-msgid "Auto hide popup when other windows gain focus"
-msgstr "当其它窗口获取焦点时自动隐藏弹出框"
-
-#: rc.js:63
-msgid "Clear input entry and display text when popup collapsed"
-msgstr "当弹出框收缩后清空输入框和结果显示区的文字"
-
-#: rc.js:69
-msgid "Auto query the text in system clipboard when pop up"
-msgstr "弹出时自动查询系统剪贴板中的文字"
-
-#: rc.js:72
-msgid "Advanced"
-msgstr "高级"
-
-#: rc.js:75
-msgid "YouDao Translate API Key"
-msgstr "有道翻译API Key"
-
-#: rc.js:78
-msgid "YouDao Translate API Name"
-msgstr "有道翻译API名称"
-
-#: rc.js:81
-msgid "Baidu Translate API Key"
-msgstr "百度翻译API Key"
-
-#: rc.js:84
-msgid "Kingsoft iCiBa API Key"
-msgstr "金山爱词霸API Key"
-
-#: rc.js:87
-msgid "Merriam-Webster's Collegiate® Dictionary API Key"
-msgstr "梅里亚姆-韦伯斯特大学词典® API Key"
-
-#: rc.js:90
-msgid "Merriam-Webster's Spanish-English Dictionary API Key"
-msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API Key"
-
-#: rc.js:91
+#: rc.js:67
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "您的名字"
 
-#: rc.js:92
+#: rc.js:68
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "您的邮箱"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "Advanced"
+#~ msgstr "高级"
+
+#~ msgid "YouDao Translate API Key"
+#~ msgstr "有道翻译API Key"
+
+#~ msgid "YouDao Translate API Name"
+#~ msgstr "有道翻译API名称"
+
+#~ msgid "Baidu Translate API Key"
+#~ msgstr "百度翻译API Key"
+
+#~ msgid "Kingsoft iCiBa API Key"
+#~ msgstr "金山爱词霸API Key"
+
+#~ msgid "Merriam-Webster's Collegiate® Dictionary API Key"
+#~ msgstr "梅里亚姆-韦伯斯特大学词典® API Key"
+
+#~ msgid "Merriam-Webster's Spanish-English Dictionary API Key"
+#~ msgstr "梅里亚姆-韦伯斯特西班牙语-英语词典 API Key"
 
 #~ msgid "QQ Dictionary"
 #~ msgstr "QQ词典"

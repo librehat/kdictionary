@@ -19,457 +19,212 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTabWidget" name="tabWidget">
+  <widget class="QCheckBox" name="kcfg_autoClear">
    <property name="geometry">
     <rect>
-     <x>6</x>
-     <y>6</y>
-     <width>530</width>
-     <height>300</height>
+     <x>25</x>
+     <y>10</y>
+     <width>361</width>
+     <height>20</height>
     </rect>
    </property>
-   <property name="currentIndex">
-    <number>0</number>
+   <property name="text">
+    <string>Clear display text once input text changed</string>
    </property>
-   <widget class="QWidget" name="tabGen">
-    <attribute name="title">
-     <string>General</string>
-    </attribute>
-    <widget class="QCheckBox" name="kcfg_autoClear">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>15</y>
-       <width>321</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Clear display text once input text changed</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_showPhrases">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>155</y>
-       <width>251</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Only available when you use QQ dictionary</string>
-     </property>
-     <property name="text">
-      <string>Show phrases</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="kcfg_dictProvider">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>225</y>
-       <width>350</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <item>
-      <property name="text">
-       <string>Kingsoft iCiBa English-Chinese Dictionary</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>YouDao English-Chinese Dictionary and Translate</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Baidu Translate</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Merriam-Webster's Collegiate® Dictionary</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Merriam-Webster's Spanish-English Dictionary</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Yandex Russian-English Dictionary</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Yandex English-Russian Dictionary</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QLabel" name="label_dictProvider">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>225</y>
-       <width>110</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Dictionary Provider</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_showWebdict">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>190</y>
-       <width>251</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Show description from web content.&lt;/p&gt;&lt;p&gt;Note: It's different from online dictionary providers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="text">
-      <string>Show description from web</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_showWiki">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>190</y>
-       <width>220</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Show Wikipedia entry link</string>
-     </property>
-     <property name="checkable">
-      <bool>true</bool>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_showSentences">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>155</y>
-       <width>220</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Show sentence examples</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_autoHide">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>50</y>
-       <width>331</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Only available when used as a popup applet.</string>
-     </property>
-     <property name="text">
-      <string>Auto hide popup when other windows gain focus</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_clearCollapsed">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>120</y>
-       <width>351</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Only available when used as a popup applet.</string>
-     </property>
-     <property name="text">
-      <string>Clear input entry and display text when popup collapsed</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="kcfg_autoQuery">
-     <property name="geometry">
-      <rect>
-       <x>25</x>
-       <y>85</y>
-       <width>381</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="toolTip">
-      <string>Only available when used as a popup applet.</string>
-     </property>
-     <property name="text">
-      <string>Auto query the text in system clipboard when pop up</string>
-     </property>
-     <property name="checked">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="tabAdv">
-    <property name="enabled">
-     <bool>false</bool>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_autoHide">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>50</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Only available when used as a popup applet.</string>
+   </property>
+   <property name="text">
+    <string>Auto hide popup when other windows gain focus</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_autoQuery">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>90</y>
+     <width>381</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Only available when used as a popup applet.</string>
+   </property>
+   <property name="text">
+    <string>Auto query the text in system clipboard when pop up</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_clearCollapsed">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>130</y>
+     <width>351</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Only available when used as a popup applet.</string>
+   </property>
+   <property name="text">
+    <string>Clear input entry and display text when popup collapsed</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_showPhrases">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>170</y>
+     <width>251</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Only available when you use QQ dictionary</string>
+   </property>
+   <property name="text">
+    <string>Show phrases</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_showWebdict">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>210</y>
+     <width>251</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Show description from web content.&lt;/p&gt;&lt;p&gt;Note: It's different from online dictionary providers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="text">
+    <string>Show description from web</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_dictProvider">
+   <property name="geometry">
+    <rect>
+     <x>25</x>
+     <y>260</y>
+     <width>110</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dictionary Provider</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="kcfg_dictProvider">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>260</y>
+     <width>350</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Kingsoft iCiBa English-Chinese Dictionary</string>
     </property>
-    <attribute name="title">
-     <string>Advanced</string>
-    </attribute>
-    <widget class="QLineEdit" name="kcfg_youdao_key">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>20</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="kcfg_youdao_name">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>55</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="kcfg_baidu_key">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>90</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="kcfg_iciba_key">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>125</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_ydkey">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>20</y>
-       <width>191</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>YouDao Translate API Key</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_ydname">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>55</y>
-       <width>191</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>YouDao Translate API Name</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_baidu">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>90</y>
-       <width>191</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Baidu Translate API Key</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_iciba">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>125</y>
-       <width>191</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Kingsoft iCiBa API Key</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_mwcd">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>160</y>
-       <width>191</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Merriam-Webster's Collegiate® Dictionary API Key</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="kcfg_mwcd_key">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>170</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_mwsd">
-     <property name="geometry">
-      <rect>
-       <x>16</x>
-       <y>210</y>
-       <width>191</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Merriam-Webster's Spanish-English Dictionary API Key</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="kcfg_mwsd_key">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>220</y>
-       <width>280</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="maxLength">
-      <number>100</number>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::PasswordEchoOnEdit</enum>
-     </property>
-     <property name="readOnly">
-      <bool>false</bool>
-     </property>
-    </widget>
-   </widget>
+   </item>
+   <item>
+    <property name="text">
+     <string>YouDao English-Chinese Dictionary and Translate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Baidu Translate</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Merriam-Webster's Collegiate® Dictionary</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Merriam-Webster's Spanish-English Dictionary</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yandex Russian-English Dictionary</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yandex English-Russian Dictionary</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_showSentences">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>170</y>
+     <width>220</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show sentence examples</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kcfg_showWiki">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>210</y>
+     <width>220</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show Wikipedia entry link</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
   </widget>
  </widget>
  <resources/>

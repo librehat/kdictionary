@@ -35,8 +35,7 @@ Item {
     }
 
     function query(words) {
-        var mwsdurl = 'http://www.dictionaryapi.com/api/v1/references/spanish/xml/' + words + '?key=' + mainWindow.mwsd_key;
-        mwsdModel.source = mwsdurl;
+        mwsdModel.source = 'http://www.dictionaryapi.com/api/v1/references/spanish/xml/' + words + '?key=acd5df54-076a-46c0-902e-4e31eacafbcb';
     }
 
     function parseMWSD() {
