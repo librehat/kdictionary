@@ -33,9 +33,6 @@
             <label>Show description from web</label>
             <default>true</default>
         </entry>
-        <entry name="showWiki" type="Bool">
-            <default>true</default>
-        </entry>
         <entry name="dictProvider" type="Enum">
             <choices name="dictProviderChoices">
                 <choice name="iCiBa"/>

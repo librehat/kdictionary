@@ -37,7 +37,6 @@ Item {
     property bool showSentences;
     property bool showPhrases;
     property bool showWebdict;
-    property bool showWiki;
     property int dictProvider;
     property string dictProviderName;
 
@@ -72,42 +71,48 @@ Item {
         showSentences = plasmoid.readConfig('showSentences');
         showPhrases = plasmoid.readConfig('showPhrases');
         showWebdict = plasmoid.readConfig('showWebdict');
-        showWiki = plasmoid.readConfig('showWiki');
         dictProvider = plasmoid.readConfig('dictProvider');
         switch(dictProvider) {
             case 0: {
                 dictProviderName = i18n('Kingsoft iCiBa');
+                displayText.powerText = i18n('Powered by Kingsoft iCiBa');
                 break;
             }
             case 1: {
                 dictProviderName = i18n('YouDao Dictionary and Translate');
+                displayText.powerText = i18n('Powered by YouDao');
                 break;
             }
             case 2: {
                 dictProviderName = i18n('Baidu Translate');
+                displayText.powerText = i18n('Powered by Baidu');
                 break;
             }
             case 3: {
                 dictProviderName = i18n("Merriam-Webster's Collegiate® Dictionary");
+                displayText.powerText = i18n("Powered by Merriam-Webster's Collegiate® Dictionary");
                 break;
             }
             case 4: {
                 dictProviderName = i18n("Merriam-Webster's Spanish-English Dictionary");
+                displayText.powerText = i18n("Powered by Merriam-Webster's Spanish-English Dictionary");
                 break;
             }
             case 5: {
                 dictProviderName = i18n("Yandex Russian-English Dictionary");
+                displayText.powerText = '<a href="http://api.yandex.com/dictionary/">' + i18n('Powered by Yandex.Dictionary') + '</a>';
                 break;
             }
             case 6: {
                 dictProviderName = i18n("Yandex English-Russian Dictionary");
+                displayText.powerText = '<a href="http://api.yandex.com/dictionary/">' + i18n('Powered by Yandex.Dictionary') + '</a>';
                 break;
             }
         }
         autoHide = plasmoid.readConfig('autoHide');
         plasmoid.passivePopup =  !autoHide;
 
-        if (dictProvider == 4 || dictProvider == 5)
+        if (dictProvider == 3 || dictProvider == 4)
             displayText.logoVisible = true;
         else
             displayText.logoVisible = false;
@@ -192,8 +197,8 @@ Item {
         QIconItem {
             id: topIcon;
             icon: QIcon('accessories-dictionary');
-            width: 28;
-            height: 28;
+            width: 26;
+            height: 26;
 
             MouseArea {//Make a hovering effect just like the original Dictionary plasmoid in Plasma Addons
                 anchors.fill: topIcon;
@@ -206,7 +211,7 @@ Item {
         PlasmaComponents.TextField {
             id: inputEntry;
             placeholderText: '<i>' + i18n('Enter word(s) here') + '</i>';
-            width: parent.width - 28 - headrow.spacing;//28:QIconItem's width
+            width: parent.width - 26 - headrow.spacing;//26:QIconItem's width
             maximumLength: 140; //Limit the maximum length
             clearButtonShown: true;
             focus: true;

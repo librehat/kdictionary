@@ -102,7 +102,6 @@ Item {
             if (mainWindow.showSentences && model.get(i).tr3_extx != '')
                 mainWindow.desresult += '✒ ' + model.get(i).tr3_extx + '<br />✑ ' + model.get(i).tr3_extr + '<br />';
         }
-        mainWindow.desresult += '<br /><a href="http://api.yandex.com/dictionary/">' + i18n('Powered by Yandex.Dictionary') + '</a>';
         mainWindow.parseDone();
     }
 }

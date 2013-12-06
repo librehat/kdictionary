@@ -51,7 +51,6 @@ Item {
                 mainWindow.desresult+= '<b>' + i18n('Definitions:') + '</b><br />' + mwsdModel.get(i).def.replace(/\s1\s+:?/, "✒ ").replace(/\s\d\s+:?/g, "<br />✒ ").replace(/\s+:\s?\b/g, ": ") + '<br />';
             mainWindow.desresult += '<br />';
         }
-        mainWindow.desresult += '<i>' + i18n("Powered by Merriam-Webster's Spanish-English Dictionary") + '</i>';
         mainWindow.parseDone();
     }
 }

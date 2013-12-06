@@ -171,7 +171,14 @@ Item {
      */
     property alias wrapMode: textEdit.wrapMode
 
+    //logoVisible used to display Merriam Webster's Logo as required
     property alias logoVisible: mwLogo.visible
+    
+    //powerText used to display "Powered by XXX" as required
+    property alias powerText: footer.text
+    
+    //powerVisible to control whether powerText display or not
+    property alias powerVisible: footer.visible
     /**
      * The text displayed when the text property is empty.
      *
@@ -319,7 +326,7 @@ Item {
     Image {
         id: mwLogo;
         visible: false;//Unless user choose Merriam-Webster's Collegiate® Dictionary as provider
-        anchors { right:flickArea.right; bottom: flickArea.bottom;}
+        anchors { right:parent.right; bottom: parent.bottom;}
         source: '../images/mw.png';
         fillMode: Image.PreserveAspectFit;
         opacity: 0.5;
@@ -328,11 +335,14 @@ Item {
     Flickable {
         id: flickArea
         anchors {
-            fill: parent
+            top: parent.top
+            bottom: footer.top
+            left: parent.left
+            right: parent.right
             leftMargin: 2 * base.margins.left
             rightMargin: 2 * base.margins.right + (verticalScroll.visible ? verticalScroll.width : 0)
             topMargin: 2 * base.margins.top
-            bottomMargin: 2 * base.margins.bottom + (horizontalScroll.visible ? verticalScroll.width : 0)
+            bottomMargin: 2 * base.margins.bottom + (horizontalScroll.visible ? verticalScroll.width : 0) + (footer.visible ? 4 : 0)
         }
         interactive: !verticalScroll.interactive //textArea.activeFocus
         contentWidth: {
@@ -401,7 +411,7 @@ Item {
                 anchors.fill: parent
                 text: textArea.placeholderText
                 visible: textEdit.text == "" && !textArea.activeFocus
-                color: theme.buttonTextColor
+                color: theme.viewTextColor
                 opacity: 0.5
             }
             onActiveFocusChanged: {
@@ -410,6 +420,18 @@ Item {
                 }
             }
         }
+    }
+    
+    PlasmaComponents.Label {
+        id: footer
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: (mwLogo.visible ? mwLogo.left : parent.right)
+        }
+        wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
+        onLinkActivated: Qt.openUrlExternally(link);
     }
 
     PlasmaComponents.ScrollBar {

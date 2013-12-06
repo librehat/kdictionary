@@ -52,7 +52,6 @@ Item {
             if (mwcdModel.get(i).origin != '')  mainWindow.desresult += '<b>' + i18n('Origin:') + '</b><br />' + mwcdModel.get(i).origin + '<br />';
             mainWindow.desresult += '<br />';
         }
-        mainWindow.desresult += '<i>' + i18n("Powered by Merriam-Webster's Collegiate® Dictionary") + '</i>';
         mainWindow.parseDone();
     }
 }
