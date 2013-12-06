@@ -40,6 +40,14 @@ Item {
     property int dictProvider;
     property string dictProviderName;
 
+    /*
+     * remember the last query and its result.
+     * This can solve a weird issue.
+     */
+    property string lastQuery;
+    property string lastQueryResult;
+    property int lastDictProvider;
+
     API.ICB {//Kingsoft PowerWord iCiBa
         id: cb;
     }
@@ -144,7 +152,11 @@ Item {
 
     function enterTriggered() {
         if (inputEntry.text != '') {
-            displayText.text = '<i>' + i18n('Loading...') + '</i>';//it's not instantaneous!
+            displayText.text = '<i>' + i18n('Loading...') + '</i>';
+            if (inputEntry.text == lastQuery && lastDictProvider == dictProvider) {
+                displayText.text = lastQueryResult;
+                return;
+            }
             switch(dictProvider) {
                 case 0: {
                     cb.queryCB(inputEntry.text);
@@ -187,6 +199,9 @@ Item {
         else
             displayText.text = '<i>' + i18n('No result.') + '</i>';
         desresult = '';
+        lastQuery = inputEntry.text;
+        lastQueryResult = displayText.text;
+        lastDictProvider = dictProvider;
     }
 
     Row {

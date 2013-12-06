@@ -171,14 +171,15 @@ Item {
      */
     property alias wrapMode: textEdit.wrapMode
 
-    //logoVisible used to display Merriam Webster's Logo as required
+    // logoVisible used to display Merriam Webster's Logo as required
     property alias logoVisible: mwLogo.visible
     
-    //powerText used to display "Powered by XXX" as required
+    // powerText used to display "Powered by XXX" as required
     property alias powerText: footer.text
     
-    //powerVisible to control whether powerText display or not
+    // powerVisible to control whether powerText display or not
     property alias powerVisible: footer.visible
+
     /**
      * The text displayed when the text property is empty.
      *
@@ -414,6 +415,7 @@ Item {
                 color: theme.viewTextColor
                 opacity: 0.5
             }
+            
             onActiveFocusChanged: {
                 if (!textEdit.activeFocus) {
                     textEdit.closeSoftwareInputPanel()
@@ -430,6 +432,7 @@ Item {
             right: (mwLogo.visible ? mwLogo.left : parent.right)
         }
         wrapMode: Text.WordWrap
+        font.italic: true
         horizontalAlignment: Text.AlignHCenter
         onLinkActivated: Qt.openUrlExternally(link);
     }
