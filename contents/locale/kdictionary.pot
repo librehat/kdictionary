@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-05 23:47+0800\n"
+"POT-Creation-Date: 2013-12-07 12:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,71 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../ui/main.qml:79
+#: ../ui/main.qml:85
 msgid "Kingsoft iCiBa"
 msgstr ""
 
-#: ../ui/main.qml:83
+#: ../ui/main.qml:86
+msgid "Powered by Kingsoft iCiBa"
+msgstr ""
+
+#: ../ui/main.qml:90
 msgid "YouDao Dictionary and Translate"
 msgstr ""
 
-#: ../ui/main.qml:87 rc.js:48
+#: ../ui/main.qml:91
+msgid "Powered by YouDao"
+msgstr ""
+
+#: ../ui/main.qml:95 rc.js:45
 msgid "Baidu Translate"
 msgstr ""
 
-#: ../ui/main.qml:91 rc.js:51
+#: ../ui/main.qml:96
+msgid "Powered by Baidu"
+msgstr ""
+
+#: ../ui/main.qml:100 rc.js:48
 msgid "Merriam-Webster's Collegiate® Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:95 rc.js:54
+#: ../ui/main.qml:101
+msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:105 rc.js:51
 msgid "Merriam-Webster's Spanish-English Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:99 rc.js:57
+#: ../ui/main.qml:106
+msgid "Powered by Merriam-Webster's Spanish-English Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:110 rc.js:54
 msgid "Yandex Russian-English Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:103 rc.js:60
+#: ../ui/main.qml:111 ../ui/main.qml:116
+msgid "Powered by Yandex.Dictionary"
+msgstr ""
+
+#: ../ui/main.qml:115 rc.js:57
 msgid "Yandex English-Russian Dictionary"
 msgstr ""
 
-#: ../ui/main.qml:121
+#: ../ui/main.qml:134
 msgid "KDictionary"
 msgstr ""
 
-#: ../ui/main.qml:142
+#: ../ui/main.qml:155
 msgid "Loading..."
 msgstr ""
 
-#: ../ui/main.qml:183
+#: ../ui/main.qml:200
 msgid "No result."
 msgstr ""
 
-#: ../ui/main.qml:208
+#: ../ui/main.qml:228
 msgid "Enter word(s) here"
 msgstr ""
 
@@ -111,18 +135,6 @@ msgstr ""
 msgid "Origin:"
 msgstr ""
 
-#: ../ui/api/MWCD.qml:55
-msgid "Powered by Merriam-Webster's Collegiate® Dictionary"
-msgstr ""
-
-#: ../ui/api/MWSD.qml:54
-msgid "Powered by Merriam-Webster's Spanish-English Dictionary"
-msgstr ""
-
-#: ../ui/api/YANDEX.qml:105
-msgid "Powered by Yandex.Dictionary"
-msgstr ""
-
 #: ../ui/api/YOUDAO.qml:51
 msgid "The input text is too long."
 msgstr ""
@@ -172,49 +184,41 @@ msgid "Clear input entry and display text when popup collapsed"
 msgstr ""
 
 #: rc.js:27
-msgid "Only available when you use QQ dictionary"
-msgstr ""
-
-#: rc.js:30
 msgid "Show phrases"
 msgstr ""
 
-#: rc.js:33
+#: rc.js:30
 msgid ""
 "<html><head/><body><p>Show description from web content.</p><p>Note: It's "
 "different from online dictionary providers.</p></body></html>"
 msgstr ""
 
-#: rc.js:36
+#: rc.js:33
 msgid "Show description from web"
 msgstr ""
 
-#: rc.js:39
+#: rc.js:36
 msgid "Dictionary Provider"
 msgstr ""
 
-#: rc.js:42
+#: rc.js:39
 msgid "Kingsoft iCiBa English-Chinese Dictionary"
 msgstr ""
 
-#: rc.js:45
+#: rc.js:42
 msgid "YouDao English-Chinese Dictionary and Translate"
 msgstr ""
 
-#: rc.js:63
+#: rc.js:60
 msgid "Show sentence examples"
 msgstr ""
 
-#: rc.js:66
-msgid "Show Wikipedia entry link"
-msgstr ""
-
-#: rc.js:67
+#: rc.js:61
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: rc.js:68
+#: rc.js:62
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
