@@ -303,25 +303,11 @@ Item {
 
     opacity: enabled ? 1.0 : 0.5
 
-    Private.TextFieldFocus {
-        id: hover
-        state: textArea.activeFocus ? "focus" : (mouseWatcher.containsMouse ? "hover" : "hidden")
-        anchors.fill: base
-    }
-
-    MouseArea {
-        id: mouseWatcher
-        anchors.fill: hover
-        hoverEnabled: true
-    }
-
-    PlasmaCore.FrameSvgItem {
+    Rectangle {
         id: base
-
-        // TODO: see what is the best policy for margins
-        //imagePath: "widgets/lineedit"
-        visible: false
-        prefix: "base"
+        anchors { top: parent.top; bottom: flickArea.bottom; left: parent.left; right: parent.right }
+        color: theme.backgroundColor
+        opacity: 0.3
     }
 
     Image {
@@ -340,10 +326,10 @@ Item {
             bottom: footer.top
             left: parent.left
             right: parent.right
-            leftMargin: 2 * base.margins.left
-            rightMargin: 2 * base.margins.right + (verticalScroll.visible ? verticalScroll.width : 0)
-            topMargin: 2 * base.margins.top
-            bottomMargin: 2 * base.margins.bottom + (horizontalScroll.visible ? verticalScroll.width : 0) + (footer.visible ? 4 : 0)
+            leftMargin: 2
+            rightMargin: 2 + (verticalScroll.visible ? verticalScroll.width : 0)
+            topMargin: 2
+            bottomMargin: (footer.visible ? 4 : 0)
         }
         interactive: !verticalScroll.interactive //textArea.activeFocus
         contentWidth: {
@@ -435,19 +421,6 @@ Item {
         font.italic: true
         horizontalAlignment: Text.AlignHCenter
         onLinkActivated: Qt.openUrlExternally(link);
-    }
-
-    PlasmaComponents.ScrollBar {
-        id: horizontalScroll
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: flickArea.right
-        }
-        enabled: parent.enabled
-        flickableItem: flickArea
-        orientation: Qt.Horizontal
-        stepSize: textEdit.font.pixelSize
     }
 
     PlasmaComponents.ScrollBar {
