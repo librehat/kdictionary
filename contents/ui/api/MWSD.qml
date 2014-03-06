@@ -1,6 +1,6 @@
 // -*- coding: utf-8 -*-
 /*
- *   Copyright (C) 2013 by William Wong <librehat@outlook.com>
+ *   Copyright (C) 2013-2014 by William Wong <librehat@outlook.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
